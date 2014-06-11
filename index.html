@@ -22,6 +22,32 @@
 	<!-- FontAwesome -->
     <link href="http://www.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
+    <!-- google visualization:pie-chart-->
+     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+     <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Category', 'Expenses Juno'],
+          ['Education',     39.90],
+          ['Food',      18.50],
+          ['Entertainment',  20.00],
+          ['Transportation',   15.00]
+        ]);
+
+        var options = {
+          colors:['#D95246','#2A2931','#53798D','#344E5B'],
+          fontName:'Roboto',
+          chartArea:{left:20,top:10,width:'100%',height:'80%'},
+          backgroundColor:'none',
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -50,7 +76,7 @@
 				<div class="boxed" >
 					<div class="row">
 					</div>
-					<h1>Budget</h1>
+					<h1>Daily Budget</h1>
 					<h2>your personal Budget</h2>
 
 					<div class="progress">
@@ -82,13 +108,12 @@
 
 		<div class="row mt">
 			<div class="col-lg-6 col-lg-offset-3">
-				<div class="boxed" >
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<div class="boxed">
+				<h1>Monthly Budget</h1>
+				<div id="piechart"></div>
+				
+					
+</html>
 				</div>
 			</div>
 		</div><!-- /row -->
