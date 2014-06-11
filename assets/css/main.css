@@ -5,14 +5,26 @@
  * Project Name: FLATTY - Free Bootstrap 3 Theme
  * Version: 1.0
  * URL: http://blacktie.co
+
+
+    Farben:
+    Schwarz:    #2A2931;
+    Rot:        #D95246;
+    Weiß:       #F6F6F8;
+    Hellblau:   #53798D;
+    Dunkelblau: #344E5B;
+
  */
 
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,700,500italic,900,700italic,900italic);
+
 body {
-  background-color: #f2f2f2;
-    font-family: 'Lato', sans-serif;
+  background-color: #d5d5d5;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 16px;
     color: #555;
+    margin-top: 60px;
 
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
@@ -20,18 +32,28 @@ body {
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #333;
+    margin: 0;
 }
 
 h1 {
-	font-size: 40px;
+  font-size:3rem;
+  font-weight:200;
+  width:28rem;
 }
 
-h3 {
-	color: #95a5a6;
-	font-weight: 400;
+strong {
+    font-weight:300;
+    color:#539D00;
+  }
+
+h2 {
+  font-size:1.2rem;
+  line-height:2.5;
+  color:gray;
+  font-weight:400;
 }
 
 h4 {
@@ -45,10 +67,15 @@ p {
     line-height: 28px;
     margin-bottom: 25px;
     font-size: 16px;
+    text-align: justify;
 }
 
 .centered {
     text-align: center;
+}
+
+.light{
+
 }
 
 /* Links */
@@ -63,8 +90,7 @@ a {
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-a:hover,
-a:focus {
+a:active {
     color: #7b7b7b;
     text-decoration: none;
     outline: 0;
@@ -91,7 +117,7 @@ a:after {
 .navbar-default {
 	background-color: #2A2931;
 	border-color: transparent;
-    padding: 15px;
+    padding: 10px;
 }
 
 .navbar-default .navbar-brand {
@@ -99,14 +125,21 @@ a:after {
     padding: 0px;
 }
 
+.navbar-header > a > i{
+    color: #F2F6F8;
+    vertical-align: middle;
+    margin: 0;
+}
+
 .nav > li > a{
+    width: 25%;
     float: left;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 12px;
     color: #F2F6F8;
     text-align: center;
-    padding: 10px 23px;
+    vertical-align: middle;
 }
 
 .nav > li > a > i{
@@ -115,7 +148,7 @@ a:after {
 }
 
 #logo{
-    height: 60px;
+    height: 40px;
      padding-right: 15px;
 }
 
@@ -123,7 +156,7 @@ a:after {
     display: inline;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 24px;
     color: #F2F6F8;
     vertical-align: middle;
 }
@@ -147,8 +180,8 @@ a:after {
 /* Helpers */
 
 .mt {
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .form-control {
@@ -163,33 +196,28 @@ i {
 }
 
 
-/* HeaderWrap */
-#headerwrap {
-	/* background: url(../img/bg01.jpg) no-repeat center top; */
-	background-color: #3498db;
-	margin-top: -20px;
-	padding-top:200px;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 650px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
+/* inner area */
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.boxed{
+  padding:1.5rem;
+  box-shadow:0 1px 2px #aaa;
+  background:white;
+  border-radius:3px;
+  user-select:none;
+  animation:fly-in-from-left .5s 1s ease both;
+  transform-origin:top left;
 }
 
-#headerwrap h1 {
-	margin-top: 60px;
-	margin-bottom: 15px;
-	color: white;
-	font-size: 45px;
-	font-weight: 300;
-	letter-spacing: 1px;
+.progress-bar-black {
+  background-color: #2A2931;
+}
+
+.progress-bar-red {
+    background-color: #D95246;
+}
+.progress-bar-lightblue{
+    background-color: #53798D;
+}
+.progress-bar-darkblue{
+    background-color: #344E5B;
 }

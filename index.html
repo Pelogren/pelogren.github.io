@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/img/favicon.png">
 
-    <title>FLATTY - Free Bootstrap 3 Landing Page</title>
+    <title>Budget Butler</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -30,47 +30,69 @@
   </head>
 
   <body>
+  	<header>
+  		<!-- HEADER -->
+  	  <div class="navbar navbar-default navbar-fixed-top">
+  	    <div class="container">
+  	      <div class="navbar-header">
+  	        <a class="navbar-brand" href="#"><img id="logo" src="assets/img/logo_white.png"> <p id="brand-name">BUDGET BUTLER</p></a>
+  	        <a class="pull-right" href="#"><i class="fa fa-ellipsis-v fa-2x"></i> </a>
+  	      </div>
+  	    </div>
+  	  </div>  	
+  	</header><!-- /header -->
 
-    <!-- HEADER -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#"><img id="logo" src="assets/img/logo_white.png"> <p id="brand-name">BUDGET BUTLER</p></a>
-        </div>
-      </div>
-    </div>
 
-    <!-- FOOTER -->
-    <div id="footer" class="navbar-default">
-      	<ul class="nav">
-      		<li><a href="#"><i class="fa fa-paper-plane fa-3x"></i> <br> Option 1</a></li>
-      		<li><a href="#"><i class="fa fa-rebel fa-3x"></i> <br> Option 2</a></li>
-      		<li><a href="#"><i class="fa fa-recycle fa-3x"></i> <br> Option 3</a></li>
-        	<li><a href="#"><i class="fa fa-cog fa-3x"></i> <br> Option 4</a></li>
-        </ul>
-    </div>
 
-	<div id="headerwrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<img class="img-responsive" src="assets/img/ipad-hand.png" alt="">
-				</div><!-- /col-lg-6 -->
-				
-			</div><!-- /row -->
-		</div><!-- /container -->
-	</div><!-- /headerwrap -->
-
-	
-	
 	<div class="container">
-		<div class="row mt centered">
+		<div class="row mt">
 			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Your Landing Page<br/>Looks Wonderful Now.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
-				<a href="#">www.google.de</a>
+				<div class="boxed" >
+					<div class="row">
+					</div>
+					<h1>Budget</h1>
+					<h2>your personal Budget</h2>
+
+					<div class="progress">
+					  <div class="progress-bar progress-bar-black" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+					    <span class="">40€</span>
+					  </div>
+					</div>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+					    <span class="">20€</span>
+					  </div>
+					</div>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-lightblue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+					    <span class="">60€</span>
+					  </div>
+					</div>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-darkblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+					    <span class="">80€</span>
+					  </div>
+					</div>
+
+				</div>
 			</div>
 		</div><!-- /row -->
+
+		<button type="button" class="btn btn-primary btn-lg btn-block">NEW ENTRY</button>
+
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3">
+				<div class="boxed" >
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</div><!-- /row -->
+		
 		
 		<div class="row mt centered">
 			<div class="col-lg-4">
@@ -212,8 +234,19 @@
 		<p class="centered">Created by BlackTie.co - Attribution License 3.0 - 2013</p>
 	</div><!-- /container -->
 	
+	<footer>
+  	<!-- FOOTER -->
+    	<div id="footer" class="navbar-default">
+    	  	<ul class="nav">
+    	  		<li><a href="#"><i class="fa fa-paper-plane fa-2x"></i> <br> Option 1</a></li>
+    	  		<li><a href="#"><i class="fa fa-rebel fa-2x"></i> <br> Option 2</a></li>
+    	  		<li><a href="#"><i class="fa fa-recycle fa-2x"></i> <br> Option 3</a></li>
+    	    	<li><a href="#"><i class="fa fa-cog fa-2x"></i> <br> Option 4</a></li>
+    	    </ul>
+    	</div>
+  	</footer>
 
-    <!-- Bootstrap core JavaScript
+  	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
