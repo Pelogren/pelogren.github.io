@@ -22,79 +22,72 @@
 	<!-- FontAwesome -->
     <link href="http://www.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- jQuery -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="assets/js/myjQuery.js"></script>
-
     <!-- google visualization:pie-chart-->
      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Category', 'Expenses Juno'],
-          ['Education',     39.90],
-          ['Food',      18.50],
-          ['Entertainment',  20.00],
-          ['Transportation',   15.00]
-        ]);
-
-        var options = {
-          colors:['#D95246','#2A2931','#53798D','#344E5B'],
-          fontName:'Roboto',
-          chartArea:{left:20,top:10,width:'100%',height:'80%'},
-          backgroundColor:'none',
-          legend: {position: 'right'}
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        chart.draw(data, options);
-      }
-    </script>
-
-     <script type="text/javascript">
-      google.load('visualization', '1', {packages: ['corechart']});
-    </script>
-    <script type="text/javascript">
-      function drawVisualization() {
-        // Some raw data (not necessarily accurate)
-         var data = google.visualization.arrayToDataTable([
-          ['Month', 'Education', 'Food', 'Entertainment', 'Transportation'],
-          ['April 2014',  41,      204,         33,             162],
-          ['May 2014',  13,      178,        69,             26.8],
-          ['Juno 2014',  57.98,      198,        57,             64.7]
-        ]);
-
-        var options = {
-          title : 'Expenses last three months',
-          vAxis: {title: "Expenses in €"},
-          hAxis: {title: "Month"},
-          seriesType: "bars",
-          series: {3: {type: "line"}},
-          colors:['#D95246','#2A2931','#53798D','#344E5B'],
-          fontName:'Roboto',
-          backgroundColor:'none',
-          legend: {position: 'right'},
-          chartArea:{left:20,top:10,width:'70%',height:'80%'}
-        };
-        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-      google.setOnLoadCallback(drawVisualization);
-    </script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+     <script type="text/javascript" src="assets/js/googleVisualisation.js"></script>
+    
   </head>
 
   <body>
+
+	<div class="container" data-role="page" id="pageone">
+
+	 	<div data-role="main" class="ui-content">
+	 	  	<div class="boxed">
+	 	  		<div id="dailyOverview">
+	 	  			
+					<h1>Daily Budget</h1>
+					<h2>your personal Budget</h2>
+	
+						<div class="progress">
+						  	<div class="progress-bar progress-bar-black" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+						    	<span class="">40€</span>
+				  			</div>
+				  		</div>
+	
+						<div class="progress">
+						  	<div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+								<span class="">20€</span>
+						  	</div>
+						</div>
+	
+						<div class="progress">
+						  	<div class="progress-bar progress-bar-lightblue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+						    	<span class="">60€</span>
+						  	</div>
+						</div>
+	
+						<div class="progress">
+							<div class="progress-bar progress-bar-darkblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+							    <span class="">80€</span>
+				 			</div>
+					</div>
+	 	  		</div>
+
+	 	  		<div id="monthlyOverview" hidden>
+					<h1>Monthly Budget</h1>
+					<div id="piechart"></div>
+	 	  		</div>	
+			</div>
+
+			<button type="button" class="btn btn-primary btn-lg btn-block">NEW ENTRY</button>
+
+			<div class="boxed">
+				<h1>Monthly Budget</h1>
+			</div>
+
+			<div class="boxed">
+				<h1>Period Balance</h1>
+				<div id="chart_div"></div>
+			</div>
+
+		</div>
+
+	</div> <!-- end of page one -->
+
   	<header>
   		<!-- HEADER -->
-  	  <div class="navbar navbar-default navbar-fixed-top">
+  	  <div class="navbar navbar-default navbar-fixed-top" data-role="header">
   	    <div class="container">
   	      <div class="navbar-header">
   	        <a class="navbar-brand" href="#"><img id="logo" src="assets/img/logo_white.png"> <p id="brand-name">BUDGET BUTLER</p></a>
@@ -104,202 +97,6 @@
   	  </div>  	
   	</header><!-- /header -->
 
-
-
-	<div class="container">
-		<div class="row mt">
-			<div class="col-lg-6 col-lg-offset-3">
-				<div class="boxed" id="budgetOverview" >
-					<div class="row">
-					</div>
-					<h1>Daily Budget</h1>
-					<h2>your personal Budget</h2>
-
-					<div class="progress">
-					  <div class="progress-bar progress-bar-black" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-					    <span class="">40€</span>
-					  </div>
-					</div>
-					<div class="progress">
-					  <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-					    <span class="">20€</span>
-					  </div>
-					</div>
-					<div class="progress">
-					  <div class="progress-bar progress-bar-lightblue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-					    <span class="">60€</span>
-					  </div>
-					</div>
-					<div class="progress">
-					  <div class="progress-bar progress-bar-darkblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-					    <span class="">80€</span>
-					  </div>
-					</div>
-
-				</div>
-			</div>
-		</div><!-- /row -->
-
-		<button type="button" class="btn btn-primary btn-lg btn-block">NEW ENTRY</button>
-
-		<div class="row mt">
-			<div class="col-lg-6 col-lg-offset-3">
-				<div class="boxed">
-				<h1>Monthly Budget</h1>
-				<div id="piechart"></div>
-				</div>
-			</div>
-		</div><!-- /row -->
-
-		<div class="row mt">
-			<div class="col-lg-6 col-lg-offset-3">
-				<div class="boxed">
-				<h1>Period Balance</h1>
-				<div id="chart_div"></div>
-				</div>
-			</div>
-		</div><!-- /row -->
-		
-		
-		<div class="row mt centered">
-			<div class="col-lg-4">
-				<img src="assets/img/ser01.png" width="180" alt="">
-				<h4>1 - Browser Compatibility</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-			</div><!--/col-lg-4 -->
-
-			<div class="col-lg-4">
-				<img src="assets/img/ser02.png" width="180" alt="">
-				<h4>2 - Email Campaigns</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-
-			</div><!--/col-lg-4 -->
-
-			<div class="col-lg-4">
-				<img src="assets/img/ser03.png" width="180" alt="">
-				<h4>3 - Gather Your Notes</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-
-			</div><!--/col-lg-4 -->
-		</div><!-- /row -->
-	</div><!-- /container -->
-	
-	<div class="container">
-		<hr>
-		<div class="row centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<form class="form-inline" role="form">
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
-				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
-				</form>					
-			</div>
-			<div class="col-lg-3"></div>
-		</div><!-- /row -->
-		<hr>
-	</div><!-- /container -->
-	
-	<div class="container">
-		<div class="row mt centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Flatty is for Everyone.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
-			</div>
-		</div><!-- /row -->
-	
-		<! -- CAROUSEL -->
-		<div class="row mt centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				  <!-- Indicators -->
-				  <ol class="carousel-indicators">
-				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-				  </ol>
-				
-				  <!-- Wrapper for slides -->
-				  <div class="carousel-inner">
-				    <div class="item active">
-				      <img src="assets/img/p01.png" alt="">
-				    </div>
-				    <div class="item">
-				      <img src="assets/img/p02.png" alt="">
-				    </div>
-				    <div class="item">
-				      <img src="assets/img/p03.png" alt="">
-				    </div>
-				  </div>
-				</div>			
-			</div><!-- /col-lg-8 -->
-		</div><!-- /row -->
-	</div><! --/container -->
-	
-	<div class="container">
-		<hr>
-		<div class="row centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<form class="form-inline" role="form">
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
-				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
-				</form>					
-			</div>
-			<div class="col-lg-3"></div>
-		</div><!-- /row -->
-		<hr>
-	</div><!-- /container -->
-
-	<div class="container">
-		<div class="row mt centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Our Awesome Team.<br/>Design Lovers.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
-			</div>
-		</div><!-- /row -->
-		
-		<div class="row mt centered">
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic1.jpg" width="140" alt="">
-				<h4>Michael Robson</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
-			</div><!--/col-lg-4 -->
-
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic2.jpg" width="140" alt="">
-				<h4>Pete Ford</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
-			</div><!--/col-lg-4 -->
-
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic3.jpg" width="140" alt="">
-				<h4>Angelica Finning</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
-			</div><!--/col-lg-4 -->
-		</div><!-- /row -->
-	</div><!-- /container -->
-	
-	<div class="container">
-		<hr>
-		<div class="row centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<form class="form-inline" role="form">
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
-				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
-				</form>					
-			</div>
-			<div class="col-lg-3"></div>
-		</div><!-- /row -->
-		<hr>
-		<p class="centered">Created by BlackTie.co - Attribution License 3.0 - 2013</p>
-	</div><!-- /container -->
 	
 	<footer>
   	<!-- FOOTER -->
@@ -318,5 +115,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- jQuery -->
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/myjQuery.js"></script>
   </body>
 </html>

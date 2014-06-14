@@ -200,6 +200,7 @@ i {
 
 .boxed{
   padding:1.5rem;
+  margin: 1rem 0;
   box-shadow:0 1px 2px #aaa;
   background:white;
   border-radius:3px;

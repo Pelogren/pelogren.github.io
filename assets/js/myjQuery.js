@@ -1,6 +1,12 @@
-$(document).ready(function() { 
+$(document).on("pagecreate","#pageone",function(){
 
-  	$("#budgetOverview").swiperight(function() {  
-    	  alert("You just swiped right!")  
-	});  
-}); 
+  	$("#dailyOverview").on("swipeleft",function(){
+  	  $("#monthlyOverview").show();
+  	  $("#dailyOverview").hide();
+  	});
+
+  	$("#monthlyOverview").on("swiperight",function(){
+    $("#dailyOverview").show();
+    $("#monthlyOverview").hide();
+  });
+});
