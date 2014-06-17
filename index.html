@@ -1,73 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/img/favicon.png">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="assets/img/favicon.png">
 
-    <title>Budget Butler</title>
+	<title>Budget Butler</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
+  	<!-- Bootstrap core JavaScript
+  	================================================== -->
+  	<!-- Placed at the end of the document so the pages load faster -->
+  	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  	<script src="assets/js/bootstrap.min.js"></script>
 
-    <!-- Fonts from Google Fonts -->
+	<!-- Custom styles for this template -->
+	<link href="assets/css/main.css" rel="stylesheet">
+
+	<!-- Fonts from Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
 
 	<!-- FontAwesome -->
-    <link href="http://www.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="http://www.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- google visualization:pie-chart-->
-     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-     <script type="text/javascript" src="assets/js/googleVisualisation.js"></script>
-    
-  </head>
+	<!-- google visualization:pie-chart-->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="assets/js/googleVisualisation.js"></script>
 
-  <body>
+	<!-- jQuery -->
+  	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  	<script type="text/javascript" src="assets/js/myjQuery.js"></script>
 
+</head>
+
+<body>
 	<div class="container" data-role="page" id="pageone">
 
-	 	<div data-role="main" class="ui-content">
-	 	  	<div class="boxed">
-	 	  		<div id="dailyOverview">
-	 	  			
-					<h1>Daily Budget</h1>
-					<h2>your personal Budget</h2>
-	
-						<div class="progress">
-						  	<div class="progress-bar progress-bar-black" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-						    	<span class="">40€</span>
-				  			</div>
-				  		</div>
-	
-						<div class="progress">
-						  	<div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-								<span class="">20€</span>
-						  	</div>
-						</div>
-	
-						<div class="progress">
-						  	<div class="progress-bar progress-bar-lightblue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-						    	<span class="">60€</span>
-						  	</div>
-						</div>
-	
-						<div class="progress">
-							<div class="progress-bar progress-bar-darkblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-							    <span class="">80€</span>
-				 			</div>
-					</div>
-	 	  		</div>
+		<div data-role="main" class="ui-content">
+			<div class="boxed">
+				<div id="budget-tabs">
+					<ul>
+						<li onClick=toDaily()><a href="#" title="daily" id="daily" class="activeOverview">DAY</a></li>
+						<li onclick=toMonthly()><a href="#" title="monthly" id="monthly">MONTH</a></li>
+						<li onclick=toPeriod()><a href="#" title="periodly" id="periodly">PERIOD</a></li>
+					</ul>
+				</div>
+				<div id="dailyOverview">
 
-	 	  		<div id="monthlyOverview" hidden>
+					<h1>Daily Budget</h1>
+					<h2>your daily Budget on</h2>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-black" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							<span class="">40€</span>
+						</div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+							<span class="">20€</span>
+						</div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-lightblue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+							<span class="">60€</span>
+						</div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-darkblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+							<span class="">80€</span>
+						</div>
+					</div>
+				</div>
+
+				<div id="monthlyOverview" hidden>
 					<h1>Monthly Budget</h1>
 					<div id="piechart"></div>
-	 	  		</div>	
+				</div>	
+
+				<div id="periodOverview" hidden>
+					<h1>Period Budget</h1>
+					<div id="chart_div"></div>
+				</div>	
 			</div>
 
 			<button type="button" class="btn btn-primary btn-lg btn-block">NEW ENTRY</button>
@@ -80,44 +101,110 @@
 				<h1>Period Balance</h1>
 				<div id="chart_div"></div>
 			</div>
-
 		</div>
-
 	</div> <!-- end of page one -->
 
-  	<header>
-  		<!-- HEADER -->
-  	  <div class="navbar navbar-default navbar-fixed-top" data-role="header">
-  	    <div class="container">
-  	      <div class="navbar-header">
-  	        <a class="navbar-brand" href="#"><img id="logo" src="assets/img/logo_white.png"> <p id="brand-name">BUDGET BUTLER</p></a>
-  	        <a class="pull-right" href="#"><i class="fa fa-ellipsis-v fa-2x"></i> </a>
-  	      </div>
-  	    </div>
-  	  </div>  	
-  	</header><!-- /header -->
+	<div class="container" data-role="page" id="pagetwo"><!-- page two -->
+
+		<!-- Categories -->
+		<div data-role="main" class="ui-content">
+			<div class="col-lg-6 col-lg-offset-3">
+				<div class="boxed">
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading panel-education">
+								<h2 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+										<i class="fa  fa-graduation-cap"></i>  Education </li>
+									</a>
+								</h2>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in">
+								<div class="panel-body">
+									<span> Bier 6€ </span>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel-default">
+							<div class="panel-heading panel-food">
+								<h2 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+										<i class="fa  fa-spoon"></i>  Food </li>
+									</a>
+								</h2>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse">
+								<div class="panel-body">
+									<span> Bier 6€ </span>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel-default">
+							<div class="panel-heading panel-entertainment">
+								<h2 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+										<i class="fa  fa-glass"></i> Entertainment </li>
+									</a>
+								</h2>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse">
+								<div class="panel-body">
+									<span> Bier 6€ </span>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel-default">
+							<div class="panel-heading panel-transportation">
+								<h2 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+										<i class="fa  fa-car"></i>  Transportation </li>
+									</a>
+								</h2>
+							</div>
+							<div id="collapseFour" class="panel-collapse collapse">
+								<div class="panel-body">
+									<span> Bier 6€ </span>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div><!-- /row -->
+		<!-- Categories -->	
+
+	</div> <!-- end of page two -->
+
+	<header>
+		<!-- HEADER -->
+		<div class="navbar navbar-default navbar-fixed-top" data-role="header">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#"><img id="logo" src="assets/img/logo_white.png"> <p id="brand-name">BUDGET BUTLER</p></a>
+					<a class="pull-right" href="#"><i class="fa fa-ellipsis-v fa-2x"></i> </a>
+				</div>
+			</div>
+		</div>  	
+	</header><!-- /header -->
 
 	
 	<footer>
-  	<!-- FOOTER -->
-    	<div id="footer" class="navbar-default">
-    	  	<ul class="nav">
-    	  		<li><a href="#"><i class="fa fa-paper-plane fa-2x"></i> <br> Option 1</a></li>
-    	  		<li><a href="#"><i class="fa fa-rebel fa-2x"></i> <br> Option 2</a></li>
-    	  		<li><a href="#"><i class="fa fa-recycle fa-2x"></i> <br> Option 3</a></li>
-    	    	<li><a href="#"><i class="fa fa-cog fa-2x"></i> <br> Option 4</a></li>
-    	    </ul>
-    	</div>
-  	</footer>
+		<!-- FOOTER -->
+		<div id="footer" class="navbar-default">
+			<ul class="nav">
+				<li><a href="#"><i class="fa fa-bar-chart-o fa-2x"></i> <br> Overview </a></li>
+				<li><a  href="#pagetwo" data-transition="slidedown"><i class="fa fa-tags fa-2x"></i> <br> Categories </a></li>
+				<li><a href="#"><i class="fa fa-money fa-2x"></i> <br> Budgets </a></li>
+				<li><a href="#"><i class="fa fa-lightbulb-o fa-2x"></i> <br> Advice </a></li>
+			</ul>
+		</div>
+	</footer>
 
-  	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-
-    <!-- jQuery -->
-	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-    <script type="text/javascript" src="assets/js/myjQuery.js"></script>
+  	<!-- jQuery -->
   </body>
-</html>
+  </html>

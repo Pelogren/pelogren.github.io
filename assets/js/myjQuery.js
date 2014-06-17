@@ -1,12 +1,32 @@
-$(document).on("pagecreate","#pageone",function(){
+function toDaily() {
+   	$("#dailyOverview").show();
+	$("#monthlyOverview").hide();
+	$("#periodOverview").hide();
+	$("#daily").addClass('activeOverview');   
+	$("#monthly").removeClass('activeOverview');
+	$("#periodly").removeClass('activeOverview');
+ };
 
-  	$("#dailyOverview").on("swipeleft",function(){
-  	  $("#monthlyOverview").show();
-  	  $("#dailyOverview").hide();
-  	});
+ function toMonthly() {
+   	$("#dailyOverview").hide();
+   	$("#monthlyOverview").show();
+   	$("#periodOverview").hide();
+   	$("#daily").removeClass('activeOverview');   
+	$("#monthly").addClass('activeOverview');
+	$("#periodly").removeClass('activeOverview');
+ };
 
-  	$("#monthlyOverview").on("swiperight",function(){
-    $("#dailyOverview").show();
-    $("#monthlyOverview").hide();
-  });
-});
+ function toPeriod() {
+   	$("#dailyOverview").hide();
+   	$("#monthlyOverview").hide();
+   	$("#periodOverview").show();
+   	$("#daily").removeClass('activeOverview');   
+	$("#monthly").removeClass('activeOverview');
+	$("#periodly").addClass('activeOverview');
+ };
+
+
+$("#dailyOverview").on("swipeleft",toMonthly(););
+$("#monthlyOverview").on("swipeleft",toPeriod(););
+$("#periodOverview").on("swiperight",toMonthly(););
+$("#monthlyOverview").on("swiperight",toDaily(););
