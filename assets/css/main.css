@@ -160,6 +160,11 @@ a:after {
     margin: 2px;
 }
 
+.nav > li > a:focus{
+    color: #2A2931;
+    background: #F2F6F8;
+}
+
 #logo{
     height: 40px;
      padding-right: 15px;
@@ -307,6 +312,10 @@ tbody tr:nth-child(2n-1) {
 
 #budget-tabs > ul > li > a.activeOverview {
                                         color: #2A2931;
+}
+
+.activeSite{
+    background: #344E5B;
 }
 
 

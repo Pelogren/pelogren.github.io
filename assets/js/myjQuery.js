@@ -30,3 +30,12 @@ $("#dailyOverview").on("swipeleft",toMonthly());
 $("#monthlyOverview").on("swipeleft",toPeriod());
 $("#periodOverview").on("swiperight",toMonthly());
 $("#monthlyOverview").on("swiperight",toDaily());
+
+// change color of the navbar elements on click
+
+$(function() {  
+$('.navlink').click(function(){
+	$('.navlink').removeClass('activeSite');
+    $(this).addClass('activeSite');
+  });
+});
