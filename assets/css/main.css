@@ -102,10 +102,41 @@ li {
     display: block;
 }
 
-#logobig > img{
-    width: 33%;
-    bottom: 65px;
+#logobig {
+    bottom: 70px;
+    position: absolute;
 }
+
+#logobig > img{
+    width: 30%;
+}
+
+#butlersays {
+    height: 20em;
+    overflow-x: hidden;
+    overflow-y: scroll; 
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+#butlersays:after {  
+    content:"";
+    position:absolute;
+    top: 23em; /* value = - border-top-width - border-bottom-width */
+    right:50px; /* controls horizontal position */
+    border-width:1em;  /*vary these values to change the angle of the vertex */
+    border-style:solid;
+    border-color:#fff;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+    box-shadow:1px 1px 2px #aaa;
+    -webkit-transform: rotate(45deg);
+} 
+
 
 /* Links */
 a {
@@ -241,9 +272,32 @@ i {
   box-shadow:0 1px 2px #aaa;
   background:white;
   border-radius:3px;
+
+}
+
+.flying {
   user-select:none;
-  animation:fly-in-from-left .5s 1s ease both;
-  transform-origin:top left;
+  -webkit-animation: fly-in-from-left .5s .2s ease both;
+  -webkit-transform-origin:top left;
+}
+
+.flying:nth-child(even){
+  -webkit-animation-name:fly-in-from-right;
+  -webkit-animation-delay:.4s;
+  -webkit-transform-origin:top right;
+}
+
+@-webkit-keyframes fly-in-from-left {
+  from {
+    -webkit-transform:translateY(15rem) rotate(15deg);
+    opacity:0;
+  }
+}
+@-webkit-keyframes fly-in-from-right {
+  from {
+    -webkit-transform:translateY(15rem) rotate(-15deg);
+    opacity:0;
+  }
 }
 
 .progress-bar-black , .panel-food{

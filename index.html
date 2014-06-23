@@ -55,7 +55,7 @@
 	<div class="container page" id="pageOverview">
 
 		<div data-role="main" class="ui-content">
-			<div class="boxed">
+			<div class="boxed flying">
 				<div id="budget-tabs">
 					<ul>
 						<li onClick=toDaily()><a href="#" title="daily" id="daily" class="activeOverview">DAY</a></li>
@@ -104,7 +104,7 @@
 				</div>	
 			</div>
 
-			<button type="button" class="btn btn-primary btn-lg btn-block">NEW ENTRY</button>
+			<button type="button" class="btn btn-primary btn-lg btn-block flying">NEW ENTRY</button>
 		</div>
 	</div> <!-- end of page Overview -->
 
@@ -113,7 +113,7 @@
 		<!-- Categories -->
 		<div data-role="main" class="ui-content">
 			<div class="col-lg-6 col-lg-offset-3">
-				<div class="boxed">
+				<div class="boxed flying">
 					<div class="panel-group" id="accordion">
 						<div class="panel panel-default">
 							<div class="panel-heading panel-education">
@@ -226,16 +226,17 @@
 	</div>
 
 	<div class="container page activePage" id="pageAdvice"><!-- page Advice -->
-		<div data-role="main" class="ui-content">
-			<div class="boxed">
-				<h1> Der Butler rät:</h1>
-			</div>
-
-			<div id="logobig">
-				<img class="pull-right" src="assets/img/logo_white.png" alt="Logo">
-			</div>
+		<div class="boxed flying" id="butlersays">
+			<h1> Der Butler rät:</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
 		</div>
-	</div>
+
+	 	<div id="logobig">
+	 		<img class="pull-right pull-down flying" src="assets/img/logo_white.png" alt="Logo" id="butlerpic">
+	 	</div>
+	</div> <!-- end of page Advice -->
 
 	<!-- HEADER -->
 	<div data-role="header" class="navbar navbar-default navbar-fixed-top" data-role="header">
