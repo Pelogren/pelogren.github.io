@@ -18,6 +18,10 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,700,500italic,900,700italic,900italic);
 
+html {
+    height: 100%;
+}
+
 body {
   background-color: #d5d5d5;
     font-family: 'Roboto', sans-serif;
@@ -26,6 +30,7 @@ body {
     color: #555;
     -webkit-font-smoothing: antialiased;
     height: 100%;
+    overflow: hidden;
 }
 
 /* Titles */
@@ -82,13 +87,24 @@ li {
 
 
 /* ui page */
-.ui-page{
+.page {
+    min-height: 100%;
     padding-top: 60px;
     padding-bottom: 65px;
+    display: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 0;
+    bottom: 0;
 }
 
-.ui-page-active{
-    min-height: 100%;
+.activePage {
+    display: block;
+}
+
+#logobig > img{
+    width: 33%;
+    bottom: 65px;
 }
 
 /* Links */
@@ -160,9 +176,8 @@ a:after {
     margin: 2px;
 }
 
-.nav > li > a:focus{
-    color: #2A2931;
-    background: #F2F6F8;
+.nav > li > a:hover{
+    text-decoration: none;
 }
 
 #logo{
@@ -253,13 +268,14 @@ i {
 
 
 #budget-tabs > ul {
-    padding: 0 0 10px;
+    padding: 0;
     border-bottom: 1px solid #aaa;
     border-color: #eee;
 
 }
 
 #budget-tabs > ul > li {
+    padding: 0 0 10px;
     display: inline-block;
     width: 32%;
     text-align: center;
@@ -267,7 +283,11 @@ i {
 
 #budget-tabs > ul > li > a {
     text-decoration: none;
-    color: #aaa;
+    color: #53798D;
+}
+
+#budget-tabs > ul > li > a.activeOverview {
+    color: #344E5B;
 }
 
 
@@ -309,10 +329,6 @@ tbody tr:nth-child(2n-1) {
                         transition: all .125s ease-in-out;
                         }
 
-
-#budget-tabs > ul > li > a.activeOverview {
-                                        color: #2A2931;
-}
 
 .activeSite{
     background: #344E5B;

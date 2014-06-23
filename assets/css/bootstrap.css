@@ -4104,12 +4104,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding: 10px 15px;
 }
 
-.nav > li > a:hover,
-.nav > li > a:focus {
-  text-decoration: none;
-  background-color: #2A2931;
-}
-
 .nav > li.disabled > a {
   color: #999999;
 }
@@ -4120,13 +4114,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
-}
-
-.nav .open > a,
-.nav .open > a:hover,
-.nav .open > a:focus {
-  background-color: #2A2931;
-  border-color: #428bca;
 }
 
 .nav .nav-divider {
@@ -5939,7 +5926,7 @@ button.close {
 
 .modal {
   position: fixed;
-  top: 0;
+  top: 60px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -6000,7 +5987,7 @@ button.close {
 }
 
 .modal-backdrop.in {
-  opacity: 0.5;
+  opacity: 0.1;
   filter: alpha(opacity=50);
 }
 
