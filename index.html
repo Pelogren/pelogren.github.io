@@ -53,7 +53,7 @@
 </head>
 
 <body>
-	<div class="container page" id="pageOverview">
+	<div class="container page activePage" id="pageOverview">
 
 		<div data-role="main" class="ui-content">
 			<div class="boxed flying">
@@ -108,115 +108,105 @@
 	<div class="container page" id="pageCategories"><!-- page Categories -->
 
 		<!-- Categories -->
-		<div data-role="main" class="ui-content">
-			<div class="col-lg-6 col-lg-offset-3">
-				<div class="boxed flying">
-					<div class="panel-group" id="accordion">
-
-						
-							<div class="panel panel-default">
-						
-								<div class="panel-heading panel-education">
-								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-									<h2 class="panel-title">
-										<i class="fa  fa-graduation-cap"></i>  Education 
-										<ul class="panel-category-list">
-										<li class="pull-right"><i class="fa  fa-angle-down fa-2x"></i></li>
-									</ul>
-								</h2>
-								</a>
-							</div>
-							
-
-							<div id="collapseOne" class="panel-collapse collapse">
-								<div class="panel-body" id="panel-body-0">
-									<script>
-	 									$(document).ready(function(){
-	    								  $("#panel-body-0").append(createExpenseEntry(0)); 
-	   											 });
-	  								</script> 
-								</div>
-							</div>
+		<div class="boxed flying">
+			<div class="panel-group" id="accordion">
+				
+					<div class="panel panel-default">
+				
+						<div class="panel-heading panel-education">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+							<h2 class="panel-title">
+								<i class="fa  fa-graduation-cap"></i>  Education 
+								<ul class="panel-category-list">
+								<li class="pull-right"><i class="fa  fa-angle-down fa-2x"></i></li>
+							</ul>
+						</h2>
+						</a>
+					</div>
+					
+					<div id="collapseOne" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-0">
+							<script>
+									$(document).ready(function(){
+   								  $("#panel-body-0").append(createExpenseEntry(0)); 
+  											 });
+ 								</script> 
 						</div>
-
-						<div class="panel panel-default">
-							<div class="panel-heading panel-food">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-								<h2 class="panel-title">
-										<i class="fa  fa-spoon"></i>  Food 
-									
-									<ul class="panel-category-list">
-										
-										<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
-										
-									</ul>
-								</h2>
-								</a>
-							</div>
-							<div id="collapseTwo" class="panel-collapse collapse">
-								<div class="panel-body" id="panel-body-1">
-									<script>
- 										$(document).ready(function(){
-    								  		$("#panel-body-1").append(createExpenseEntry(1)); 
-   											 });
-  									</script> 
-								</div>
-							</div>
-						</div>
-
-						<div class="panel panel-default">
-							<div class="panel-heading panel-entertainment">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">	
-								<h2 class="panel-title">
-									
-										<i class="fa  fa-glass"></i> Entertainment 
-									
-									<ul class="panel-category-list">
-										<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
-									</ul>
-								</h2>
-								</a>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse">
-								<div class="panel-body" id="panel-body-2">
-																		<script>
- 										$(document).ready(function(){
-    								  		$("#panel-body-2").append(createExpenseEntry(2)); 
-   											 });
-  									</script> 
-								</div>
-							</div>
-						</div>
-
-						<div class="panel panel-default">
-							<div class="panel-heading panel-transportation">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-								<h2 class="panel-title">
-									
-										<i class="fa  fa-car"></i>  Transportation 
-									
-									<ul class="panel-category-list">
-										<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
-									</ul>
-								</h2>
-								</a>
-							</div>
-							<div id="collapseFour" class="panel-collapse collapse">
-								<div class="panel-body" id="panel-body-3">
-																		<script>
- 										$(document).ready(function(){
-    								  		$("#panel-body-3").append(createExpenseEntry(3)); 
-   											 });
-  									</script> 
-								</div>
-							</div>
-						</div>
-
-
 					</div>
 				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading panel-food">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+						<h2 class="panel-title">
+								<i class="fa  fa-spoon"></i>  Food 
+							
+							<ul class="panel-category-list">
+								
+								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+								
+							</ul>
+						</h2>
+						</a>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-1">
+							<script>
+									$(document).ready(function(){
+  								  		$("#panel-body-1").append(createExpenseEntry(1)); 
+ 											 });
+									</script> 
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading panel-entertainment">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">	
+						<h2 class="panel-title">
+							
+								<i class="fa  fa-glass"></i> Entertainment 
+							
+							<ul class="panel-category-list">
+								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+							</ul>
+						</h2>
+						</a>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-2">
+																<script>
+									$(document).ready(function(){
+  								  		$("#panel-body-2").append(createExpenseEntry(2)); 
+ 											 });
+									</script> 
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading panel-transportation">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+						<h2 class="panel-title">
+							
+								<i class="fa  fa-car"></i>  Transportation 
+							
+							<ul class="panel-category-list">
+								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+							</ul>
+						</h2>
+						</a>
+					</div>
+					<div id="collapseFour" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-3">
+																<script>
+									$(document).ready(function(){
+  								  		$("#panel-body-3").append(createExpenseEntry(3)); 
+ 											 });
+									</script> 
+						</div>
+					</div>
+				</div>
+
 			</div>
-		</div><!-- /row -->
+		</div>
 
 
 		<script>
@@ -236,10 +226,10 @@
 
 	</div>
 
-	<div class="container page activePage" id="pageAdvice"><!-- page Advice -->
+	<div class="container page" id="pageAdvice"><!-- page Advice -->
 			 	
 		<div class="boxed flying butlersays">
-			<div id="logobig">
+			<div class="logobig">
 	 			<img class="pull-right" src="assets/img/logo_black.png" alt="Logo" id="butlerpic">
 	 		</div>
 			<h1> BUTLER'S BEST ADVICE</h1>
@@ -247,7 +237,7 @@
 		</div>
 
 		<div class="boxed flying butlersays">
-			<div id="logobig">
+			<div class="logobig">
 	 			<img class="pull-right" src="assets/img/logo_black.png" alt="Logo" id="butlerpic">
 	 		</div>
 			<h1> BUTLER'S BEST ADVICE</h1>
@@ -255,7 +245,7 @@
 		</div>
 
 		<div class="boxed flying butlersays">
-			<div id="logobig">
+			<div class="logobig">
 	 			<img class="pull-right" src="assets/img/logo_black.png" alt="Logo" id="butlerpic">
 	 		</div>
 			<h1> BUTLER'S BEST ADVICE</h1>
@@ -263,7 +253,7 @@
 		</div>
 
 		<div class="boxed flying butlersays">
-			<div id="logobig">
+			<div class="logobig">
 	 			<img class="pull-right" src="assets/img/logo_black.png" alt="Logo" id="butlerpic">
 	 		</div>
 			<h1> BUTLER'S BEST ADVICE</h1>

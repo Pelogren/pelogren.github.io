@@ -103,15 +103,15 @@ li {
 }
 
 
-#logobig {
-    bottom: 70px;
-    position: absolute;
+.logobig {
+    margin: 0 0 5 15px;
 }
+
 #butlerpic {
     margin: 5px 5px 5px 15px;
 }
 
-#logobig > img{
+.logobig > img{
     width: 30%;
 
 }
@@ -150,6 +150,13 @@ li {
     box-shadow:1px 1px 2px #aaa;
     -webkit-transform: rotate(45deg);
 } 
+
+
+/* Categories */
+
+.panel {
+    font-size: 10pt;
+}
 
 
 /* Links */
@@ -366,8 +373,6 @@ i {
 
 table {
     border-collapse: collapse;
-
-    width: 100%;
     background: #fff;
 }
 
@@ -375,11 +380,12 @@ table {
 td, th {
         padding: 0.75em ;
         text-align: left;
-        }
+        width: 70%;
+}
 
 .listPrice {
-
     text-align: right;
+    width: 30%;
 }
 
 
@@ -392,14 +398,14 @@ th {
 
 
 tbody tr:nth-child(2n-1) {
-                        background-color: #f5f5f5;
-                        transition: all .125s ease-in-out;
-                        }
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
 
 input {
     border: none;
     background-color: transparent;
-
+    font-style: italic;
 }
 
 

@@ -5,7 +5,7 @@ google.setOnLoadCallback(drawVisualization);
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
       ['Category', 'Expenses Juno'],
-      ['Education',     39.90],
+      ['Education',     12.90],
       ['Food',      18.50],
       ['Entertainment',  20.00],
       ['Transportation',   15.00]
@@ -13,9 +13,10 @@ google.setOnLoadCallback(drawVisualization);
     var options = {
       colors:['#D95246','#2A2931','#53798D','#344E5B'],
       fontName:'Roboto',
-      chartArea:{left:20,top:10,width:'100%',height:'80%'},
+      chartArea:{left:10,top:10,width:'70%',height:'80%'},
       backgroundColor:'none',
-      legend: {position: 'right'}
+      pieSliceText: 'none',
+      legend: {position: 'labeled'}
     };
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
@@ -32,14 +33,13 @@ google.setOnLoadCallback(drawVisualization);
     var options = {
       title : 'Expenses last three months',
       vAxis: {title: "Expenses in €"},
-      hAxis: {title: "Month"},
       seriesType: "bars",
       series: {3: {type: "line"}},
       colors:['#D95246','#2A2931','#53798D','#344E5B'],
       fontName:'Roboto',
       backgroundColor:'none',
-      legend: {position: 'right'},
-      chartArea:{left:20,top:10,width:'70%',height:'80%'}
+      legend: {position: 'none'},
+      chartArea:{left:25,top:10,width:'70%',height:'80%'}
     };
     var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
     chart.draw(data, options);

@@ -78,7 +78,7 @@ function createExpenseEntry(category){
 		var begintable= "<table>";
 		var tablerows= "<thead><tr><th>Expense</th><th class=\"listPrice\">Price</th></tr></thead><tbody>";
 		var endtable= "</table>";
-		var addexpense= "<tr class=\"addexpense\" ><td><input id=\"newExpenseEntry\" type=\"text\" placeholder=\"Add new Expense...\" required></td><td class=\"listPrice\"><input class=\"listPrice\" id=\"newPriceEntry\" type=\"text\" placeholder=\"Price\" required></td></tr>";
+		var addexpense= "<tr class=\"addexpense\" ><td><input id=\"newExpenseEntry\" type=\"text\" placeholder=\"Add new Expense...\" required></td><td class=\"listPrice\"><input class=\"listPrice\" id=\"newPriceEntry\" type=\"text\" placeholder=\"...€\" required></td></tr>";
 		var addbutton= "<button  id=\"addbutton\" type=\"button\" class=\"btn btn-default\" onclick='addExpense("+category+")'><i class=\"fa fa-plus\"></i><span>add</span></button>"; 
 
 	for (var element in categories[category].expenses) {  //erstellt für jedes Element in Expenses einer bestimmten Kategorie (categorie) einen Eintrag
