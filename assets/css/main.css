@@ -92,7 +92,7 @@ li {
     padding-top: 60px;
     padding-bottom: 65px;
     display: none;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     top: 0;
     bottom: 0;
