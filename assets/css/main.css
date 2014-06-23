@@ -24,10 +24,8 @@ body {
     font-weight: 300;
     font-size: 16px;
     color: #555;
-    margin-top: 60px;
-
     -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
+    height: 100%;
 }
 
 /* Titles */
@@ -80,6 +78,17 @@ li {
 
 .light{
 
+}
+
+
+/* ui page */
+.ui-page{
+    padding-top: 60px;
+    padding-bottom: 65px;
+}
+
+.ui-page-active{
+    min-height: 100%;
 }
 
 /* Links */
@@ -199,6 +208,10 @@ i {
 	color: #F6F6F8; 
 }
 
+.fa-plus-dark {
+    color:#333;;
+}
+
 
 /* inner area */
 
@@ -252,6 +265,49 @@ i {
     color: #aaa;
 }
 
-#budget-tabs > ul > li > a.activeOverview {
-    color: #2A2931;
+
+.panel-category-list {
+    list-style: none;
+    display:inline;
 }
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 2em;
+    width: 100%;
+    background: #fff;
+}
+
+
+td, th {
+        padding: 0.75em ;
+        text-align: left;
+        }
+
+td.err {
+        background-color: #e992b9;
+        color: #333;
+        font-size: 1em;
+        text-align: center;
+        line-height: 1;
+             }
+th {
+    opacity:0.8;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+}
+
+
+tbody tr:nth-child(2n-1) {
+                        background-color: #f5f5f5;
+                        transition: all .125s ease-in-out;
+                        }
+
+
+#budget-tabs > ul > li > a.activeOverview {
+                                        color: #2A2931;
+}
+
+
+

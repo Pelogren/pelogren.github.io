@@ -15,7 +15,7 @@
 
   	<!-- Bootstrap core JavaScript
   	================================================== -->
-  	<!-- Placed at the end of the document so the pages load faster -->
+  	<!-- Placed at the end of the document so the pages load faster NOT^^-->
   	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   	<script src="assets/js/bootstrap.min.js"></script>
 
@@ -32,6 +32,9 @@
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script type="text/javascript" src="assets/js/googleVisualisation.js"></script>
 
+	<!-- our scripts -->
+	<script type="text/javascript" src="assets/js/categories.js"></script>
+
 	<!-- jQuery -->
   	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
   	<script type="text/javascript" src="assets/js/myjQuery.js"></script>
@@ -39,7 +42,7 @@
 </head>
 
 <body>
-	<div class="container" data-role="page" id="pageone">
+	<div class="container" data-role="page" id="pageOverview">
 
 		<div data-role="main" class="ui-content">
 			<div class="boxed">
@@ -92,19 +95,10 @@
 			</div>
 
 			<button type="button" class="btn btn-primary btn-lg btn-block">NEW ENTRY</button>
-
-			<div class="boxed">
-				<h1>Monthly Budget</h1>
-			</div>
-
-			<div class="boxed">
-				<h1>Period Balance</h1>
-				<div id="chart_div"></div>
-			</div>
 		</div>
-	</div> <!-- end of page one -->
+	</div> <!-- end of page Overview -->
 
-	<div class="container" data-role="page" id="pagetwo"><!-- page two -->
+	<div class="container" data-role="page" id="pageCategories"><!-- page Categories -->
 
 		<!-- Categories -->
 		<div data-role="main" class="ui-content">
@@ -114,14 +108,23 @@
 						<div class="panel panel-default">
 							<div class="panel-heading panel-education">
 								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-										<i class="fa  fa-graduation-cap"></i>  Education </li>
-									</a>
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+										<i class="fa  fa-graduation-cap"></i>  Education 
+										</a>
+										<ul class="panel-category-list">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+										<li class="pull-right"><i class="fa fa-plus-square-o fa-2x"></i></li>
+										</a>
+									</ul>
 								</h2>
 							</div>
-							<div id="collapseOne" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<span> Bier 6€ </span>
+							<div id="collapseOne" class="panel-collapse collapse">
+								<div class="panel-body" id="panel-body-education">
+									<script>
+	 									$(document).ready(function(){
+	    								  $("#panel-body-education").append(createExpenseEntry(0)); 
+	   											 });
+	  								</script> 
 								</div>
 							</div>
 						</div>
@@ -130,13 +133,22 @@
 							<div class="panel-heading panel-food">
 								<h2 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-										<i class="fa  fa-spoon"></i>  Food </li>
+										<i class="fa  fa-spoon"></i>  Food 
 									</a>
+									<ul class="panel-category-list">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+										<li class="pull-right"><i class="fa fa-plus-square-o fa-2x"></i></li>
+										</a>
+									</ul>
 								</h2>
 							</div>
 							<div id="collapseTwo" class="panel-collapse collapse">
-								<div class="panel-body">
-									<span> Bier 6€ </span>
+								<div class="panel-body" id="panel-body-food">
+									<script>
+ 										$(document).ready(function(){
+    								  		$("#panel-body-food").append(createExpenseEntry(1)); 
+   											 });
+  									</script> 
 								</div>
 							</div>
 						</div>
@@ -145,13 +157,22 @@
 							<div class="panel-heading panel-entertainment">
 								<h2 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-										<i class="fa  fa-glass"></i> Entertainment </li>
+										<i class="fa  fa-glass"></i> Entertainment 
 									</a>
+									<ul class="panel-category-list">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+										<li class="pull-right"><i class="fa fa-plus-square-o fa-2x"></i></li>
+										</a>
+									</ul>
 								</h2>
 							</div>
 							<div id="collapseThree" class="panel-collapse collapse">
-								<div class="panel-body">
-									<span> Bier 6€ </span>
+								<div class="panel-body" id="panel-body-entertainment">
+																		<script>
+ 										$(document).ready(function(){
+    								  		$("#panel-body-entertainment").append(createExpenseEntry(2)); 
+   											 });
+  									</script> 
 								</div>
 							</div>
 						</div>
@@ -160,13 +181,22 @@
 							<div class="panel-heading panel-transportation">
 								<h2 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-										<i class="fa  fa-car"></i>  Transportation </li>
+										<i class="fa  fa-car"></i>  Transportation 
 									</a>
+									<ul class="panel-category-list">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+										<li class="pull-right"><i class="fa fa-plus-square-o fa-2x"></i></li>
+										</a>
+									</ul>
 								</h2>
 							</div>
 							<div id="collapseFour" class="panel-collapse collapse">
-								<div class="panel-body">
-									<span> Bier 6€ </span>
+								<div class="panel-body" id="panel-body-transportation">
+																		<script>
+ 										$(document).ready(function(){
+    								  		$("#panel-body-transportation").append(createExpenseEntry(3)); 
+   											 });
+  									</script> 
 								</div>
 							</div>
 						</div>
@@ -178,33 +208,37 @@
 		</div><!-- /row -->
 		<!-- Categories -->	
 
-	</div> <!-- end of page two -->
+	</div> <!-- end of page Categories -->
 
-	<header>
-		<!-- HEADER -->
-		<div class="navbar navbar-default navbar-fixed-top" data-role="header">
-			<div class="container">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#"><img id="logo" src="assets/img/logo_white.png"> <p id="brand-name">BUDGET BUTLER</p></a>
-					<a class="pull-right" href="#"><i class="fa fa-ellipsis-v fa-2x"></i> </a>
-				</div>
+
+	<div class="container" data-role="page" id="pageBudgets"><!-- page Budgets -->
+
+	</div>
+
+	<div class="container" data-role="page" data-dialog="true" id="pageAdvice"><!-- page Advice -->
+
+	</div>
+
+	<!-- HEADER -->
+	<div data-role="header" class="navbar navbar-default navbar-fixed-top" data-role="header">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><img id="logo" src="assets/img/logo_white.png"> <p id="brand-name">BUDGET BUTLER</p></a>
+				<a class="pull-right" href="#"><i class="fa fa-ellipsis-v fa-2x"></i> </a>
 			</div>
-		</div>  	
-	</header><!-- /header -->
+		</div>
+	</div><!-- /header -->
 
 	
-	<footer>
-		<!-- FOOTER -->
-		<div id="footer" class="navbar-default">
-			<ul class="nav">
-				<li><a href="#"><i class="fa fa-bar-chart-o fa-2x"></i> <br> Overview </a></li>
-				<li><a  href="#pagetwo" data-transition="slidedown"><i class="fa fa-tags fa-2x"></i> <br> Categories </a></li>
-				<li><a href="#"><i class="fa fa-money fa-2x"></i> <br> Budgets </a></li>
-				<li><a href="#"><i class="fa fa-lightbulb-o fa-2x"></i> <br> Advice </a></li>
-			</ul>
-		</div>
-	</footer>
+	<!-- FOOTER -->
+	<div data-role="footer" id="footer" class="navbar-default">
+		<ul class="nav">
+			<li><a href="#pageOverview"><i class="fa fa-bar-chart-o fa-2x"></i> <br> Overview </a></li>
+			<li><a href="#pageCategories" data-transition="slidedown"><i class="fa fa-tags fa-2x"></i> <br> Categories </a></li>
+			<li><a href="#pageBudgets"><i class="fa fa-money fa-2x"></i> <br> Budgets </a></li>
+			<li><a href="#pageAdvice"><i class="fa fa-lightbulb-o fa-2x"></i> <br> Advice </a></li>
+		</ul>
+	</div><!-- /footer -->
 
-  	<!-- jQuery -->
   </body>
   </html>

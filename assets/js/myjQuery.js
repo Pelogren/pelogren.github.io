@@ -26,7 +26,7 @@ function toDaily() {
  };
 
 
-$("#dailyOverview").on("swipeleft",toMonthly(););
-$("#monthlyOverview").on("swipeleft",toPeriod(););
-$("#periodOverview").on("swiperight",toMonthly(););
-$("#monthlyOverview").on("swiperight",toDaily(););
+$("#dailyOverview").on("swipeleft",toMonthly());
+$("#monthlyOverview").on("swipeleft",toPeriod());
+$("#periodOverview").on("swiperight",toMonthly());
+$("#monthlyOverview").on("swiperight",toDaily());
