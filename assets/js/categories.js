@@ -71,29 +71,41 @@ var categories = [
 				];
 
 
+
+
 function createExpenseEntry(category){
 
 		var begintable= "<table>";
-		var tablerows= "<thead><tr><th>Expense</th><th>Price</th></tr></thead><tbody>";
+		var tablerows= "<thead><tr><th>Expense</th><th class=\"listPrice\">Price</th></tr></thead><tbody>";
 		var endtable= "</table>";
-		var addexpense= "<tr class=\"addexpense\" onclick='addExpense("+category+")'><td><b>Add new Expense</b></td><td><i class=\"fa fa-plus-dark fa-plus-square-o fa-2x\"></i></td></tr>";
-	
+		var addexpense= "<tr class=\"addexpense\" ><td><input id=\"newExpenseEntry\" type=\"text\" placeholder=\"Add new Expense...\" required></td><td class=\"listPrice\"><input class=\"listPrice\" id=\"newPriceEntry\" type=\"text\" placeholder=\"Price\" required></td></tr>";
+		var addbutton= "<button  id=\"addbutton\" type=\"button\" class=\"btn btn-default\" onclick='addExpense("+category+")'><i class=\"fa fa-plus\"></i><span>add</span></button>"; 
+
 	for (var element in categories[category].expenses) {  //erstellt für jedes Element in Expenses einer bestimmten Kategorie (categorie) einen Eintrag
 
-		var tablerow = "<tr><td>" + categories[category].expenses[element].name + "</td><td>" + categories[category].expenses[element].price + "</td></tr>";
+		var tablerow = "<tr><td>" + categories[category].expenses[element].name + "</td><td class=\"listPrice\">" + categories[category].expenses[element].price + "</td></tr>";
 
 		var tablerows= tablerows + tablerow;
 	}
 
-		var table = "<div>" + begintable + tablerows + "</tbody>" + addexpense + endtable + "</div>";
+		var table = "<div>" + begintable + tablerows + addexpense + "</tbody>" + endtable + addbutton +"</div>";
 		return table;
 };
 
 
-// function addExpense (category) {
-// 	var day = new Date();
+function addExpense (category) {
+ 	var day = new Date();
+ 	var expenseEntry = document.getElementById('newExpenseEntry').value;
+ 	var expensePrice = document.getElementById('newPriceEntry').value;
 
-// 	categories[category].expenses.push({name:'test', price:'0€', date:day,});
-// 	$("#panel-body-education").html(createExpenseEntry(category));
-// };
+	categories[category].expenses.push({name: expenseEntry, price: expensePrice + "€", date:day,});
+	$("#panel-body-"+category).html(createExpenseEntry(category));
+ };
+
+
+
+
+
+
+
 

@@ -28,6 +28,7 @@
   	<!-- Placed at the end of the document so the pages load faster NOT^^-->
   	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   	<script src="assets/js/bootstrap.min.js"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 	<!-- Custom styles for this template -->
 	<link href="assets/css/main.css" rel="stylesheet">
@@ -64,8 +65,6 @@
 					</ul>
 				</div>
 				<div id="dailyOverview">
-
-					<h1>Daily Budget</h1>
 					<h2>your daily Budget on</h2>
 
 					<div class="progress">
@@ -94,12 +93,10 @@
 				</div>
 
 				<div id="monthlyOverview" hidden>
-					<h1>Monthly Budget</h1>
 					<div id="piechart"></div>
 				</div>	
 
 				<div id="periodOverview" hidden>
-					<h1>Period Budget</h1>
 					<div id="chart_div"></div>
 				</div>	
 			</div>
@@ -115,24 +112,27 @@
 			<div class="col-lg-6 col-lg-offset-3">
 				<div class="boxed flying">
 					<div class="panel-group" id="accordion">
-						<div class="panel panel-default">
-							<div class="panel-heading panel-education">
-								<h2 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+
+						
+							<div class="panel panel-default">
+						
+								<div class="panel-heading panel-education">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+									<h2 class="panel-title">
 										<i class="fa  fa-graduation-cap"></i>  Education 
-										</a>
 										<ul class="panel-category-list">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-										<li class="pull-right"><i class="fa fa-plus-square-o fa-2x"></i></li>
-										</a>
+										<li class="pull-right"><i class="fa  fa-angle-down fa-2x"></i></li>
 									</ul>
 								</h2>
+								</a>
 							</div>
+							
+
 							<div id="collapseOne" class="panel-collapse collapse">
-								<div class="panel-body" id="panel-body-education">
+								<div class="panel-body" id="panel-body-0">
 									<script>
 	 									$(document).ready(function(){
-	    								  $("#panel-body-education").append(createExpenseEntry(0)); 
+	    								  $("#panel-body-0").append(createExpenseEntry(0)); 
 	   											 });
 	  								</script> 
 								</div>
@@ -141,22 +141,23 @@
 
 						<div class="panel panel-default">
 							<div class="panel-heading panel-food">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
 								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
 										<i class="fa  fa-spoon"></i>  Food 
-									</a>
+									
 									<ul class="panel-category-list">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-										<li class="pull-right"><i class="fa fa-plus-square-o fa-2x"></i></li>
-										</a>
+										
+										<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+										
 									</ul>
 								</h2>
+								</a>
 							</div>
 							<div id="collapseTwo" class="panel-collapse collapse">
-								<div class="panel-body" id="panel-body-food">
+								<div class="panel-body" id="panel-body-1">
 									<script>
  										$(document).ready(function(){
-    								  		$("#panel-body-food").append(createExpenseEntry(1)); 
+    								  		$("#panel-body-1").append(createExpenseEntry(1)); 
    											 });
   									</script> 
 								</div>
@@ -165,22 +166,22 @@
 
 						<div class="panel panel-default">
 							<div class="panel-heading panel-entertainment">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">	
 								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+									
 										<i class="fa  fa-glass"></i> Entertainment 
-									</a>
+									
 									<ul class="panel-category-list">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-										<li class="pull-right"><i class="fa fa-plus-square-o fa-2x"></i></li>
-										</a>
+										<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
 									</ul>
 								</h2>
+								</a>
 							</div>
 							<div id="collapseThree" class="panel-collapse collapse">
-								<div class="panel-body" id="panel-body-entertainment">
+								<div class="panel-body" id="panel-body-2">
 																		<script>
  										$(document).ready(function(){
-    								  		$("#panel-body-entertainment").append(createExpenseEntry(2)); 
+    								  		$("#panel-body-2").append(createExpenseEntry(2)); 
    											 });
   									</script> 
 								</div>
@@ -189,22 +190,22 @@
 
 						<div class="panel panel-default">
 							<div class="panel-heading panel-transportation">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
 								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+									
 										<i class="fa  fa-car"></i>  Transportation 
-									</a>
+									
 									<ul class="panel-category-list">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-										<li class="pull-right"><i class="fa fa-plus-square-o fa-2x"></i></li>
-										</a>
+										<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
 									</ul>
 								</h2>
+								</a>
 							</div>
 							<div id="collapseFour" class="panel-collapse collapse">
-								<div class="panel-body" id="panel-body-transportation">
+								<div class="panel-body" id="panel-body-3">
 																		<script>
  										$(document).ready(function(){
-    								  		$("#panel-body-transportation").append(createExpenseEntry(3)); 
+    								  		$("#panel-body-3").append(createExpenseEntry(3)); 
    											 });
   									</script> 
 								</div>
@@ -216,6 +217,16 @@
 				</div>
 			</div>
 		</div><!-- /row -->
+
+
+		<script>
+			$(document).ready(function(){
+  				$("#newExpenseEntry").focus(function(){
+    			$("#addbutton").css("display","block");
+  			});
+		});
+
+		</script>
 		<!-- Categories -->	
 
 	</div> <!-- end of page Categories -->
@@ -236,6 +247,39 @@
 	 	<div id="logobig">
 	 		<img class="pull-right pull-down flying" src="assets/img/logo_white.png" alt="Logo" id="butlerpic">
 	 	</div>
+	 	
+		<div class="boxed flying butlersays">
+			<div id="logobig">
+	 			<img class="pull-right" src="assets/img/logo_black.png" alt="Logo" id="butlerpic">
+	 		</div>
+			<h1> BUTLER'S BEST ADVICE</h1>
+			<p>Dogs have no money. Isn’t that amazing? They’re broke their entire lives. But they get through. You know why dogs have no money? .. No Pockets.</p> 
+		</div>
+
+		<div class="boxed flying butlersays">
+			<div id="logobig">
+	 			<img class="pull-right" src="assets/img/logo_black.png" alt="Logo" id="butlerpic">
+	 		</div>
+			<h1> BUTLER'S BEST ADVICE</h1>
+			<p>Money is not the most important thing in the world. Love is. Fortunately, I love money.</p> 
+		</div>
+
+		<div class="boxed flying butlersays">
+			<div id="logobig">
+	 			<img class="pull-right" src="assets/img/logo_black.png" alt="Logo" id="butlerpic">
+	 		</div>
+			<h1> BUTLER'S BEST ADVICE</h1>
+			<p>October: This is one of the particularly dangerous months to invest in stocks. Other dangerous months are July, January, September, April, November, May, March, June, December, August and February.</p> 
+		</div>
+
+		<div class="boxed flying butlersays">
+			<div id="logobig">
+	 			<img class="pull-right" src="assets/img/logo_black.png" alt="Logo" id="butlerpic">
+	 		</div>
+			<h1> BUTLER'S BEST ADVICE</h1>
+			<p>Undermine the entire economic structure of society by leaving the pay toilet door ajar so the next person can get in free.</p> 
+		</div>
+
 	</div> <!-- end of page Advice -->
 
 	<!-- HEADER -->

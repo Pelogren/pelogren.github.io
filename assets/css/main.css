@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #333;
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 h1 {
@@ -68,7 +68,7 @@ h4 {
 /* Paragraph & Typographic */
 p {
     line-height: 28px;
-    margin-bottom: 25px;
+    margin-bottom: 0;
     font-size: 16px;
     text-align: justify;
 }
@@ -102,13 +102,27 @@ li {
     display: block;
 }
 
+
 #logobig {
     bottom: 70px;
     position: absolute;
 }
+#butlerpic {
+    margin: 5px 5px 5px 15px;
+}
 
 #logobig > img{
     width: 30%;
+
+}
+
+.butlersays {
+    overflow-x: hidden;
+    overflow-y: scroll; 
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 #butlersays {
@@ -352,7 +366,7 @@ i {
 
 table {
     border-collapse: collapse;
-    margin-bottom: 2em;
+
     width: 100%;
     background: #fff;
 }
@@ -363,13 +377,12 @@ td, th {
         text-align: left;
         }
 
-td.err {
-        background-color: #e992b9;
-        color: #333;
-        font-size: 1em;
-        text-align: center;
-        line-height: 1;
-             }
+.listPrice {
+
+    text-align: right;
+}
+
+
 th {
     opacity:0.8;
     font-weight: bold;
@@ -383,10 +396,26 @@ tbody tr:nth-child(2n-1) {
                         transition: all .125s ease-in-out;
                         }
 
+input {
+    border: none;
+    background-color: transparent;
+
+}
+
 
 .activeSite{
     background: #344E5B;
 }
 
+
+#addbutton {
+    display: none;
+    width:100%;
+}
+
+#addbutton i {
+    color: #333;
+
+}
 
 
