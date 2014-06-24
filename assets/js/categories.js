@@ -103,10 +103,13 @@ function addExpense() {
 
 	$('#changeable').removeClass().addClass('fa fa-spinner fa-spin');
 	setTimeout(function(){$('#changeable').removeClass().addClass('glyphicon glyphicon-ok').css('color','#A2CFA5');}, 1500);
+	setTimeout(recolor ,2500);
  };
 
 function recolor() {
+	$('#addExpenseModal').modal('hide');
 	$('#changeable').removeAttr('style');
+	document.addExpenseForm.reset();
 };
 
 

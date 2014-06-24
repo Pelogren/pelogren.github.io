@@ -29,6 +29,7 @@
   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   	<script src="assets/js/bootstrap.min.js"></script> 	
+  	<script src="assets/js/bootstrap-slider.js"></script> 	
 
 	<!-- Custom styles for this template -->
 	<link href="assets/css/main.css" rel="stylesheet">
@@ -193,8 +194,26 @@
 
 
 	<div class="container page" id="pageBudgets"><!-- page Budgets -->
+		<div class="boxed flying">
+			<h1>SET YOUR MONTHLY BUDGET</h1>
+		</div>
+			<div class="boxed flying panel-heading panel-default">
+				<div class="panel-heading panel-food">			
+						<h2 class="panel-title">
+							<i class="fa  fa-spoon"></i> Education
+							<input type="number" class="pull-right form-control" id="inputBudgetLimit" placeholder="120€">
+						</h2>
+			
+				</div>
 
-	</div>
+			</div>
+
+	</div>	
+
+
+
+
+	
 
 	<div class="container page" id="pageAdvice"><!-- page Advice -->
 			 	
@@ -226,7 +245,7 @@
 							<li class="notImplemented"><i class="fa fa-camera"></i><a href="#" title="photograph" id="photograph">PHOTO</a></li>
 						</ul>
 					</div>
-					<form class="form-horizontal" role="form">
+					<form class="form-horizontal" role="form" name="addExpenseForm">
 						<div class="form-group">
 							<label for="inputName" class="col-sm-2 control-label">Name</label>
 							<div class="col-sm-10">
@@ -264,8 +283,12 @@
 				</div>
 
 				<div class="modal-footer">
-					<button onclick='recolor()'class="btn btn-default" data-dismiss="modal">CLOSE <span class="glyphicon glyphicon-remove"></span></button>
+
+					
+
+					<button onclick='recolor()'class="btn btn-default">CLOSE <span class="glyphicon glyphicon-remove"></span></button>
 					<button onclick='addExpense()' class="btn btn-default">ADD <span id="changeable" class="glyphicon glyphicon-ok"></span></button>
+
       			</div>
 	    	</div>
 	  	</div>
@@ -335,7 +358,7 @@
         		<p>A team of highly trained monkeys has been dispatched to deal with this situation</p>
 	      	</div>
 	      		<div class="modal-footer">
-	        		<button type="button" class="btn btn-default" data-dismiss="modal">CLOSE<span class="glyphicon glyphicon-ok"></span></button>
+	        		<button type="button" class="btn btn-default" data-dismiss="modal">CLOSE<span class="glyphicon glyphicon-remove"></span></button>
 	      		</div>
 	    	</div>
 	  	</div>
