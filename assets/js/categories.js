@@ -92,9 +92,6 @@ function createExpenseEntry(category){
 		return table;
 };
 
-
-
-
 function addExpense() {
  	var day = new Date();
  	var expenseEntry = document.getElementById('inputName').value;
@@ -103,8 +100,13 @@ function addExpense() {
 
 	categories[category].expenses.push({name: expenseEntry, price: expensePrice + "€", date:day,});
 	$("#panel-body-"+category).html(createExpenseEntry(category));
+
+	$('#changeable').removeClass().addClass('fa fa-spinner fa-spin');
+	setTimeout(function(){$('#changeable').removeClass().addClass('glyphicon glyphicon-ok').css('color','#A2CFA5');}, 1500);
  };
 
-
+function recolor() {
+	$('#changeable').removeAttr('style');
+};
 
 
