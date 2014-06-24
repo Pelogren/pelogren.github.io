@@ -1,6 +1,7 @@
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);
 google.setOnLoadCallback(drawVisualization);
+
       
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
@@ -13,7 +14,9 @@ google.setOnLoadCallback(drawVisualization);
     var options = {
       colors:['#D95246','#2A2931','#53798D','#344E5B'],
       fontName:'Roboto',
-      chartArea:{left:10,top:10,width:'70%',height:'80%'},
+
+      chartArea:{left:0,top:20,width:'100%',height:'80%'},
+
       backgroundColor:'none',
       pieSliceText: 'none',
       legend: {position: 'labeled'}
@@ -34,14 +37,38 @@ google.setOnLoadCallback(drawVisualization);
       title : 'Expenses last three months',
       vAxis: {title: "Expenses in €"},
       seriesType: "bars",
-      series: {3: {type: "line"}},
       colors:['#D95246','#2A2931','#53798D','#344E5B'],
       fontName:'Roboto',
       backgroundColor:'none',
       legend: {position: 'none'},
-      chartArea:{left:25,top:10,width:'70%',height:'80%'}
+      chartArea:{left:0,top:10,width:'75%',height:'80%'}
     };
     var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
     chart.draw(data, options);
+
+    var data1 = google.visualization.arrayToDataTable([
+  ['Category','Expense', { role: 'style' }, { role: 'annotation' }],
+  ['Education',13.94, '#D95246', 'Education'],           
+  ['Food' ,18.9, '#2A2931', 'Food'],            
+  ['Entertainment', 19.30, '#53798D','Entertainment'],
+  ['Transportation', 12.45, '#344E5B','Transportation'] 
+      ]);
+ var options1 ={
+            width:600, height:400,
+            vAxis: {textPosition: "none"},
+            hAxis: {title: "Euro"},
+            chartArea:{left:0,top:10,width:'40%',height:'100%'},
+            fontName:'Roboto',
+            backgroundColor:'none',
+            legend: {position: 'none'}
+           };
+  // Create and draw the visualization.
+  var chart1= new google.visualization.BarChart(document.getElementById('visualization')).
+      draw(data1,options1);
   }
+
+
+  
+
+
 

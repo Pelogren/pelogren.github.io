@@ -5987,7 +5987,7 @@ button.close {
 }
 
 .modal-backdrop.in {
-  opacity: 0.1;
+  opacity: 0.5;
   filter: alpha(opacity=50);
 }
 

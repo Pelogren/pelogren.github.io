@@ -78,8 +78,8 @@ function createExpenseEntry(category){
 		var begintable= "<table>";
 		var tablerows= "<thead><tr><th>Expense</th><th class=\"listPrice\">Price</th></tr></thead><tbody>";
 		var endtable= "</table>";
-		var addexpense= "<tr class=\"addexpense\" ><td><input id=\"newExpenseEntry\" type=\"text\" placeholder=\"Add new Expense...\" required></td><td class=\"listPrice\"><input class=\"listPrice\" id=\"newPriceEntry\" type=\"text\" placeholder=\"...€\" required></td></tr>";
-		var addbutton= "<button  id=\"addbutton\" type=\"button\" class=\"btn btn-default\" onclick='addExpense("+category+")'><i class=\"fa fa-plus\"></i><span>add</span></button>"; 
+		//var addexpense= "<tr class=\"addexpense\" ><td><input id=\"newExpenseEntry\" type=\"text\" placeholder=\"Add new Expense...\" required></td><td class=\"listPrice\"><input class=\"listPrice\" id=\"newPriceEntry\" type=\"text\" placeholder=\"...€\" required></td></tr>";
+		var addbutton= "<button type=\"button\" class=\"btn btn-primary btn-lg btn-block flying\" data-toggle=\"modal\" data-target=\"#addExpenseModal\">ADD NEW EXPENSE</button>"; 
 
 	for (var element in categories[category].expenses) {  //erstellt für jedes Element in Expenses einer bestimmten Kategorie (categorie) einen Eintrag
 
@@ -88,22 +88,22 @@ function createExpenseEntry(category){
 		var tablerows= tablerows + tablerow;
 	}
 
-		var table = "<div>" + begintable + tablerows + addexpense + "</tbody>" + endtable + addbutton +"</div>";
+		var table = "<div>" + begintable + tablerows +  "</tbody>" + endtable + addbutton +"</div>";
 		return table;
 };
 
 
-function addExpense (category) {
+
+
+function addExpense() {
  	var day = new Date();
- 	var expenseEntry = document.getElementById('newExpenseEntry').value;
- 	var expensePrice = document.getElementById('newPriceEntry').value;
+ 	var expenseEntry = document.getElementById('inputName').value;
+ 	var expensePrice = document.getElementById('inputPrice').value;
+ 	var category = document.getElementById('inputCategory').value;
 
 	categories[category].expenses.push({name: expenseEntry, price: expensePrice + "€", date:day,});
 	$("#panel-body-"+category).html(createExpenseEntry(category));
  };
-
-
-
 
 
 

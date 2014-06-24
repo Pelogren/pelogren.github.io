@@ -365,6 +365,40 @@ i {
     color: #344E5B;
 }
 
+/* Tabs for Entry swipe */
+
+#entry-tabs{
+    width: 100%;
+}
+
+
+#entry-tabs > ul {
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    border-color: #eee;
+
+}
+
+#entry-tabs > ul > li {
+    padding: 0 0 10px;
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+}
+
+#entry-tabs > ul > li > i {
+    color: #53798D;
+}
+
+#entry-tabs > ul > li > a {
+    text-decoration: none;
+    color: #53798D;
+}
+
+#entry-tabs > ul > li > a.activeOverview {
+    color: #344E5B;
+}
+
 
 .panel-category-list {
     list-style: none;
@@ -374,6 +408,7 @@ i {
 table {
     border-collapse: collapse;
     background: #fff;
+    width: 100%;
 }
 
 
@@ -422,6 +457,18 @@ input {
 #addbutton i {
     color: #333;
 
+}
+
+.modal-header {
+    background-color: #2A2931;
+}
+
+.modal-footer {
+    background-color: #2A2931;
+}
+
+button.close {
+    color: #fff;
 }
 
 
