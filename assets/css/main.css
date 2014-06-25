@@ -308,7 +308,7 @@ i {
 
 .flying:nth-child(even){
   -webkit-animation-name:fly-in-from-right;
-  -webkit-animation-delay:.4s;
+  -webkit-animation-delay:.3s;
   -webkit-transform-origin:top right;
 }
 

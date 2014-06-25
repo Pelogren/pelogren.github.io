@@ -97,15 +97,10 @@ function addExpense() {
  	var day = new Date();
  	var expenseEntry = document.getElementById('inputName').value;
  	var expensePrice = document.getElementById('inputPrice').value;
- 	var category = document.getElementById('inputCategory').value;
- 	var sum = document.getElementById('totalsum').value;
- 	 
+ 	var category = document.getElementById('inputCategory').value; 
 
 	categories[category].expenses.push({name: expenseEntry, price: expensePrice, date:day,});
 	$("#panel-body-"+category).html(createExpenseEntry(category));
-
-	$("#totalsum").html(sum + expensePrice);
-
 
 	$('#changeable').removeClass().addClass('fa fa-spinner fa-spin');
 	setTimeout(function(){$('#changeable').removeClass().addClass('glyphicon glyphicon-ok').css('color','#A2CFA5');}, 1500);

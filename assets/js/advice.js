@@ -15,5 +15,7 @@ var advices = [
 // function to change the advice displayed
 function changeAdvice () {
 	var content = advices[Math.floor(Math.random()*advices.length)];
+	$('#adviceBox').hide();
 	$('#advice').html(content);
+	setTimeout(function(){$('#adviceBox').show();},1);
 }
