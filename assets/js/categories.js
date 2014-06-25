@@ -5,15 +5,15 @@ var categories = [
 							limit: '100',
 							expenses: [ 
 										{name: 'Bear Neurowissenschaften',
-										 price: '98.90 €',
+										 price: 98.90,
 										 date: '10.6.14',
 										},
 										{name: 'Schöning Theo. Informatik',
-										 price: '19.90 €',
+										 price: 19.90,
 										 date: '14.6.14',
 										},
 										{name: 'Bleistift',
-										 price: '0.90 €',
+										 price: 0.90,
 										 date: '16.6.14',
 										}
 										]
@@ -26,15 +26,15 @@ var categories = [
 							limit: '220',
 							expenses: [ 
 										{name: 'Einkauf Aldi',
-										 price: '17.96 €',
+										 price: 17.96,
 										 date: '11.6.14',
 										},
 										{name: 'Döner',
-										 price: '3.50 €',
+										 price: 3.50,
 										 date: '14.6.14',
 										},
 										{name: 'Einkauf Rewe',
-										 price: '20.50 €',
+										 price: 20.50 ,
 										 date: '16.6.14',
 										}
 										]
@@ -45,11 +45,11 @@ var categories = [
 							limit: '80',
 							expenses: [ 
 										{name: 'Biergarten',
-										 price: "17.60 €",
+										 price: 17.60,
 										 date: '5.6.14',
 										},
 										{name: 'Kino mit James',
-										 price: "13.50 €",
+										 price: 13.50,
 										 date: '14.6.14',
 										}
 										]},
@@ -59,11 +59,11 @@ var categories = [
 							limit: '80',
 							expenses: [ 
 										{name: 'Semesterticket SS14',
-										 price: '141.00 €',
+										 price: 141.00,
 										 date: '5.6.14',
 										},
 										{name: 'Taxi Ulm',
-										 price: '13.50 €',
+										 price: 13.50,
 										 date: '11.6.14',
 										}
 
@@ -78,17 +78,18 @@ function createExpenseEntry(category){
 		var begintable= "<table>";
 		var tablerows= "<thead><tr><th>Expense</th><th class=\"listPrice\">Price</th></tr></thead><tbody>";
 		var endtable= "</table>";
-		//var addexpense= "<tr class=\"addexpense\" ><td><input id=\"newExpenseEntry\" type=\"text\" placeholder=\"Add new Expense...\" required></td><td class=\"listPrice\"><input class=\"listPrice\" id=\"newPriceEntry\" type=\"text\" placeholder=\"...€\" required></td></tr>";
+		var sum= 0; 
 		var addbutton= "<button type=\"button\" class=\"btn btn-primary btn-lg btn-block flying\" data-toggle=\"modal\" data-target=\"#addExpenseModal\">ADD NEW EXPENSE</button>"; 
 
 	for (var element in categories[category].expenses) {  //erstellt für jedes Element in Expenses einer bestimmten Kategorie (categorie) einen Eintrag
-
-		var tablerow = "<tr><td>" + categories[category].expenses[element].name + "</td><td class=\"listPrice\">" + categories[category].expenses[element].price + "</td></tr>";
+		var sum= sum + categories[category].expenses[element].price;
+		var tablerow = "<tr><td>" + categories[category].expenses[element].name + "</td><td class=\"listPrice\">" + categories[category].expenses[element].price + " €</td></tr>";
 
 		var tablerows= tablerows + tablerow;
 	}
-
-		var table = "<div>" + begintable + tablerows +  "</tbody>" + endtable + addbutton +"</div>";
+		var sum =  Math.round(sum * Math.pow(10, 2)) / Math.pow(10, 2);
+		var summedup= "<tr id=\"sum\"><td><span><b>Total Expenses 06/14</b></span></td><td id=\"totalsum\" class=\"listPrice\"><b>"+sum+" €</b></td></tr>";
+		var table = "<div>" + begintable + tablerows +  summedup + "</tbody>" + endtable + addbutton +"</div>";
 		return table;
 };
 
@@ -97,9 +98,14 @@ function addExpense() {
  	var expenseEntry = document.getElementById('inputName').value;
  	var expensePrice = document.getElementById('inputPrice').value;
  	var category = document.getElementById('inputCategory').value;
+ 	var sum = document.getElementById('totalsum').value;
+ 	 
 
-	categories[category].expenses.push({name: expenseEntry, price: expensePrice + "€", date:day,});
+	categories[category].expenses.push({name: expenseEntry, price: expensePrice, date:day,});
 	$("#panel-body-"+category).html(createExpenseEntry(category));
+
+	$("#totalsum").html(sum + expensePrice);
+
 
 	$('#changeable').removeClass().addClass('fa fa-spinner fa-spin');
 	setTimeout(function(){$('#changeable').removeClass().addClass('glyphicon glyphicon-ok').css('color','#A2CFA5');}, 1500);
@@ -111,5 +117,3 @@ function recolor() {
 	$('#changeable').removeAttr('style');
 	document.addExpenseForm.reset();
 };
-
-

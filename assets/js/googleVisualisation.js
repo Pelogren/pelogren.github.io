@@ -23,6 +23,7 @@ google.setOnLoadCallback(drawVisualization);
     };
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
+
   }
 
   function drawVisualization() {
@@ -51,10 +52,10 @@ google.setOnLoadCallback(drawVisualization);
   ['Education',13.94, '#D95246', 'Education'],           
   ['Food' ,18.9, '#2A2931', 'Food'],            
   ['Entertainment', 19.30, '#53798D','Entertainment'],
-  ['Transportation', 12.45, '#344E5B','Transportation'] 
+  ['Transportation', 16.45, '#344E5B','Transportation'] 
       ]);
  var options1 ={
-            width:600, height:400,
+            width:600, height:200,
             vAxis: {textPosition: "none"},
             hAxis: {title: "Euro"},
             chartArea:{left:0,top:10,width:'40%',height:'100%'},
@@ -65,7 +66,97 @@ google.setOnLoadCallback(drawVisualization);
   // Create and draw the visualization.
   var chart1= new google.visualization.BarChart(document.getElementById('visualization')).
       draw(data1,options1);
+
+  // The donut chart1
+    var data = google.visualization.arrayToDataTable([
+    ['BUDGET', 'SPEND'],
+    ['SPEND',     90],
+    ['LEFT',      30]
+  ]);
+
+  var options2 ={
+            pieHole: 0.7,
+            colors:['#D95246','#DDDDDD'],
+            fontName:'Roboto',
+
+            chartArea:{left:0,top:20,width:'70%',height:'80%'},
+
+            backgroundColor:'none',
+            pieSliceText: 'none',
+            legend: {position: 'none'}
+           };
+
+  var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
+  chart.draw(data, options2);
+
+    // The donut chart2
+    var data = google.visualization.arrayToDataTable([
+    ['BUDGET', 'SPEND'],
+    ['SPEND',     40],
+    ['LEFT',      35]
+  ]);
+
+  var options3 ={
+            pieHole: 0.7,
+            colors:['#2A2931','#DDDDDD'],
+            fontName:'Roboto',
+
+            chartArea:{left:0,top:20,width:'70%',height:'80%'},
+
+            backgroundColor:'none',
+            pieSliceText: 'none',
+            legend: {position: 'none'}
+           };
+
+  var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
+  chart.draw(data, options3);
+
+    // The donut chart3
+    var data = google.visualization.arrayToDataTable([
+    ['BUDGET', 'SPEND'],
+    ['SPEND',     60],
+    ['LEFT',      5]
+  ]);
+
+  var options4 ={
+            pieHole: 0.7,
+            colors:['#53798D','#DDDDDD'],
+            fontName:'Roboto',
+
+            chartArea:{left:0,top:20,width:'70%',height:'80%'},
+
+            backgroundColor:'none',
+            pieSliceText: 'none',
+            legend: {position: 'none'}
+           };
+
+  var chart = new google.visualization.PieChart(document.getElementById('donutchart3'));
+  chart.draw(data, options4);
+
+    // The donut chart4
+    var data = google.visualization.arrayToDataTable([
+    ['BUDGET', 'SPEND'],
+    ['SPEND',     18],
+    ['LEFT',      72]
+  ]);
+
+  var options5 ={
+            pieHole: 0.7,
+            colors:['#344E5B','#DDDDDD'],
+            fontName:'Roboto',
+
+            chartArea:{left:0,top:20,width:'70%',height:'80%'},
+
+            backgroundColor:'none',
+            pieSliceText: 'none',
+            legend: {position: 'none'}
+           };
+
+  var chart = new google.visualization.PieChart(document.getElementById('donutchart4'));
+  chart.draw(data, options5);
   }
+
+
 
 
   

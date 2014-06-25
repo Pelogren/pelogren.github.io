@@ -30,7 +30,8 @@ body {
     color: #555;
     -webkit-font-smoothing: antialiased;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 /* Titles */
@@ -85,12 +86,15 @@ li {
 
 }
 
+.btn-block {
+    margin-top: 5px;
+}
 
 /* ui page */
 .page {
     min-height: 100%;
     padding-top: 60px;
-    padding-bottom: 65px;
+    padding-bottom: 70px;
     display: none;
     overflow-y: hidden;
     overflow-x: hidden;
