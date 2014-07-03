@@ -62,25 +62,56 @@
 			<div class="boxed flying">
 				<div id="budget-tabs">
 					<ul>
-						<li onClick=toDaily()><a href="#" title="daily" id="daily">DAY</a></li>
-						<li onclick=toMonthly()><a href="#" title="monthly" id="monthly" class="activeOverview">MONTH</a></li>
-						<li onclick=toPeriod()><a href="#" title="periodly" id="periodly">PERIOD</a></li>
+						<li onClick=toDaily()><a href="#" title="daily" id="daily">MEAT</a></li>
+						<li onclick=toMonthly()><a href="#" title="monthly" id="monthly" class="activeOverview">VEGGIE</a></li>
+						<li onclick=toPeriod()><a href="#" title="periodly" id="periodly">VEGAN</a></li>
 					</ul>
 				</div>
 				<div id="dailyOverview" style="display:none">
-					<div id="visualization"></div>
+					<img id="salad" src="assets/img/Steak.jpg">
+
+					<span>WHAT YOU NEED FOR THIS MEAL</span>
+					<ul>
+						<li>400g beef</li>
+						<li>100% awesomeness</li>
+					</ul>
 				</div>	
 
 				<div id="monthlyOverview" >
-					<div id="piechart"></div>
+					<img id="salad" src="assets/img/salad.png">
+
+					<span>WHAT YOU NEED FOR THIS MEAL</span>
+					<ul>
+						<li>4 strawberries</li>
+						<li>1 avocado</li>
+						<li>1 mache</li>
+						<li>a few roasted pumpkin seeds</li>
+					</ul>
 				</div>	
 
 				<div id="periodOverview" style="display:none">
-					<div id="chart_div"></div>
+					<img id="salad" src="assets/img/spinach.jpg">
+
+					<span>WHAT YOU NEED FOR THIS MEAL</span>
+					<ul>
+						<li>4 strawberries</li>
+						<li>1 avocado</li>
+						<li>1 mache</li>
+						<li>a few roasted pumpkin seeds</li>
+					</ul>
 				</div>	
 			</div>
 
-			<button type="button" class="btn btn-primary btn-lg btn-block flying" data-toggle="modal" data-target="#addExpenseModal">ADD NEW EXPENSE</button>
+			<button type="button" class="btn btn-primary btn-lg btn-block flying" data-toggle="modal" data-target="#addExpenseModal">FILL UP YOUR FRIDGE</button>
+
+			<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented halfButton">
+				<i class="fa fa-user fa-2x"></i> <br>
+				COOK <br> ALONE
+			</button>
+			<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented halfButton pull-right">
+				<i class="fa fa-users fa-2x"></i> <br>
+				COOK <br> WITH FRIENDS
+			</button>
 		</div>
 	</div> <!-- end of page Overview -->
 
@@ -89,7 +120,7 @@
 		<!-- Categories -->
 
 		<div class="boxed flying">
-			<h1>THE CONTENT OF YOUR FRIDGE</h1>
+			<h1>CURRENT CONTENT OF YOUR FRIDGE</h1>
 			<h5>conveniently categorized</h5>
 		</div>
 		
@@ -190,7 +221,7 @@
 		
 		
 
-		<button type="button" class="btn btn-primary btn-lg btn-block flying" data-toggle="modal" data-target="#whattocook">WHAT TO COOK</button>
+		<button type="button" class="btn btn-primary btn-lg btn-block flying" data-toggle="modal" data-target="#whattocook">GENERATE MEAL</button>
 		<!-- Categories -->	
 
 	</div> <!-- end of page Categories -->
@@ -242,7 +273,7 @@
   		  	<div class="modal-content">
   		  	  	<div class="modal-header">
   		  	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-  		  	    	<h4 class="modal-title" id="myModalLabel">ADD A NEW EXPENSE</h4>
+  		  	    	<h4 class="modal-title" id="myModalLabel">FILL UP YOUR FRIDGE</h4>
   		  	  	</div>
 
   		  		<div class="modal-body">
@@ -250,43 +281,34 @@
 						<ul>
 							<li class="notImplemented"><i class="fa fa-microphone"></i><a href="#" title="dictate" id="dictate">SAY</a></li>
 							<li><i class="fa fa-pencil"></i><a href="#" title="write" id="write" class="activeOverview">WRITE</a></li>
-							<li class="notImplemented"><i class="fa fa-camera"></i><a href="#" title="photograph" id="photograph">PHOTO</a></li>
+							<li class="notImplemented"><i class="fa fa-camera"></i><a href="#" title="photograph" id="photograph">SCAN</a></li>
 						</ul>
 					</div>
 					<form class="form-horizontal" role="form" name="addExpenseForm">
 						<div class="form-group">
-							<label for="inputName" class="col-sm-2 control-label">Name</label>
+							<label for="inputName" class="col-sm-2 control-label">INGREDIENT</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="inputName" placeholder="Cat Food">
+								<input type="text" class="form-control" id="inputName" placeholder="apple">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputPrice" class="col-sm-2 control-label">Price</label>
+							<label for="inputPrice" class="col-sm-2 control-label">AMOUNT</label>
 							<div class="col-sm-10">
 								<input type="number" class="form-control" id="inputPrice" placeholder="12">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputCategory" class="col-sm-2 control-label">Category</label>
+							<label for="inputCategory" class="col-sm-2 control-label">CATEGORY</label>
 							<div class="col-sm-10">
-								<select class="form-control" id="inputCategory" placeholder="FOOD">
-									<option value="0">Education</option>
-								  	<option value="1">Food</option>
-								  	<option value="2">Entertainment</option>
-								  	<option value="3">Transportation</option>
+								<select class="form-control" id="inputCategory" placeholder="Fruit & Vegetables">
+									<option value="0">Fruit & Vegetables</option>
+								  	<option value="1">Dairy Products</option>
+								  	<option value="2">Meat & Fish</option>
+								  	<option value="3">Beverages</option>
 								</select>
 							</div>
 						</div>
 						
-						<div class="form-group">
-							<div class="col-sm-offset-2 col-sm-10">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox"> Repeat Expense
-									</label>
-								</div>
-							</div>
-						</div>
 					</form>
 				</div>
 
@@ -295,7 +317,7 @@
 					
 
 					<button onclick='recolor()'class="btn btn-default">CLOSE <span class="glyphicon glyphicon-remove"></span></button>
-					<button onclick='addExpense()' class="btn btn-default">ADD <span id="changeable" class="glyphicon glyphicon-ok"></span></button>
+					<button onclick='addExpense()' class="btn btn-default">ADD TO FRIDGE <span id="changeable" class="glyphicon glyphicon-ok"></span></button>
 
       			</div>
 	    	</div>
@@ -308,7 +330,7 @@
   		  	<div class="modal-content">
   		  	  	<div class="modal-header">
   		  	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-  		  	    	<h4 class="modal-title" id="myModalLabel">WHAT TO COOK</h4>
+  		  	    	<h4 class="modal-title" id="myModalLabel">GENERATE MEAL</h4>
   		  	  	</div>
 
   		  		<div class="modal-body">
@@ -322,6 +344,17 @@
 					
 
 					<img id="salad" src="assets/img/salad.png">
+
+					<span>WHAT YOU NEED FOR THIS MEAL</span>
+					<ul>
+						<li>4 strawberries</li>
+						<li>1 avocado</li>
+						<li>1 mache</li>
+						<li>1 yoghurt</li>
+						<li>a few roasted pumpkin seeds</li>
+					</ul>
+
+					
 				</div>
 
 				<div class="modal-footer">
@@ -341,7 +374,7 @@
   		  	    	<h4 class="modal-title" id="myModalLabel">SORRY</h4>
   		  	  	</div>
   		  	<div class="modal-body">
-        		<p>The function you are trying to acces does not yet exist.</p>
+        		<p>The function you are trying to acces does not exist yet.</p>
         		<p>A team of highly trained monkeys has been dispatched to deal with this situation</p>
 	      	</div>
 	      		<div class="modal-footer">
@@ -367,7 +400,7 @@
 			<li><a href="#pageOverview" class="navlink activeSite" ><i class="fa fa-cutlery fa-2x"></i> <br> cook </a></li>
 			<li><a href="#pageCategories" class="navlink"><img src="assets/img/logo_white.png" height="28px" alt="refriendgerator"> <br> fridge </a></li>
 			<li><a href="#pageBudgets" class="navlink" ><i class="fa fa-users fa-2x"></i> <br> friends </a></li>
-			<li><a href="#pageAdvice" class="navlink"><i class="fa fa-gears fa-2x"></i> <br> settings </a></li>
+			<li><a href="#" class="navlink notImplemented"><i class="fa fa-gears fa-2x"></i> <br> settings </a></li>
 		</ul>
 	</div><!-- /footer -->
 

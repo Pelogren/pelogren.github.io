@@ -8,11 +8,11 @@
 
 
     Farben:
-    Schwarz:    #9BAB74;
+    Schwarz:    #344E5B;
     Rot:        #E0592C;
     Weiß:       #F6F6F8;
     Hellblau:   #FFD6A0;
-    Dunkelblau: #218777;
+    Dunkelblau: #344E5B;
 
  */
 
@@ -61,7 +61,7 @@ h2 {
 }
 
 h4 {
-	color: #95a5a6;
+	color: #fff;
 	font-weight: 400;
 	font-size: 20px;
 }
@@ -200,7 +200,7 @@ a:after {
 }
 
 .navbar-default {
-	background-color: #9BAB74;
+	background-color: #344E5B;
 	border-color: transparent;
     padding: 10px;
 }
@@ -330,17 +330,17 @@ i {
 }
 
 .progress-bar-black , .panel-food{
-  background-color: #9BAB74;
+  background-color: #344E5B;
 }
 
 .progress-bar-red , .panel-education{
-    background-color: #E0592C;
+    background-color: #9BAB74;
 }
 .progress-bar-lightblue , .panel-entertainment{
-    background-color: #FFD6A0;
+    background-color: #E0592C;
 }
 .progress-bar-darkblue , .panel-transportation{
-    background-color: #218777;
+    background-color: #344E5B;
 }
 
 /* Tabs for Overview swipe */
@@ -366,11 +366,11 @@ i {
 
 #budget-tabs > ul > li > a {
     text-decoration: none;
-    color: #FFD6A0;
+    color: #9BAB74;
 }
 
 #budget-tabs > ul > li > a.activeOverview {
-    color: #218777;
+    color: #344E5B;
 }
 
 /* Tabs for Entry swipe */
@@ -395,16 +395,16 @@ i {
 }
 
 #entry-tabs > ul > li > i {
-    color: #FFD6A0;
+    color: #9BAB74;
 }
 
 #entry-tabs > ul > li > a {
     text-decoration: none;
-    color: #FFD6A0;
+    color: #9BAB74;
 }
 
 #entry-tabs > ul > li > a.activeOverview {
-    color: #218777;
+    color: #344E5B;
 }
 
 
@@ -453,7 +453,7 @@ input {
 
 
 .activeSite{
-    background: #218777;
+    background: #9BAB74;
 }
 
 
@@ -461,18 +461,17 @@ input {
     display: none;
     width:100%;
 }
-
 #addbutton i {
     color: #333;
 
 }
 
 .modal-header {
-    background-color: #9BAB74;
+    background-color: #344E5B;
 }
 
 .modal-footer {
-    background-color: #9BAB74;
+    background-color: #344E5B;
 }
 
 button.close {
@@ -491,4 +490,10 @@ button.close {
 
 #salad {
     width:100%;
+    padding:10px;
+}
+
+.halfButton {
+    display: inline-block;
+    width: 49%;
 }
