@@ -1,19 +1,19 @@
 var categories = [
 						{ //EDUCATION
-							name:'Education',
+							name:'FRUIT',
 							color:'#D95246', //red
 							limit: '100',
 							expenses: [ 
-										{name: 'Bear Neurowissenschaften',
-										 price: 98.90,
+										{name: 'Banana',
+										 price: 5,
 										 date: '10.6.14',
 										},
-										{name: 'Schöning Theo. Informatik',
-										 price: 19.90,
+										{name: 'Tomato',
+										 price: 3,
 										 date: '14.6.14',
 										},
-										{name: 'Bleistift',
-										 price: 0.90,
+										{name: 'Lettuce',
+										 price: 1,
 										 date: '16.6.14',
 										}
 										]
@@ -21,49 +21,49 @@ var categories = [
 
 
 						{//FOOD
-							name:'Food',
+							name:'DIARY',
 							color:'#2A2931', //dunkeldunkelblau
 							limit: '220',
 							expenses: [ 
-										{name: 'Einkauf Aldi',
-										 price: 17.96,
+										{name: 'Parmesan Cheese',
+										 price: 1,
 										 date: '11.6.14',
 										},
-										{name: 'Döner',
-										 price: 3.50,
+										{name: 'Yoghurt',
+										 price: 3,
 										 date: '14.6.14',
 										},
-										{name: 'Einkauf Rewe',
-										 price: 20.50 ,
+										{name: 'Creme',
+										 price: 2,
 										 date: '16.6.14',
 										}
 										]
 						},
 						{//Entertainment
-							name:'Entertainment',
+							name:'MEAT',
 							color:'#53798D', //hellblau
 							limit: '80',
 							expenses: [ 
-										{name: 'Biergarten',
-										 price: 17.60,
+										{name: 'Tuna',
+										 price: 2,
 										 date: '5.6.14',
 										},
-										{name: 'Kino mit James',
-										 price: 13.50,
+										{name: 'BBQ Steak',
+										 price: 1,
 										 date: '14.6.14',
 										}
 										]},
 						{//Transportation
-							name:'Entertainment',
+							name:'BEVERAGES',
 							color:'#53798D', //hellblau
 							limit: '80',
 							expenses: [ 
-										{name: 'Semesterticket SS14',
-										 price: 141.00,
+										{name: 'Beer',
+										 price: 7,
 										 date: '5.6.14',
 										},
-										{name: 'Taxi Ulm',
-										 price: 13.50,
+										{name: 'Milk',
+										 price: 2,
 										 date: '11.6.14',
 										}
 
@@ -76,20 +76,20 @@ var categories = [
 function createExpenseEntry(category){
 
 		var begintable= "<table>";
-		var tablerows= "<thead><tr><th>Expense</th><th class=\"listPrice\">Price</th></tr></thead><tbody>";
+		var tablerows= "<thead><tr><th>ingredients</th><th class=\"listPrice\">amount</th></tr></thead><tbody>";
 		var endtable= "</table>";
 		var sum= 0; 
-		var addbutton= "<button type=\"button\" class=\"btn btn-primary btn-lg btn-block flying\" data-toggle=\"modal\" data-target=\"#addExpenseModal\">ADD NEW EXPENSE</button>"; 
+		var addbutton= "<button type=\"button\" class=\"btn btn-primary btn-lg btn-block flying\" data-toggle=\"modal\" data-target=\"#addExpenseModal\">NEW ENTRY</button>"; 
 
 	for (var element in categories[category].expenses) {  //erstellt für jedes Element in Expenses einer bestimmten Kategorie (categorie) einen Eintrag
 		var sum= sum + categories[category].expenses[element].price;
-		var tablerow = "<tr><td>" + categories[category].expenses[element].name + "</td><td class=\"listPrice\">" + categories[category].expenses[element].price + " €</td></tr>";
+		var tablerow = "<tr><td>" + categories[category].expenses[element].name + "</td><td class=\"listPrice\">" + categories[category].expenses[element].price + " x </td></tr>";
 
 		var tablerows= tablerows + tablerow;
 	}
 		var sum =  Math.round(sum * Math.pow(10, 2)) / Math.pow(10, 2);
 		var summedup= "<tr id=\"sum\"><td><span><b>Total Expenses 06/14</b></span></td><td id=\"totalsum\" class=\"listPrice\"><b>"+sum+" €</b></td></tr>";
-		var table = "<div>" + begintable + tablerows +  summedup + "</tbody>" + endtable + addbutton +"</div>";
+		var table = "<div>" + begintable + tablerows +  "</tbody>" + endtable + addbutton +"</div>";
 		return table;
 };
 

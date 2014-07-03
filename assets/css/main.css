@@ -8,11 +8,11 @@
 
 
     Farben:
-    Schwarz:    #2A2931;
-    Rot:        #D95246;
+    Schwarz:    #9BAB74;
+    Rot:        #E0592C;
     Weiß:       #F6F6F8;
-    Hellblau:   #53798D;
-    Dunkelblau: #344E5B;
+    Hellblau:   #FFD6A0;
+    Dunkelblau: #218777;
 
  */
 
@@ -200,7 +200,7 @@ a:after {
 }
 
 .navbar-default {
-	background-color: #2A2931;
+	background-color: #9BAB74;
 	border-color: transparent;
     padding: 10px;
 }
@@ -243,11 +243,15 @@ a:after {
 
 #brand-name{
     display: inline;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     font-size: 24px;
     color: #F2F6F8;
     vertical-align: middle;
+}
+
+#brand-name>span{
+    font-weight: 100;
 }
 
 #footer{
@@ -326,17 +330,17 @@ i {
 }
 
 .progress-bar-black , .panel-food{
-  background-color: #2A2931;
+  background-color: #9BAB74;
 }
 
 .progress-bar-red , .panel-education{
-    background-color: #D95246;
+    background-color: #E0592C;
 }
 .progress-bar-lightblue , .panel-entertainment{
-    background-color: #53798D;
+    background-color: #FFD6A0;
 }
 .progress-bar-darkblue , .panel-transportation{
-    background-color: #344E5B;
+    background-color: #218777;
 }
 
 /* Tabs for Overview swipe */
@@ -362,11 +366,11 @@ i {
 
 #budget-tabs > ul > li > a {
     text-decoration: none;
-    color: #53798D;
+    color: #FFD6A0;
 }
 
 #budget-tabs > ul > li > a.activeOverview {
-    color: #344E5B;
+    color: #218777;
 }
 
 /* Tabs for Entry swipe */
@@ -391,16 +395,16 @@ i {
 }
 
 #entry-tabs > ul > li > i {
-    color: #53798D;
+    color: #FFD6A0;
 }
 
 #entry-tabs > ul > li > a {
     text-decoration: none;
-    color: #53798D;
+    color: #FFD6A0;
 }
 
 #entry-tabs > ul > li > a.activeOverview {
-    color: #344E5B;
+    color: #218777;
 }
 
 
@@ -449,7 +453,7 @@ input {
 
 
 .activeSite{
-    background: #344E5B;
+    background: #218777;
 }
 
 
@@ -464,11 +468,11 @@ input {
 }
 
 .modal-header {
-    background-color: #2A2931;
+    background-color: #9BAB74;
 }
 
 .modal-footer {
-    background-color: #2A2931;
+    background-color: #9BAB74;
 }
 
 button.close {
@@ -480,6 +484,11 @@ button.close {
     height:60px;
 }
 
-#pageBudgets h2{
-    color:#F6F6F8;
+
+#pageBudgets > img{
+    margin-bottom: 4px
+}
+
+#salad {
+    width:100%;
 }
