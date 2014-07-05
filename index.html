@@ -1,280 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/img/favicon.png">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="assets/img/favicon.png">
 
-    <title>Budget Butler</title>
+	<!-- full screen toggle -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<script type='text/javascript' charset='utf-8'>
+	    // Hides mobile browser's address bar when page is done loading.
+	      window.addEventListener('load', function(e) {
+	        setTimeout(function() { window.scrollTo(0, 1); }, 1);
+	      }, false);
+	</script>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<title>Budget Butler</title>
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Fonts from Google Fonts -->
+  	<!-- Bootstrap core JavaScript
+  	================================================== -->
+  	<!-- Placed at the end of the document so the pages load faster NOT^^-->
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  	<script src="assets/js/bootstrap.min.js"></script> 	
+  	<script src="assets/js/bootstrap-slider.js"></script> 	
+
+	<!-- Custom styles for this template -->
+	<link href="assets/css/main.css" rel="stylesheet">
+
+	<!-- Fonts from Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
 
 	<!-- FontAwesome -->
-    <link href="http://www.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="http://www.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- google visualization:pie-chart-->
-     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Category', 'Expenses Juno'],
-          ['Education',     39.90],
-          ['Food',      18.50],
-          ['Entertainment',  20.00],
-          ['Transportation',   15.00]
-        ]);
+	<!-- google visualization:pie-chart-->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="assets/js/googleVisualisation.js"></script>
 
-        var options = {
-          colors:['#D95246','#2A2931','#53798D','#344E5B'],
-          fontName:'Roboto',
-          chartArea:{left:20,top:10,width:'100%',height:'80%'},
-          backgroundColor:'none',
-        };
+	<!-- our scripts -->
+	<script type="text/javascript" src="assets/js/categories.js"></script>	
+	<script type="text/javascript" src="assets/js/advice.js"></script>
+	<script type="text/javascript" src="assets/js/modals.js"></script>		
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        chart.draw(data, options);
-      }
-    </script>
+	<!-- jQuery -->	
+  	<script src="assets/js/jquery.mobile.min.js"></script>
+  	<script type="text/javascript" src="assets/js/myjQuery.js"></script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
+</head>
 
-  <body>
-  	<header>
-  		<!-- HEADER -->
-  	  <div class="navbar navbar-default navbar-fixed-top">
-  	    <div class="container">
-  	      <div class="navbar-header">
-  	        <a class="navbar-brand" href="#"><img id="logo" src="assets/img/logo_white.png"> <p id="brand-name">BUDGET BUTLER</p></a>
-  	        <a class="pull-right" href="#"><i class="fa fa-ellipsis-v fa-2x"></i> </a>
-  	      </div>
-  	    </div>
-  	  </div>  	
-  	</header><!-- /header -->
+<body>
+	<div class="container page activePage" id="pageOverview">
 
-
-
-	<div class="container">
-		<div class="row mt">
-			<div class="col-lg-6 col-lg-offset-3">
-				<div class="boxed" >
-					<div class="row">
-					</div>
-					<h1>Daily Budget</h1>
-					<h2>your personal Budget</h2>
-
-					<div class="progress">
-					  <div class="progress-bar progress-bar-black" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-					    <span class="">40€</span>
-					  </div>
-					</div>
-					<div class="progress">
-					  <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-					    <span class="">20€</span>
-					  </div>
-					</div>
-					<div class="progress">
-					  <div class="progress-bar progress-bar-lightblue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-					    <span class="">60€</span>
-					  </div>
-					</div>
-					<div class="progress">
-					  <div class="progress-bar progress-bar-darkblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-					    <span class="">80€</span>
-					  </div>
-					</div>
-
+		<div data-role="main" class="ui-content">
+			<div class="boxed flying">
+				<div id="budget-tabs">
+					<ul>
+						<li onClick=toDaily()><a href="#" title="daily" id="daily">MEAT</a></li>
+						<li onclick=toMonthly()><a href="#" title="monthly" id="monthly" class="activeOverview">VEGGIE</a></li>
+						<li onclick=toPeriod()><a href="#" title="periodly" id="periodly">VEGAN</a></li>
+					</ul>
 				</div>
+				<div id="dailyOverview" style="display:none">
+					<img id="salad" src="assets/img/Steak.jpg">
+
+					<span>WHAT YOU NEED FOR THIS MEAL</span>
+					<ul>
+						<li>400g beef</li>
+						<li>100% awesomeness</li>
+					</ul>
+				</div>	
+
+				<div id="monthlyOverview" >
+					<img id="salad" src="assets/img/salad.png">
+
+					<span>WHAT YOU NEED FOR THIS MEAL</span>
+					<ul>
+						<li>4 strawberries</li>
+						<li>1 avocado</li>
+						<li>1 mache</li>
+						<li>a few roasted pumpkin seeds</li>
+					</ul>
+				</div>	
+
+				<div id="periodOverview" style="display:none">
+					<img id="salad" src="assets/img/spinach.jpg">
+
+					<span>WHAT YOU NEED FOR THIS MEAL</span>
+					<ul>
+						<li>4 strawberries</li>
+						<li>1 avocado</li>
+						<li>1 mache</li>
+						<li>a few roasted pumpkin seeds</li>
+					</ul>
+				</div>	
 			</div>
-		</div><!-- /row -->
 
-		<button type="button" class="btn btn-primary btn-lg btn-block">NEW ENTRY</button>
+			<button type="button" class="btn btn-primary btn-lg btn-block flying" data-toggle="modal" data-target="#addExpenseModal">FILL UP YOUR FRIDGE</button>
 
-		<div class="row mt">
-			<div class="col-lg-6 col-lg-offset-3">
-				<div class="boxed">
-				<h1>Monthly Budget</h1>
-				<div id="piechart"></div>
-				
+			<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented halfButton">
+				<i class="fa fa-user fa-2x"></i> <br>
+				COOK <br> ALONE
+			</button>
+			<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented halfButton pull-right">
+				<i class="fa fa-users fa-2x"></i> <br>
+				COOK <br> WITH FRIENDS
+			</button>
+		</div>
+	</div> <!-- end of page Overview -->
+
+	<div class="container page" id="pageCategories"><!-- page Categories -->
+
+		<!-- Categories -->
+
+		<div class="boxed flying">
+			<h1>CURRENT CONTENT OF YOUR FRIDGE</h1>
+			<h5>conveniently categorized</h5>
+		</div>
+		
+			<div class="panel-group" id="accordion">
+				<div class="boxed flying panel panel-default">
+					<div class="panel-heading panel-education">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+							<h2 class="panel-title">
+								<i class="fa   fa-lemon-o"></i>  FRUIT & VEGETABLES
+								<li class="pull-right"><i class="fa  fa-angle-down fa-2x"></i></li>
+								</ul>
+							</h2>
+						</a>
+					</div>
 					
-</html>
+					<div id="collapseOne" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-0">
+							<script>
+									$(document).ready(function(){
+   								  $("#panel-body-0").append(createExpenseEntry(0)); 
+  											 });
+ 								</script> 
+						</div>
+					</div>
 				</div>
+				<div class="boxed flying panel panel-default">
+					<div class="panel-heading panel-food">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+						<h2 class="panel-title">
+								<i class="fa  fa-spoon"></i> DAIRY PRODUCTS
+							
+							<ul class="panel-category-list">
+								
+								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+								
+							</ul>
+						</h2>
+						</a>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-1">
+							<script>
+									$(document).ready(function(){
+  								  		$("#panel-body-1").append(createExpenseEntry(1)); 
+ 											 });
+									</script> 
+						</div>
+					</div>
+				</div>
+				<div class="boxed flying panel panel-default">
+					<div class="panel-heading panel-entertainment">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">	
+						<h2 class="panel-title">
+							
+								<i class="fa  fa-cutlery"></i> MEAT & FISH
+							
+							<ul class="panel-category-list">
+								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+							</ul>
+						</h2>
+						</a>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-2">
+																<script>
+									$(document).ready(function(){
+  								  		$("#panel-body-2").append(createExpenseEntry(2)); 
+ 											 });
+									</script> 
+						</div>
+					</div>
+				</div>
+				<div class="boxed flying panel panel-default">
+					<div class="panel-heading panel-transportation">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+						<h2 class="panel-title">
+							
+								<i class="fa  fa-glass"></i>  BEVERAGES
+							
+							<ul class="panel-category-list">
+								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+							</ul>
+						</h2>
+						</a>
+					</div>
+					<div id="collapseFour" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-3">
+																<script>
+									$(document).ready(function(){
+  								  		$("#panel-body-3").append(createExpenseEntry(3)); 
+ 											 });
+									</script> 
+						</div>
+					</div>
+				</div>
+
 			</div>
-		</div><!-- /row -->
 		
 		
-		<div class="row mt centered">
-			<div class="col-lg-4">
-				<img src="assets/img/ser01.png" width="180" alt="">
-				<h4>1 - Browser Compatibility</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-			</div><!--/col-lg-4 -->
 
-			<div class="col-lg-4">
-				<img src="assets/img/ser02.png" width="180" alt="">
-				<h4>2 - Email Campaigns</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+		<button type="button" class="btn btn-primary btn-lg btn-block flying" data-toggle="modal" data-target="#whattocook">GENERATE MEAL</button>
+		<!-- Categories -->	
 
-			</div><!--/col-lg-4 -->
+	</div> <!-- end of page Categories -->
 
-			<div class="col-lg-4">
-				<img src="assets/img/ser03.png" width="180" alt="">
-				<h4>3 - Gather Your Notes</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
 
-			</div><!--/col-lg-4 -->
-		</div><!-- /row -->
-	</div><!-- /container -->
-	
-	<div class="container">
-		<hr>
-		<div class="row centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<form class="form-inline" role="form">
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
-				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
-				</form>					
+	<div class="container page" id="pageBudgets"><!-- page Budgets -->
+		<div class="boxed flying">
+			<h1>YOUR FRIENDS</h1>
+			<h5>tap image for more information</h5>
+		</div>
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+		<img src="assets/img/avatar_dummy.jpg" alt="avatar" class="flying notImplemented" height="107px">
+	</div>	
+
+
+
+	<div class="container page" id="pageAdvice"><!-- page Advice -->
+			 	
+		<div class="boxed butlersays">
+			<div class="logobig">
+	 			<img class="pull-right" src="assets/img/logo_black.png" alt="Logo" id="butlerpic">
+	 			<h1>HI, I AM JAMES,</h1>
+	 			<p>your personal butler regarding finance. With my limitless wisdom I am here to help you manage your expenses and stay within your monthly budgets.</p>
+	 			<p>Just ask me for advice any time you want!</p>
+	 		</div>
+	 	</div>
+
+	 	<div class="boxed flying butlersays" id="adviceBox">
+			<h1> MY ADVICE FOR YOU</h1>
+			<p id="advice">Dogs have no money. Isn’t that amazing? They’re broke their entire lives. But they get through. You know why dogs have no money? .. No Pockets.</p> 
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg btn-block flying" onclick="changeAdvice()">GET OTHER ADVICE</button>
+	</div> <!-- end of page Advice -->
+
+	<!-- add expense Modal -->
+	<div class="modal fade" id="addExpenseModal" tabindex="-1" role="dialog" aria-labelledby="addExpenseLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+  		  	<div class="modal-content">
+  		  	  	<div class="modal-header">
+  		  	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  		  	    	<h4 class="modal-title" id="myModalLabel">FILL UP YOUR FRIDGE</h4>
+  		  	  	</div>
+
+  		  		<div class="modal-body">
+					<div id="entry-tabs">
+						<ul>
+							<li class="notImplemented"><i class="fa fa-microphone"></i><a href="#" title="dictate" id="dictate">SAY</a></li>
+							<li><i class="fa fa-pencil"></i><a href="#" title="write" id="write" class="activeOverview">WRITE</a></li>
+							<li class="notImplemented"><i class="fa fa-camera"></i><a href="#" title="photograph" id="photograph">SCAN</a></li>
+						</ul>
+					</div>
+					<form class="form-horizontal" role="form" name="addExpenseForm">
+						<div class="form-group">
+							<label for="inputName" class="col-sm-2 control-label">INGREDIENT</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inputName" placeholder="apple">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputPrice" class="col-sm-2 control-label">AMOUNT</label>
+							<div class="col-sm-10">
+								<input type="number" class="form-control" id="inputPrice" placeholder="12">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputCategory" class="col-sm-2 control-label">CATEGORY</label>
+							<div class="col-sm-10">
+								<select class="form-control" id="inputCategory" placeholder="Fruit & Vegetables">
+									<option value="0">Fruit & Vegetables</option>
+								  	<option value="1">Dairy Products</option>
+								  	<option value="2">Meat & Fish</option>
+								  	<option value="3">Beverages</option>
+								</select>
+							</div>
+						</div>
+						
+					</form>
+				</div>
+
+				<div class="modal-footer">
+
+					
+
+					<button onclick='recolor()'class="btn btn-default">CLOSE <span class="glyphicon glyphicon-remove"></span></button>
+					<button onclick='addExpense()' class="btn btn-default">ADD TO FRIDGE <span id="changeable" class="glyphicon glyphicon-ok"></span></button>
+
+      			</div>
+	    	</div>
+	  	</div>
+	</div>
+
+	<!-- add category Modal -->
+	<div class="modal fade" id="whattocook" tabindex="-1" role="dialog" aria-labelledby="addCategoryLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+  		  	<div class="modal-content">
+  		  	  	<div class="modal-header">
+  		  	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  		  	    	<h4 class="modal-title" id="myModalLabel">GENERATE MEAL</h4>
+  		  	  	</div>
+
+  		  		<div class="modal-body">
+  		  		<div id="entry-tabs">
+						<ul>
+							<li class="notImplemented"><a href="#" title="dictate" id="dictate">MEAT</a></li>
+							<li><a href="#" title="write" id="write" class="activeOverview">VEGGIE</a></li>
+							<li class="notImplemented"><a href="#" title="photograph" id="photograph">VEGAN</a></li>
+						</ul>
+					</div>
+					
+
+					<img id="salad" src="assets/img/salad.png">
+
+					<span>WHAT YOU NEED FOR THIS MEAL</span>
+					<ul>
+						<li>4 strawberries</li>
+						<li>1 avocado</li>
+						<li>1 mache</li>
+						<li>1 yoghurt</li>
+						<li>a few roasted pumpkin seeds</li>
+					</ul>
+
+					
+				</div>
+
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal">CLOSE <span class=" glyphicon glyphicon-remove"></span></button>
+					<button  class="notImplemented btn btn-default">START COOKING <span class="glyphicon glyphicon-ok"></span></button>
+      			</div>
+	    	</div>
+	  	</div>
+	</div>
+
+	<!-- function not implemented Modal -->
+	<div class="modal fade" id="notImplementedModal" tabindex="-1" role="dialog" aria-labelledby="notImplementedLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+  		  	<div class="modal-content">
+  		  	  	<div class="modal-header">
+  		  	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  		  	    	<h4 class="modal-title" id="myModalLabel">SORRY</h4>
+  		  	  	</div>
+  		  	<div class="modal-body">
+        		<p>The function you are trying to acces does not exist yet.</p>
+        		<p>A team of highly trained monkeys has been dispatched to deal with this situation</p>
+	      	</div>
+	      		<div class="modal-footer">
+	        		<button type="button" class="btn btn-default" data-dismiss="modal">CLOSE<span class="glyphicon glyphicon-remove"></span></button>
+	      		</div>
+	    	</div>
+	  	</div>
+	</div>
+
+	<!-- HEADER -->
+	<div data-role="header" class="navbar navbar-default navbar-fixed-top" data-role="header">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><img id="logo" src="assets/img/logo_white.png"> <p id="brand-name">re<span>friend</span>gerator</p></a>
 			</div>
-			<div class="col-lg-3"></div>
-		</div><!-- /row -->
-		<hr>
-	</div><!-- /container -->
-	
-	<div class="container">
-		<div class="row mt centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Flatty is for Everyone.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
-			</div>
-		</div><!-- /row -->
-	
-		<! -- CAROUSEL -->
-		<div class="row mt centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				  <!-- Indicators -->
-				  <ol class="carousel-indicators">
-				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-				  </ol>
-				
-				  <!-- Wrapper for slides -->
-				  <div class="carousel-inner">
-				    <div class="item active">
-				      <img src="assets/img/p01.png" alt="">
-				    </div>
-				    <div class="item">
-				      <img src="assets/img/p02.png" alt="">
-				    </div>
-				    <div class="item">
-				      <img src="assets/img/p03.png" alt="">
-				    </div>
-				  </div>
-				</div>			
-			</div><!-- /col-lg-8 -->
-		</div><!-- /row -->
-	</div><! --/container -->
-	
-	<div class="container">
-		<hr>
-		<div class="row centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<form class="form-inline" role="form">
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
-				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
-				</form>					
-			</div>
-			<div class="col-lg-3"></div>
-		</div><!-- /row -->
-		<hr>
-	</div><!-- /container -->
+		</div>
+	</div><!-- /header -->
 
-	<div class="container">
-		<div class="row mt centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Our Awesome Team.<br/>Design Lovers.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
-			</div>
-		</div><!-- /row -->
-		
-		<div class="row mt centered">
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic1.jpg" width="140" alt="">
-				<h4>Michael Robson</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
-			</div><!--/col-lg-4 -->
-
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic2.jpg" width="140" alt="">
-				<h4>Pete Ford</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
-			</div><!--/col-lg-4 -->
-
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic3.jpg" width="140" alt="">
-				<h4>Angelica Finning</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
-			</div><!--/col-lg-4 -->
-		</div><!-- /row -->
-	</div><!-- /container -->
 	
-	<div class="container">
-		<hr>
-		<div class="row centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<form class="form-inline" role="form">
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
-				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
-				</form>					
-			</div>
-			<div class="col-lg-3"></div>
-		</div><!-- /row -->
-		<hr>
-		<p class="centered">Created by BlackTie.co - Attribution License 3.0 - 2013</p>
-	</div><!-- /container -->
-	
-	<footer>
-  	<!-- FOOTER -->
-    	<div id="footer" class="navbar-default">
-    	  	<ul class="nav">
-    	  		<li><a href="#"><i class="fa fa-paper-plane fa-2x"></i> <br> Option 1</a></li>
-    	  		<li><a href="#"><i class="fa fa-rebel fa-2x"></i> <br> Option 2</a></li>
-    	  		<li><a href="#"><i class="fa fa-recycle fa-2x"></i> <br> Option 3</a></li>
-    	    	<li><a href="#"><i class="fa fa-cog fa-2x"></i> <br> Option 4</a></li>
-    	    </ul>
-    	</div>
-  	</footer>
+	<!-- FOOTER -->
+	<div data-role="footer" id="footer" class="navbar-default">
+		<ul class="nav">
+			<li><a href="#pageOverview" class="navlink activeSite" ><i class="fa fa-cutlery fa-2x"></i> <br> cook </a></li>
+			<li><a href="#pageCategories" class="navlink"><img src="assets/img/logo_white.png" height="28px" alt="refriendgerator"> <br> fridge </a></li>
+			<li><a href="#pageBudgets" class="navlink" ><i class="fa fa-users fa-2x"></i> <br> friends </a></li>
+			<li><a href="#" class="navlink notImplemented"><i class="fa fa-gears fa-2x"></i> <br> settings </a></li>
+		</ul>
+	</div><!-- /footer -->
 
-  	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
   </body>
-</html>
+  </html>
