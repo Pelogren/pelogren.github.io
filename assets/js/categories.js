@@ -76,31 +76,19 @@ var categories = [
 function createExpenseEntry(category){
 
 		var begintable= "<table>";
-<<<<<<< HEAD
 		var tablerows= "<thead><tr><th>ingredients</th><th class=\"listPrice\">amount</th><th></th></tr></thead><tbody>";
-=======
-		var tablerows= "<thead><tr><th>ingredients</th><th class=\"listPrice\">amount</th></tr></thead><tbody>";
->>>>>>> origin/master
 		var endtable= "</table>";
 		var sum= 0; 
 		var addbutton= "<button type=\"button\" class=\"btn btn-primary btn-lg btn-block flying\" data-toggle=\"modal\" data-target=\"#addExpenseModal\">NEW ENTRY</button>"; 
 
 	for (var element in categories[category].expenses) {  //erstellt für jedes Element in Expenses einer bestimmten Kategorie (categorie) einen Eintrag
 		var sum= sum + categories[category].expenses[element].price;
-<<<<<<< HEAD
 		var tablerow = "<tr><td>" + categories[category].expenses[element].name + "</td><td class=\"listPrice\">" + categories[category].expenses[element].price + " x </td><td class=\"notImplemented\"><img src=\"assets/img/pencil.png\" alt=\"edit\" height=\"16px\"></td></tr>";
-=======
-		var tablerow = "<tr><td>" + categories[category].expenses[element].name + "</td><td class=\"listPrice\">" + categories[category].expenses[element].price + " x </td></tr>";
->>>>>>> origin/master
 
 		var tablerows= tablerows + tablerow;
 	}
 		var sum =  Math.round(sum * Math.pow(10, 2)) / Math.pow(10, 2);
-<<<<<<< HEAD
 		var summedup= "<tr id=\"sum\"><td><span><b>Total Expenses 06/14</b></span></td><td id=\"totalsum\" class=\"listPrice\"><b>"+sum+" €</b></td</tr>";
-=======
-		var summedup= "<tr id=\"sum\"><td><span><b>Total Expenses 06/14</b></span></td><td id=\"totalsum\" class=\"listPrice\"><b>"+sum+" €</b></td></tr>";
->>>>>>> origin/master
 		var table = "<div>" + begintable + tablerows +  "</tbody>" + endtable + addbutton +"</div>";
 		return table;
 };
