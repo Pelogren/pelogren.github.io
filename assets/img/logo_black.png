@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -16,3 +17,23 @@
 <line fill="none" stroke="#000000" stroke-width="17" stroke-miterlimit="10" x1="178" y1="133.5" x2="61" y2="133.5"/>
 <line fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" x1="92" y1="155" x2="92" y2="214"/>
 </svg>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="256px" height="256px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
+<g id="Icons_with_numbers">
+	<g id="Group" transform="translate(0.000000, -384.000000)">
+		<path id="Rectangle_204_copy" d="M61.099,405.011h56.448L96.64,421.736H77.824v58.539h83.627v-16.726l16.725-13.377V497H61.099
+			V405.011z M194.9,421.736l-41.813,33.451v-16.656c-27.869-1.005-44.647,11.413-58.816,25.214
+			c0-32.806,29.217-58.641,58.816-58.931v-16.529L194.9,421.736z"/>
+	</g>
+</g>
+<line fill="none" stroke="#000000" stroke-width="17" stroke-miterlimit="10" x1="69.5" y1="125" x2="69.5" y2="245"/>
+<line fill="none" stroke="#000000" stroke-width="17" stroke-miterlimit="10" x1="169.5" y1="125" x2="169.5" y2="245"/>
+<line fill="none" stroke="#000000" stroke-width="17" stroke-miterlimit="10" x1="178" y1="237.5" x2="61" y2="237.5"/>
+<line fill="none" stroke="#000000" stroke-width="17" stroke-miterlimit="10" x1="178" y1="133.5" x2="61" y2="133.5"/>
+<line fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" x1="92" y1="155" x2="92" y2="214"/>
+</svg>
+>>>>>>> origin/master
