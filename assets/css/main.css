@@ -8,10 +8,10 @@
 
 
     Farben:
-    Schwarz:    #344E5B;
-    Rot:        #E0592C;
+    Schwarz:    #2A2931;
+    Rot:        #D95246;
     Weiß:       #F6F6F8;
-    Hellblau:   #FFD6A0;
+    Hellblau:   #53798D;
     Dunkelblau: #344E5B;
 
  */
@@ -61,7 +61,7 @@ h2 {
 }
 
 h4 {
-	color: #fff;
+	color: #95a5a6;
 	font-weight: 400;
 	font-size: 20px;
 }
@@ -200,7 +200,7 @@ a:after {
 }
 
 .navbar-default {
-	background-color: #344E5B;
+	background-color: #2A2931;
 	border-color: transparent;
     padding: 10px;
 }
@@ -243,15 +243,11 @@ a:after {
 
 #brand-name{
     display: inline;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     font-size: 24px;
     color: #F2F6F8;
     vertical-align: middle;
-}
-
-#brand-name>span{
-    font-weight: 100;
 }
 
 #footer{
@@ -330,14 +326,14 @@ i {
 }
 
 .progress-bar-black , .panel-food{
-  background-color: #344E5B;
+  background-color: #2A2931;
 }
 
 .progress-bar-red , .panel-education{
-    background-color: #9BAB74;
+    background-color: #D95246;
 }
 .progress-bar-lightblue , .panel-entertainment{
-    background-color: #E0592C;
+    background-color: #53798D;
 }
 .progress-bar-darkblue , .panel-transportation{
     background-color: #344E5B;
@@ -366,7 +362,7 @@ i {
 
 #budget-tabs > ul > li > a {
     text-decoration: none;
-    color: #9BAB74;
+    color: #53798D;
 }
 
 #budget-tabs > ul > li > a.activeOverview {
@@ -395,12 +391,12 @@ i {
 }
 
 #entry-tabs > ul > li > i {
-    color: #9BAB74;
+    color: #53798D;
 }
 
 #entry-tabs > ul > li > a {
     text-decoration: none;
-    color: #9BAB74;
+    color: #53798D;
 }
 
 #entry-tabs > ul > li > a.activeOverview {
@@ -453,7 +449,7 @@ input {
 
 
 .activeSite{
-    background: #9BAB74;
+    background: #344E5B;
 }
 
 
@@ -461,17 +457,18 @@ input {
     display: none;
     width:100%;
 }
+
 #addbutton i {
     color: #333;
 
 }
 
 .modal-header {
-    background-color: #344E5B;
+    background-color: #2A2931;
 }
 
 .modal-footer {
-    background-color: #344E5B;
+    background-color: #2A2931;
 }
 
 button.close {
@@ -483,17 +480,6 @@ button.close {
     height:60px;
 }
 
-
-#pageBudgets > img{
-    margin-bottom: 4px
-}
-
-#salad {
-    width:100%;
-    padding:10px;
-}
-
-.halfButton {
-    display: inline-block;
-    width: 49%;
+#pageBudgets h2{
+    color:#F6F6F8;
 }
