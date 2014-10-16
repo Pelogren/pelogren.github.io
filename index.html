@@ -1,503 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="shortcut icon" href="assets/img/favicon.png">
 
-	<!-- full screen toggle -->
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-	<script type='text/javascript' charset='utf-8'>
-	    // Hides mobile browser's address bar when page is done loading.
-	      window.addEventListener('load', function(e) {
-	        setTimeout(function() { window.scrollTo(0, 1); }, 1);
-	      }, false);
-	</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<title>refriendgerator</title>
+    <title>Hole in One fitting - agent</title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  	<!-- Bootstrap core JavaScript
-  	================================================== -->
-  	<!-- Placed at the end of the document so the pages load faster NOT^^-->
-  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  	<script src="assets/js/bootstrap.min.js"></script> 	
-  	<script src="assets/js/bootstrap-slider.js"></script> 	
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
 
-	<!-- Custom styles for this template -->
-	<link href="assets/css/main.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-	<!-- Fonts from Google Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
-
-	<!-- FontAwesome -->
-	<link href="http://www.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-	<!-- google visualization:pie-chart-->
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	<script type="text/javascript" src="assets/js/googleVisualisation.js"></script>
-
-	<!-- our scripts -->
-	<script type="text/javascript" src="assets/js/categories.js"></script>	
-	<script type="text/javascript" src="assets/js/advice.js"></script>
-	<script type="text/javascript" src="assets/js/modals.js"></script>		
-
-	<!-- jQuery -->	
-  	<script src="assets/js/jquery.mobile.min.js"></script>
-  	<script type="text/javascript" src="assets/js/myjQuery.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
-<body>
-	<div class="container page activePage" id="pageOverview">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-		<div data-role="main" class="ui-content">
-			<div class="boxed flying">
-				<div id="budget-tabs">
-					<ul>
-						<li onClick=toDaily()><a href="#" title="daily" id="daily">DAY</a></li>
-						<li onclick=toMonthly()><a href="#" title="monthly" id="monthly" class="activeOverview">MONTH</a></li>
-						<li onclick=toPeriod()><a href="#" title="periodly" id="periodly">PERIOD</a></li>
-					</ul>
-				</div>
-				<div id="dailyOverview" style="display:none">
-					<div id="visualization"></div>
-				</div>	
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">HIO</span> fitting
+                </a>
+            </div>
 
-				<div id="monthlyOverview" >
-					<div id="piechart"></div>
-				</div>	
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Fitting</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-				<div id="periodOverview" style="display:none">
-					<div id="chart_div"></div>
-				</div>	
-			</div>
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Golf clubs</h1>
+                        <p class="intro-text">There are many, but only one that fits all your needs. We help you find it!<br>Created by Hole in One Fitting.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-			<button type="button" class="btn btn-primary btn-lg btn-block flying" data-toggle="modal" data-target="#addExpenseModal">ADD NEW EXPENSE</button>
-		</div>
-	</div> <!-- end of page Overview -->
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About HIO</h2>
+                <p>Wir sind ein junges Team aus München, das sich auf das spannende Thema Fitting spezialisiert hat. Durch unsere Erfahrung aus über tausend selbst durchgeführten Fittings haben wir einen einzigartigen Algorithmus entwickelt, der aus über einer Millionen Griff-Schaft-Kopf Kombinationen den perfekten Schläger ermittelt - für Golfer aller Leistungsklassen. Wir bieten ausschließlich exklusive Fittingmarken an, die in unserer Werkstatt individuell an den Golfer angepasst werden: individuell in den Spezifikationen, aber auch in Farbe und Design.</p>
+            </div>
+        </div>
+    </section>
 
-	<div class="container page" id="pageCategories"><!-- page Categories -->
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Fitting Area</h2>
+                    <p>Get the Golf club that meets your needs perfectly</p>
+                    <a href="http://www.hio-fitting.de/index.php/de/ct-menu-item-1" class="btn btn-default btn-lg">Go Fitting!</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Categories -->
-		
-			<div class="panel-group" id="accordion">
-				<div class="boxed flying panel panel-default">
-					<div class="panel-heading panel-education">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-							<h2 class="panel-title">
-								<i class="fa  fa-graduation-cap"></i>  Education 
-								<ul class="panel-category-list">
-								<li class="pull-right"><i class="fa  fa-angle-down fa-2x"></i></li>
-								</ul>
-							</h2>
-						</a>
-					</div>
-					
-					<div id="collapseOne" class="panel-collapse collapse">
-						<div class="panel-body" id="panel-body-0">
-							<script>
-									$(document).ready(function(){
-   								  $("#panel-body-0").append(createExpenseEntry(0)); 
-  											 });
- 								</script> 
-						</div>
-					</div>
-				</div>
-				<div class="boxed flying panel panel-default">
-					<div class="panel-heading panel-food">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-						<h2 class="panel-title">
-								<i class="fa  fa-spoon"></i>  Food 
-							
-							<ul class="panel-category-list">
-								
-								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
-								
-							</ul>
-						</h2>
-						</a>
-					</div>
-					<div id="collapseTwo" class="panel-collapse collapse">
-						<div class="panel-body" id="panel-body-1">
-							<script>
-									$(document).ready(function(){
-  								  		$("#panel-body-1").append(createExpenseEntry(1)); 
- 											 });
-									</script> 
-						</div>
-					</div>
-				</div>
-				<div class="boxed flying panel panel-default">
-					<div class="panel-heading panel-entertainment">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">	
-						<h2 class="panel-title">
-							
-								<i class="fa  fa-glass"></i> Entertainment 
-							
-							<ul class="panel-category-list">
-								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
-							</ul>
-						</h2>
-						</a>
-					</div>
-					<div id="collapseThree" class="panel-collapse collapse">
-						<div class="panel-body" id="panel-body-2">
-																<script>
-									$(document).ready(function(){
-  								  		$("#panel-body-2").append(createExpenseEntry(2)); 
- 											 });
-									</script> 
-						</div>
-					</div>
-				</div>
-				<div class="boxed flying panel panel-default">
-					<div class="panel-heading panel-transportation">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-						<h2 class="panel-title">
-							
-								<i class="fa  fa-car"></i>  Transportation 
-							
-							<ul class="panel-category-list">
-								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
-							</ul>
-						</h2>
-						</a>
-					</div>
-					<div id="collapseFour" class="panel-collapse collapse">
-						<div class="panel-body" id="panel-body-3">
-																<script>
-									$(document).ready(function(){
-  								  		$("#panel-body-3").append(createExpenseEntry(3)); 
- 											 });
-									</script> 
-						</div>
-					</div>
-				</div>
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact HIO</h2>
+                <p>Feel free to email us to provide some feedback on our work, give us suggestions for new options, or to just say hello!</p>
+                <p><a href="mailto:marcostinkt@hio-fitting.com">marcostinkt@hio-fitting.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://www.facebook.com/pages/HIO-Fitting/140537486012508" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/pages/HIO-Fitting/140537486012508" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/pages/HIO-Fitting/140537486012508" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-			</div>
-		
+    <!-- Map Section -->
+    <div id="map"></div>
 
-		<button type="button" class="btn btn-primary btn-lg btn-block flying" data-toggle="modal" data-target="#addCategoryModal">ADD NEW CATEGORY</button>
-		
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; HIO Fitting 2014</p>
+        </div>
+    </footer>
 
-		<!-- Categories -->	
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
 
-	</div> <!-- end of page Categories -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
 
-	<div class="container page" id="pageBudgets"><!-- page Budgets -->
-		<div class="boxed flying">
-			<h1>SET YOUR MONTHLY BUDGET</h1>
-		</div>
-		
-		<div class="panel-group" id="budgetcordion">
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
-		<div class="boxed flying panel panel-default">
-			<div class="panel-heading panel-education">
-				<a data-toggle="collapse" data-parent="#budgetcordion" href="#collapseEight">
-					<h2 class="panel-title">
-						<i class="fa  fa-graduation-cap"></i>  Education 
-						<ul class="panel-category-list">
-							<li class="pull-right"><i class="fa  fa-angle-down fa-2x"></i></li>
-						</ul>
-					</h2>
-				</a>
-			</div>
-			
-			<div id="collapseEight" class="panel-collapse collapse">
-				<div class="panel-body" id="panel-body-4">
-					<p>YOUR STATUS AT THE MOMENT</p>
-					<div id="donutchart1">
-						
-					</div>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
 
-					<p>SET YOUR BUDGET</p>
-					<div class="input-group">
-					  	<input type="number" id="inputBudget1" class="form-control listPrice" placeholder="120">
-					  	<span class="input-group-addon">€</span>
-					</div>
-					<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented">SET</button>
-				</div>
-			</div>
-		</div>
+</body>
 
-		<div class="boxed flying panel panel-default">
-			<div class="panel-heading panel-food">
-			<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-				<h2 class="panel-title">
-						<i class="fa  fa-spoon"></i>  Food 
-					
-					<ul class="panel-category-list">
-						
-						<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
-						
-					</ul>
-				</h2>
-				</a>
-			</div>
-			<div id="collapseFive" class="panel-collapse collapse">
-				<div class="panel-body" id="panel-body-5">
-					<p>YOUR STATUS AT THE MOMENT</p>
-					<div id="donutchart2">
-						
-					</div>
-
-					<p>SET YOUR BUDGET</p>
-					<div class="input-group">
-					  	<input type="number" id="inputBudget1" class="form-control listPrice" placeholder="75">
-					  	<span class="input-group-addon">€</span>
-					</div>
-					<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented">SET</button>					
-				</div>
-			</div>
-		</div>
-
-		<div class="boxed flying panel panel-default">
-			<div class="panel-heading panel-entertainment">
-			<a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">	
-				<h2 class="panel-title">
-					
-						<i class="fa  fa-glass"></i> Entertainment 
-					
-					<ul class="panel-category-list">
-						<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
-					</ul>
-				</h2>
-				</a>
-			</div>
-			<div id="collapseSix" class="panel-collapse collapse">
-				<div class="panel-body" id="panel-body-6">
-					<p>YOUR STATUS AT THE MOMENT</p>
-					<div id="donutchart3">
-						
-					</div>
-
-					<p>SET YOUR BUDGET</p>
-					<div class="input-group">
-					  	<input type="number" id="inputBudget1" class="form-control listPrice" placeholder="60">
-					  	<span class="input-group-addon">€</span>
-					</div>
-					<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented">SET</button>						
-				</div>
-			</div>
-		</div>
-
-		<div class="boxed flying panel panel-default">
-			<div class="panel-heading panel-transportation">
-			<a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
-				<h2 class="panel-title">
-					
-						<i class="fa  fa-car"></i>  Transportation 
-					
-					<ul class="panel-category-list">
-						<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
-					</ul>
-				</h2>
-				</a>
-			</div>
-			<div id="collapseSeven" class="panel-collapse collapse">
-				<div class="panel-body" id="panel-body-7">
-					<p>YOUR STATUS AT THE MOMENT</p>
-					<div id="donutchart4">
-						
-					</div>
-
-					<p>SET YOUR BUDGET</p>
-					<div class="input-group">
-					  	<input type="number" id="inputBudget1" class="form-control listPrice" placeholder="120">
-					  	<span class="input-group-addon">€</span>
-					</div>
-					<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented">SET</button>					
-				</div>
-			</div>
-		</div>
-		</div>
-	</div>	
-
-
-
-	<div class="container page" id="pageAdvice"><!-- page Advice -->
-			 	
-		<div class="boxed butlersays">
-			<div class="logobig">
-	 			<img class="pull-right" src="assets/img/logo_black.png" alt="Logo" id="butlerpic">
-	 			<h1>HI, I AM JAMES,</h1>
-	 			<p>your personal butler regarding finance. With my limitless wisdom I am here to help you manage your expenses and stay within your monthly budgets.</p>
-	 			<p>Just ask me for advice any time you want!</p>
-	 		</div>
-	 	</div>
-
-	 	<div class="boxed flying butlersays" id="adviceBox">
-			<h1> MY ADVICE FOR YOU</h1>
-			<p id="advice">Dogs have no money. Isn’t that amazing? They’re broke their entire lives. But they get through. You know why dogs have no money? .. No Pockets.</p> 
-		</div>
-
-		<button type="button" class="btn btn-primary btn-lg btn-block flying" onclick="changeAdvice()">GET OTHER ADVICE</button>
-	</div> <!-- end of page Advice -->
-
-	<!-- add expense Modal -->
-	<div class="modal fade" id="addExpenseModal" tabindex="-1" role="dialog" aria-labelledby="addExpenseLabel" aria-hidden="true">
-  		<div class="modal-dialog">
-  		  	<div class="modal-content">
-  		  	  	<div class="modal-header">
-  		  	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-  		  	    	<h4 class="modal-title" id="myModalLabel">ADD A NEW EXPENSE</h4>
-  		  	  	</div>
-
-  		  		<div class="modal-body">
-					<div id="entry-tabs">
-						<ul>
-							<li class="notImplemented"><i class="fa fa-microphone"></i><a href="#" title="dictate" id="dictate">SAY</a></li>
-							<li><i class="fa fa-pencil"></i><a href="#" title="write" id="write" class="activeOverview">WRITE</a></li>
-							<li class="notImplemented"><i class="fa fa-camera"></i><a href="#" title="photograph" id="photograph">PHOTO</a></li>
-						</ul>
-					</div>
-					<form class="form-horizontal" role="form" name="addExpenseForm">
-						<div class="form-group">
-							<label for="inputName" class="col-sm-2 control-label">Name</label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control" id="inputName" placeholder="Cat Food">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputPrice" class="col-sm-2 control-label">Price</label>
-							<div class="col-sm-10">
-								<input type="number" class="form-control" id="inputPrice" placeholder="12">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputCategory" class="col-sm-2 control-label">Category</label>
-							<div class="col-sm-10">
-								<select class="form-control" id="inputCategory" placeholder="FOOD">
-									<option value="0">Education</option>
-								  	<option value="1">Food</option>
-								  	<option value="2">Entertainment</option>
-								  	<option value="3">Transportation</option>
-								</select>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<div class="col-sm-offset-2 col-sm-10">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox"> Repeat Expense
-									</label>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-
-				<div class="modal-footer">
-
-					
-
-					<button onclick='recolor()'class="btn btn-default">CLOSE <span class="glyphicon glyphicon-remove"></span></button>
-					<button onclick='addExpense()' class="btn btn-default">ADD <span id="changeable" class="glyphicon glyphicon-ok"></span></button>
-
-      			</div>
-	    	</div>
-	  	</div>
-	</div>
-
-	<!-- add category Modal -->
-	<div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="addCategoryLabel" aria-hidden="true">
-  		<div class="modal-dialog">
-  		  	<div class="modal-content">
-  		  	  	<div class="modal-header">
-  		  	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-  		  	    	<h4 class="modal-title" id="myModalLabel">ADD A NEW CATEGORY</h4>
-  		  	  	</div>
-
-  		  		<div class="modal-body">
-  		  		<div id="entry-tabs">
-						<ul>
-							<li class="notImplemented"><i class="fa fa-microphone"></i><a href="#" title="dictate" id="dictate">SAY</a></li>
-							<li><i class="fa fa-pencil"></i><a href="#" title="write" id="write" class="activeOverview">WRITE</a></li>
-							<li class="notImplemented"><i class="fa fa-camera"></i><a href="#" title="photograph" id="photograph">PHOTO</a></li>
-						</ul>
-					</div>
-					<form class="form-horizontal" role="form">
-						<div class="form-group">
-							<label for="inputCategoryname" class="col-sm-2 control-label">Name</label>
-							<div class="col-sm-10">
-								<input type="email" class="form-control" id="inputName" placeholder="Health">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputLimit" class="col-sm-2 control-label">Limit</label>
-							<div class="col-sm-10">
-								<input type="number" class="form-control" id="inputLimit" placeholder="120">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputColor" class="col-sm-2 control-label">Color</label>
-							<div class="col-sm-10">
-								<div class="btn-group">
-  									 <input id="colorpicker" type="color" name="favcolor">
-								</div>
-							</div>
-						</div>
-						
-						
-					</form>
-				</div>
-
-				<div class="modal-footer">
-					<button class="btn btn-default" data-dismiss="modal">CLOSE <span class=" glyphicon glyphicon-remove"></span></button>
-					<button  class="notImplemented btn btn-default">ADD <span class="glyphicon glyphicon-ok"></span></button>
-      			</div>
-	    	</div>
-	  	</div>
-	</div>
-
-	<!-- function not implemented Modal -->
-	<div class="modal fade" id="notImplementedModal" tabindex="-1" role="dialog" aria-labelledby="notImplementedLabel" aria-hidden="true">
-  		<div class="modal-dialog">
-  		  	<div class="modal-content">
-  		  	  	<div class="modal-header">
-  		  	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-  		  	    	<h4 class="modal-title" id="myModalLabel">SORRY</h4>
-  		  	  	</div>
-  		  	<div class="modal-body">
-        		<p>The function you are trying to acces does not yet exist.</p>
-        		<p>A team of highly trained monkeys has been dispatched to deal with this situation</p>
-	      	</div>
-	      		<div class="modal-footer">
-	        		<button type="button" class="btn btn-default" data-dismiss="modal">CLOSE<span class="glyphicon glyphicon-remove"></span></button>
-	      		</div>
-	    	</div>
-	  	</div>
-	</div>
-
-	<!-- HEADER -->
-	<div data-role="header" class="navbar navbar-default navbar-fixed-top" data-role="header">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#"><img id="logo" src="assets/img/logo_white.png"> <p id="brand-name">BUDGET BUTLER</p></a>
-			</div>
-		</div>
-	</div><!-- /header -->
-
-	
-	<!-- FOOTER -->
-	<div data-role="footer" id="footer" class="navbar-default">
-		<ul class="nav">
-			<li><a href="#pageOverview" class="navlink activeSite" ><i class="fa fa-bar-chart-o fa-2x"></i> <br> Overview </a></li>
-			<li><a href="#pageCategories" class="navlink"><i class="fa fa-tags fa-2x"></i> <br> Categories </a></li>
-			<li><a href="#pageBudgets" class="navlink" ><i class="fa fa-money fa-2x"></i> <br> Budgets </a></li>
-			<li><a href="#pageAdvice" class="navlink"><i class="fa fa-lightbulb-o fa-2x"></i> <br> Advice </a></li>
-		</ul>
-	</div><!-- /footer -->
-
-  </body>
-  </html>
+</html>
