@@ -7,9 +7,10 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Lora,"Lato",Helvetica,Arial,sans-serif;
     color: #fff;
-    background-color: #1C1C1C;
+    background-color: #231f20;
+    /*border: 15px solid #95d551;*/
 }
 
 html {
@@ -25,7 +26,7 @@ h5,
 h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,"Lato",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -34,6 +35,7 @@ p {
     margin: 0 0 25px;
     font-size: 18px;
     line-height: 1.5;
+    font-family: Montserrat,"Lato",Helvetica,Arial,sans-serif;
 }
 
 @media(min-width:767px) {
@@ -45,7 +47,7 @@ p {
 }
 
 a {
-    color: #99cc00;
+    color: #95d551;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -65,7 +67,7 @@ a:focus {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,"Lato",Helvetica,Arial,sans-serif;
     background-color: #1C1C1C;
 }
 
@@ -110,6 +112,20 @@ a:focus {
     background-color: rgba(255,255,255,.3);
 }
 
+.navbar-toggle {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.navbar-brand {
+    padding: 5px;
+}
+
+
+#logo {
+    height: 40px;
+}
+
 @media(min-width:767px) {
     .navbar {
         padding: 20px 0;
@@ -138,8 +154,8 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/pagehead.jpeg) no-repeat bottom center scroll;
-    background-color: #000;
+    /*background: url(../img/pagehead.jpeg) no-repeat bottom center scroll;*/
+    background-color: #231f20;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -252,12 +268,63 @@ a:focus {
     padding-top: 100px;
 }
 
+.category-title {
+    margin-top: -30%
+}
+
+.category-title > a {
+    color: #fff;
+}
+
+.category-caption > p{
+    vertical-align: bottom;
+    margin-top: 27%;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 10pt;
+}
+
+.thumbnail {
+    color: #ffffff;
+    background-color: #353535;
+    border: 1px solid #777777;
+}
+
+.thumbnail .caption {
+    color: #dddddd;
+}
+
+.thumbnail p {
+    text-align: justify;
+}
+
+.news-section {
+    text-align: left;
+}
+.news-section h2 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #95d551;
+}
+
+.news-section p {
+    text-align: justify;
+    font-size: 10pt;
+    font-weight: lighter;
+}
+
+.newsentry {
+    border-bottom: 1px solid #353535;
+    margin-bottom: 35px;
+}
+
 .download-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
     background: url(../img/pagehead_sat.jpeg) no-repeat center center scroll;
-    background-color: #000;
+    background-color: #231f20;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -287,7 +354,7 @@ a:focus {
 
 .btn {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,"Lato",Helvetica,Arial,sans-serif;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -295,17 +362,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #99cc00;
-    color: #99cc00;
+    border: 1px solid #95d551;
+    color: #95d551;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #99cc00;
+    border: 1px solid #95d551;
     outline: 0;
     color: #000;
-    background-color: #99cc00;
+    background-color: #95d551;
 }
 
 ul.banner-social-buttons {
@@ -360,4 +427,9 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+.modal-content {
+    background-color: #57c03e;
+    border-radius: 0px;
 }

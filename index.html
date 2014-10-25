@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hole in One fitting - agent</title>
+    <title>TalentStix</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,135 +27,272 @@
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <![endif]-->
 
-</head>
+    </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">HIO</span> fitting
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download">Fitting</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Golf clubs</h1>
-                        <p class="intro-text">There are many, but only one that fits all your needs. We help you find it!<br>Created by Hole in One Fitting.</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <img id="logo" src="img/logo.svg">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#content">Talentstix</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#news">News</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#contact-section">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Intro Header -->
+        <header class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h1 class="brand-heading">
+                                <img src="img/logo.svg">
+                            </h1>
+                            <p class="intro-text">“WINNING TAKES TALENT, TO REPEAT TAKES CHARACTER.“</p>
+                            <a href="#content" class="btn btn-circle page-scroll">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About HIO</h2>
-                <p>Wir sind ein junges Team aus München, das sich auf das spannende Thema Fitting spezialisiert hat. Durch unsere Erfahrung aus über tausend selbst durchgeführten Fittings haben wir einen einzigartigen Algorithmus entwickelt, der aus über einer Millionen Griff-Schaft-Kopf Kombinationen den perfekten Schläger ermittelt - für Golfer aller Leistungsklassen. Wir bieten ausschließlich exklusive Fittingmarken an, die in unserer Werkstatt individuell an den Golfer angepasst werden: individuell in den Spezifikationen, aber auch in Farbe und Design.</p>
-            </div>
-        </div>
-    </section>
+        <!-- Content Section -->
+        <section id="content" class="container content-section text-center">
+            <div class="row">
 
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Fitting Area</h2>
-                    <p>Get the Golf club that meets your needs perfectly</p>
-                    <a href="http://www.hio-fitting.de/index.php/de/ct-menu-item-1" class="btn btn-default btn-lg">Go Fitting!</a>
+              <div class="col-sm-4">
+                <div class="category" id="concept">
+                  <a class="category-thumb" href="#" data-toggle="modal" data-target="#conceptModal" title="Talentstix Konzept">
+                    <img src="img/green.svg">
+                </a>
+                <h4 class="category-title">
+                  <a href="#" data-toggle="modal" data-target="#conceptModal">Talentstix Konzept</a>
+              </h4>
+          </div>    
+          <div class="category-caption">
+              <p>Zielgruppe,Vorteile Qualität vs. Finanziell, Fittingablauf</p>
+          </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="category" id="easyFit">
+          <a class="category-thumb" href="#" title="Easy Fit">
+            <img src="img/green.svg">
+        </a>
+        <h4 class="category-title">
+          <a href="#">Easy Fit</a>
+      </h4>
+  </div>    
+  <div class="category-caption">
+      <p>Dateneingabe mit Hinweis auf Emailangebot</p>
+  </div>
+</div>
+
+<div class="col-sm-4">
+    <div class="category" id="products">
+      <a class="category-thumb" href="#" title="Produkte">
+        <img src="img/green.svg">
+    </a>
+    <h4 class="category-title">
+      <a href="#">Produkte</a>
+  </h4>
+</div>    
+<div class="category-caption">
+  <p>Kopffirmen, Schaftfirmen, Grifffirmen, Bags, Trolley</p>
+</div>
+</div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-sm-4">
+    <div class="category" id="media">
+      <a class="category-thumb" href="#" title="Media">
+        <img src="img/green.svg">
+    </a>
+    <h4 class="category-title">
+      <a href="#">Media</a>
+  </h4>
+</div>    
+<div class="category-caption">
+  <p>Facebook, Presse, Testimonials, Videos</p>
+</div>
+</div>
+
+<div class="col-sm-4">
+    <div class="category" id="team">
+      <a class="category-thumb" href="#" title="Team">
+        <img src="img/green.svg">
+    </a>
+    <h4 class="category-title">
+      <a href="#">Team</a>
+  </h4>
+</div>    
+<div class="category-caption">
+  <p>Golfschule Marco Schmuck, HIO-Fitting</p>
+</div>
+</div>
+
+<div class="col-sm-4">
+    <div class="category" id="contact">
+      <a class="category-thumb" href="#" title="Kontakt">
+        <img src="img/green.svg">
+    </a>
+    <h4 class="category-title">
+      <a href="#">Kontakt</a>
+  </h4>
+</div>    
+<div class="category-caption">
+  <p>Ansprechpartner, Fittingadresse</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- News Section -->
+<section id="news" class="content-section text-center">
+    <div class="news-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h2>News</h2>
+                    <div class="newsentry">
+                        <h4>Fresh News (Julian Zimerman Gefittet)</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="newsentry">
+                            <h4>Talentstix auf der Intergolf 2014</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-2">
+                            <h2>What's new</h2>
+                            <div class="newsentry">
+                                <h4>New Colors Pure Grips</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact-section" class="container content-section text-center">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2>Contact HIO</h2>
+                        <p>Feel free to email us to provide some feedback on our work, give us suggestions for new options, or to just say hello!</p>
+                        <p><a href="mailto:marcostinkt@hio-fitting.com">marcostinkt@hio-fitting.com</a>
+                        </p>
+                        <ul class="list-inline banner-social-buttons">
+                            <li>
+                                <a href="https://www.facebook.com/pages/HIO-Fitting/140537486012508" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/pages/HIO-Fitting/140537486012508" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/pages/HIO-Fitting/140537486012508" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Map Section -->
+            <div id="map"></div>
+
+            <!-- Footer -->
+            <footer>
+                <div class="container text-center">
+                    <p>Copyright &copy; HIO Fitting 2014</p>
+                </div>
+            </footer>
+
+            <!-- Modalwindows -->
+            <!-- Konzept Modal -->
+            <div class="modal fade" id="conceptModal" tabindex="-1" role="dialog" aria-labelledby="conceptModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            foobar
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact HIO</h2>
-                <p>Feel free to email us to provide some feedback on our work, give us suggestions for new options, or to just say hello!</p>
-                <p><a href="mailto:marcostinkt@hio-fitting.com">marcostinkt@hio-fitting.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://www.facebook.com/pages/HIO-Fitting/140537486012508" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/pages/HIO-Fitting/140537486012508" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/pages/HIO-Fitting/140537486012508" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+            <!-- jQuery Version 1.11.0 -->
+            <script src="js/jquery-1.11.0.js"></script>
 
-    <!-- Map Section -->
-    <div id="map"></div>
+            <!-- Bootstrap Core JavaScript -->
+            <script src="js/bootstrap.min.js"></script>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; HIO Fitting 2014</p>
-        </div>
-    </footer>
+            <!-- Plugin JavaScript -->
+            <script src="js/jquery.easing.min.js"></script>
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
+            <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+            <!-- Custom Theme JavaScript -->
+            <script src="js/grayscale.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
+        </body>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-
-</body>
-
-</html>
+        </html>
