@@ -279,11 +279,15 @@ a:focus {
 .category-caption > p{
     vertical-align: bottom;
     margin-top: 27%;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 40px;
     text-align: justify;
     font-size: 10pt;
+}
+
+.category img {
+    width: 80%;
 }
 
 .thumbnail {
@@ -306,6 +310,10 @@ a:focus {
 .news-section h2 {
     padding-bottom: 5px;
     border-bottom: 1px solid #95d551;
+}
+
+.news-section h4 {
+    margin-bottom: 10px;
 }
 
 .news-section p {
@@ -430,6 +438,28 @@ body {
 }
 
 .modal-content {
-    background-color: #57c03e;
+    background-color: #95d551;
     border-radius: 0px;
+    color: #353535;
+}
+
+.modal-body > img{
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.modal-body > h2 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #353535;
+    /*margin-bottom: 10px;*/
+}
+
+.modal-body h4 {
+    margin-bottom: 10px;
+}
+
+.modal-body p {
+    text-align: justify;
+    font-size: 10pt;
+    font-weight: lighter;
 }
