@@ -100,7 +100,7 @@ a:focus {
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-bottom: 15px solid #7ecc28;
     text-transform: uppercase;
     font-family: Montserrat,"Lato",Helvetica,Arial,sans-serif;
     background-color: #1C1C1C;
@@ -176,7 +176,7 @@ a:focus {
     }
 
     .navbar-custom.top-nav-collapse {
-        border-bottom: 1px solid rgba(255,255,255,.3);
+        border-bottom: 15px solid #7ecc28;
     }
 }
 
@@ -210,6 +210,7 @@ a:focus {
 
 .intro .intro-body .intro-text {
     font-size: 18px;
+    padding: 0 10px;
 }
 
 @media(min-width:767px) {
