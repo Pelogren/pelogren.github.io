@@ -52,16 +52,16 @@ p {
     font-family: Montserrat,"Lato",Helvetica,Arial,sans-serif;
 }
 
-button {
+button.category-wrapper {
     background-color: transparent;
     width: 100%;
 }
 
-button:hover {
+button.category-wrapper:hover {
     background-color: #7ecc28;
 }
 
-button:hover .cl-effect-7 a {
+button.category-wrapper:hover .cl-effect-7 a {
     color: #231f20;
 }
 
@@ -372,7 +372,7 @@ a:focus {
 .category-wrapper {
     margin: 5px -10px;
     border: 1px solid #7ecc28;
-    height: 100px;
+    height: 150px;
 }
 
 .category-caption > p{
