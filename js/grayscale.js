@@ -4,12 +4,19 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+//Bubu Debugfinction
+$(".li").onmouseover = function() {
+    console.info($("#debugId"));
+};
+
 // jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
+        $("#logo").show();
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        $("#logo").hide();
     }
 });
 
@@ -25,9 +32,9 @@ $(function() {
 });
 
 // Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});
+// $('.navbar-collapse ul li a').click(function() {
+//     $('.navbar-toggle:visible').click();
+// });
 
 // Google Maps Scripts
 // When the window has finished loading create our google map below

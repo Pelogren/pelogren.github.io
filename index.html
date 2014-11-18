@@ -33,14 +33,14 @@
 
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- Facebook -->
-    <!-- <div id="fb-root"></div> -->
+    <!-- <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
           js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.0";
           fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        }(document, 'script', 'facebook-jssdk'));</script> -->
 
         <!-- Navigation -->
         <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -50,7 +50,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand page-scroll" href="#page-top">
-                        <img id="logo" src="img/logo.svg">
+                        <img hidden id="logo" src="img/Talentstix_logo_GWB_1.svg">
                     </a>
                 </div>
 
@@ -62,13 +62,13 @@
                             <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#content">Talentstix</a>
+                            <a class="page-scroll cl-effect-7" href="#content">Talentstix</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#news">News</a>
+                            <a class="page-scroll cl-effect-7" href="#news">News</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#contact-section">Kontakt</a>
+                            <a class="page-scroll cl-effect-7" href="#contact-section">Kontakt</a>
                         </li>
                     </ul>
                 </div>
@@ -84,7 +84,7 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <h1 class="brand-heading">
-                                <img src="img/logo.svg">
+                                <img src="img/Talentstix_logo_GWB_1.svg">
                             </h1>
                             <p class="intro-text">“WINNING TAKES TALENT, TO REPEAT TAKES CHARACTER.“</p>
                             <a href="#content" class="btn btn-circle page-scroll">
@@ -101,44 +101,41 @@
         <div class="row">
 
             <div class="col-sm-4">
-                <div class="category" id="concept">
-                    <a class="category-thumb" href="#" data-toggle="modal" data-target="#conceptModal" title="Talentstix Konzept">
-                        <img src="img/green.svg">
-                    </a>
-                    <h4 class="category-title">
-                        <a href="#" data-toggle="modal" data-target="#conceptModal">Talentstix Konzept</a>
-                    </h4>
+                <div class="category-wrapper">
+                    <div class="category" id="concept">
+                        <h4 class="cl-effect-7">
+                            <a class="cl-effect-7" href="#" data-toggle="modal" data-target="#conceptModal">Talentstix Konzept</a>
+                        </h4>
+                    </div>    
+                    <div class="category-caption">
+                        <p>Zielgruppe,Vorteile Qualität vs. Finanziell, Fittingablauf</p>
+                    </div>
                 </div>    
-                <div class="category-caption">
-                    <p>Zielgruppe,Vorteile Qualität vs. Finanziell, Fittingablauf</p>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="category-wrapper">
+                    <div class="category" id="easyFit">
+                        <h4 class="cl-effect-7">
+                            <a href="#" data-toggle="modal" data-target="#easyFitModal">Easy Fit</a>
+                        </h4>
+                    </div>    
+                    <div class="category-caption">
+                        <p>Dateneingabe mit Hinweis auf Emailangebot</p>
+                    </div>
                 </div>
             </div>
 
             <div class="col-sm-4">
-                <div class="category" id="easyFit">
-                    <a class="category-thumb" href="#" data-toggle="modal" data-target="#easyFitModal" title="Easy Fit">
-                        <img src="img/green.svg">
-                    </a>
-                    <h4 class="category-title">
-                        <a href="#" data-toggle="modal" data-target="#easyFitModal">Easy Fit</a>
-                    </h4>
-                </div>    
-                <div class="category-caption">
-                    <p>Dateneingabe mit Hinweis auf Emailangebot</p>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="category" id="products">
-                    <a class="category-thumb" href="#" data-toggle="modal" data-target="#productModal" title="Produkte">
-                        <img src="img/green.svg">
-                    </a>
-                    <h4 class="category-title">
-                        <a href="#" data-toggle="modal" data-target="#productModal">Produkte</a>
-                    </h4>
-                </div>    
-                <div class="category-caption">
-                    <p>Kopffirmen, Schaftfirmen, Grifffirmen, Bags, Trolley</p>
+                <div class="category-wrapper">
+                    <div class="category" id="products">
+                        <h4 class="cl-effect-7">
+                            <a href="#" data-toggle="modal" data-target="#productModal">Produkte</a>
+                        </h4>
+                    </div>    
+                    <div class="category-caption">
+                        <p>Kopffirmen, Schaftfirmen, Grifffirmen, Bags, Trolley</p>
+                    </div>
                 </div>
             </div>
 
@@ -147,44 +144,41 @@
         <div class="row">
 
             <div class="col-sm-4">
-                <div class="category" id="media">
-                    <a class="category-thumb" href="#" data-toggle="modal" data-target="#mediaModal" title="Media">
-                        <img src="img/green.svg">
-                    </a>
-                    <h4 class="category-title">
-                        <a href="#" data-toggle="modal" data-target="#mediaModal">Media</a>
-                    </h4>
-                </div>    
-                <div class="category-caption">
-                  <p>Facebook, Presse, Testimonials, Videos</p>
+                <div class="category-wrapper">
+                    <div class="category" id="media">
+                        <h4 class="cl-effect-7">
+                            <a href="#" data-toggle="modal" data-target="#mediaModal">Media</a>
+                        </h4>
+                    </div>    
+                    <div class="category-caption">
+                      <p>Facebook, Presse, Testimonials, Videos</p>
+                    </div>
                 </div>
             </div>
 
             <div class="col-sm-4">
-                <div class="category" id="team">
-                    <a class="category-thumb" href="#" data-toggle="modal" data-target="#teamModal" title="Team">
-                        <img src="img/green.svg">
-                    </a>
-                    <h4 class="category-title">
-                        <a href="#" data-toggle="modal" data-target="#teamModal">Team</a>
-                    </h4>
-                </div>    
-                <div class="category-caption">
-                    <p>Golfschule Marco Schmuck, HIO-Fitting</p>
+                <div class="category-wrapper">
+                    <div class="category" id="team">
+                        <h4 class="cl-effect-7">
+                            <a href="#" data-toggle="modal" data-target="#teamModal">Team</a>
+                        </h4>
+                    </div>    
+                    <div class="category-caption">
+                        <p>Golfschule Marco Schmuck, HIO-Fitting</p>
+                    </div>
                 </div>
             </div>
 
             <div class="col-sm-4">
-                <div class="category" id="contact">
-                    <a class="category-thumb" href="#" data-toggle="modal" data-target="#contactModal" title="Kontakt">
-                        <img src="img/green.svg">
-                    </a>
-                    <h4 class="category-title">
-                        <a href="#" data-toggle="modal" data-target="#contactModal">Kontakt</a>
-                    </h4>
-                </div>    
-                <div class="category-caption">
-                    <p>Ansprechpartner, Fittingadresse</p>
+                <div class="category-wrapper">
+                    <div class="category" id="contact">
+                        <h4 class="cl-effect-7">
+                            <a href="#" data-toggle="modal" data-target="#contactModal">Kontakt</a>
+                        </h4>
+                    </div>    
+                    <div class="category-caption">
+                        <p>Ansprechpartner, Fittingadresse</p>
+                    </div>
                 </div>
             </div>
 
@@ -220,8 +214,8 @@
                 <div class="col-md-5 col-md-offset-2">
                     <h2>What's new</h2>
                     <div class="newsentry">
-                        <h4>Talentstix auf facebook</h4> 
-                        <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fliahlounge&amp;height=395&amp;colorscheme=dark&amp;show_faces=false&amp;header=false&amp;stream=true&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100% !important; height:395px;" allowTransparency="true"></iframe>                     
+                        <h4>Talentstix auf facebook</h4>
+                        <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fliahlounge&amp;height=395&amp;colorscheme=dark&amp;show_faces=false&amp;header=false&amp;stream=true&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100% !important; height:395px;" allowTransparency="true"></iframe>                        
                     </div>
                 </div>
             </div>
