@@ -5,9 +5,8 @@
  */
 
 //Bubu Debugfinction
-$(".li").onmouseover = function() {
-    console.info($("#debugId"));
-};
+$(".category-wrapper").focus(function() {
+    $(".cl-effect-7").toggleClass('cat-hover');
 
 // jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
