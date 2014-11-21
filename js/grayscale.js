@@ -5,8 +5,7 @@
  */
 
 //Bubu Debugfinction
-$(".category-wrapper").focus(function() {
-    $(".cl-effect-7").toggleClass('cat-hover');
+
 
 // jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
