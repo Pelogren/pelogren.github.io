@@ -544,9 +544,9 @@ body {
 
 /*Modalstuff*/
 
-/*.modal-dialog {
-    width: 750px;
-}*/
+.modal-dialog {
+    width: 1000px;
+}
 
 .modal-header {
     border-bottom: 1px solid #353535;
