@@ -7,7 +7,7 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: Lora,"Lato",Helvetica,Arial,sans-serif;
+    font-family: Monserat,"Lato",Helvetica,Arial,sans-serif;
     color: #fff;
     background-color: #231f20;
 }
@@ -30,6 +30,11 @@ html {
 section {
     border-left: 15px solid #7ecc28;
     border-right: 15px solid #7ecc28;
+}
+
+form {
+    font-family: Montserrat,"Lato",Helvetica,Arial,sans-serif;
+
 }
 
 h1,
@@ -570,6 +575,7 @@ body {
 }
 
 .modal-body h4 {
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
@@ -601,4 +607,48 @@ body {
 img.smallmid {
     width: 50%;
     margin: 0 25%;
+}
+
+#formcontainer {
+    width: 25%;
+    margin: 0 auto ;
+}
+
+#submitButtonCont {
+    margin-top: 20px;
+}
+
+.btn-submit {
+    background-color: transparent;
+    border: solid 1px #231f20;
+    color: #231f20;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    background-color: #231f20;
+    color: #7ecc28;
+}   
+
+.swingtype > p {
+    font-size: 10pt;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+.swingtype > h4 {
+    
+    text-align: left;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #7ecc28;
+}
+
+#swingtypes-section h2 {
+    margin-bottom: 80px;
+    color: #7ecc28;
+    font-size: 35pt;
 }
