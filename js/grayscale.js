@@ -46,7 +46,7 @@ function init() {
         zoom: 15,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(48.1351253, 11.5819806), // New York
+        center: new google.maps.LatLng(48.15907, 11.32293), // Ringstraße 14, Gewerbegebiet Süd, 82223 Eichenau
 
         // Disables the default Google Maps UI components
         disableDefaultUI: true,
@@ -174,7 +174,7 @@ function init() {
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = 'img/map-marker.png';
-    var myLatLng = new google.maps.LatLng(48.1351253, 11.5819806);
+    var myLatLng = new google.maps.LatLng(48.15907, 11.32293);
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         map: map,

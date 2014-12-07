@@ -374,7 +374,7 @@ a:focus {
 }
 
 .category-wrapper {
-    margin: 5px -10px;
+    margin: 25px 0px;
     border: 1px solid #7ecc28;
     height: 150px;
 }
@@ -411,7 +411,12 @@ a:focus {
 .news-section {
     text-align: left;
 }
+
 .news-section h2 {
+    text-align: center;
+}
+
+.news-section h3 {
     padding-bottom: 5px;
     border-bottom: 1px solid #7ecc28;
 }
@@ -426,9 +431,49 @@ a:focus {
     font-weight: lighter;
 }
 
-.newsentry {
+/*Testimonial Stuff*/
+.testimonial {
     border-bottom: 1px solid #353535;
     margin-bottom: 35px;
+}
+
+.testimonial-text {
+    margin: 5px auto;
+}
+
+p.testimonial-name {
+    width: 100%;
+    text-align: right;
+    font-style: italic;
+    opacity: 0.3;
+}
+
+/*Press Link Stuff*/
+.press-link-wrapper {
+    margin: 0;
+    padding: 5px;
+    text-transform: none;
+    border-bottom: 1px solid #353535;
+}
+
+.press-link-wrapper:hover {
+    color: #353535;
+    background-color: #7ecc28;
+}
+
+.press-link > img {
+    width: 100%;
+}
+
+.press-link-text {
+    margin: 5px auto;
+}
+
+p.press-link-name {
+    width: 100%;
+    text-align: right;
+    font-style: italic;
+    opacity: 0.3;
 }
 
 .download-section {
@@ -549,9 +594,9 @@ body {
 
 /*Modalstuff*/
 
-.modal-dialog {
+/*.modal-dialog {
     width: 1000px;
-}
+}*/
 
 .modal-header {
     border-bottom: 1px solid #353535;
@@ -610,7 +655,7 @@ img.smallmid {
 }
 
 #formcontainer {
-    width: 25%;
+    width: 50%;
     margin: 0 auto ;
 }
 
@@ -647,8 +692,23 @@ img.smallmid {
     border-bottom: 1px solid #7ecc28;
 }
 
-#swingtypes-section h2 {
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section h2 {
     margin-bottom: 80px;
     color: #7ecc28;
-    font-size: 35pt;
+    font-size: 300%;
 }
+
