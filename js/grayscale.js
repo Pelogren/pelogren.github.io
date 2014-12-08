@@ -180,4 +180,14 @@ function init() {
         map: map,
         icon: image
     });
+
+    //Add onclick to map
+    $('#map-section').click(function(event) {
+        window.open("https://www.google.de/maps/place/Ringstra%C3%9Fe+14,+Gewerbegebiet+S%C3%BCd,+82223+Eichenau/@48.1590657,11.3230248,17z/data=!3m1!4b1!4m2!3m1!1s0x479dd5f56c4bc627:0x29d39bf7dcffcd82?hl=de");
+    });
+
+    //Tooltip
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
 }

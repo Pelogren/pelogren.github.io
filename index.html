@@ -312,7 +312,8 @@
 
             <!-- Map Section -->
             <section id="map-section">
-            <div id="map"></div>
+                    <div id="map"></div>
+                
             </section>
 
             <!-- Footer -->
@@ -362,40 +363,45 @@
                             <h2>Fittingablauf</h2>
                             <p>Wohl findet man in Deutschland keine technologisch hochwertiger ausgestattete Fittingstation als in Eichenau bei München. Folgende Messungen sind Teil des Fittingprozesses:</p>
 
-                            <div class="fittingstep-first">
-                                
+                            <div class="fittingstep fittingstep-first">
+                                <div class="fittingstep-number">
+                                    1
+                                </div>
+                                <p>Vermessung des eigenen Equipments mittels digitaler Maschinen</p>
+                                <img class="smallmid" src="img/talentstix_concept_9.png">
                             </div>
 
-                            <div class="fittingstep-second">
-                                
+                            <div class="fittingstep fittingstep-second">
+                                <div class="fittingstep-number">
+                                    2
+                                </div>
+                                <p>Eingangsmessung auf der Kraftmessplatte um körperlich Potentiale und Defizite herauszustellen</p>
+                                <img class="smallmid" src="img/talentstix_concept_9.png">
                             </div>
 
-                            <div class="fittingstep-third">
-                                
+                            <div class="fittingstep fittingstep-third">
+                                <div class="fittingstep-number">
+                                    3
+                                </div>
+                                <p>Aufnahme und Vergleich von relevanten Ballflugparameter wie Schlagweite, Flughöhe, Spin, Abflugwinkel, Ballgeschwindigkeit mittels neuester Radar- und Kameratechnologie</p>
+                                <img class="smallmid" src="img/talentstix_concept_9.png">
                             </div>
 
-                            <ol>
-                                <li><p>Vermessung des eigenen Equipments mittels digitaler Maschinen</p>
-                                    <img class="smallmid" src="img/talentstix_concept_5.png">
-                                </li>
+                            <div class="fittingstep fittingstep-fourth">
+                                <div class="fittingstep-number">
+                                    4
+                                </div>
+                                <p>Bestimmung des Testsiegers anhand gemessener Daten sowie eigens entwickeltem TalentStix Algorithmus</p>
+                                <img class="smallmid" src="img/talentstix_concept_9.png"> 
+                            </div>
 
-                                <li><p>Eingangsmessung auf der Kraftmessplatte um körperlich Potentiale und Defizite herauszustellen</p>
-                                    <img class="smallmid" src="img/talentstix_concept_6.png">
-                                    <img class="smallmid" src="img/talentstix_concept_7.png">
-                                </li>
-
-                                <li><p>Aufnahme und Vergleich von relevanten Ballflugparameter wie Schlagweite, Flughöhe, Spin, Abflugwinkel, Ballgeschwindigkeit mittels neuester Radar- und Kameratechnologie</p>
-                                    <img src="img/talentstix_concept_8_alpha.png">
-                                </li>
-
-                                <li><p>Bestimmung des Testsiegers anhand gemessener Daten sowie eigens entwickeltem TalentStix Algorithmus</p>
-                                    <img class="smallmid" src="img/talentstix_concept_9.png">        
-                                </li>
-
-                                <li><p>Diskussion der Bewegung aus biomechanischen Gesichtspunkten und Ableitung eines Trainingsplans</p>
-                                    <img class="smallmid" src="img/talentstix_concept_10.png">        
-                                </li>
-                            </ol>
+                            <div class="fittingstep fittingstep-fifth">
+                                <div class="fittingstep-number">
+                                    5
+                                </div>
+                                <p>Diskussion der Bewegung aus biomechanischen Gesichtspunkten und Ableitung eines Trainingsplans</p>
+                                <img class="smallmid" src="img/talentstix_concept_9.png">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -410,13 +416,27 @@
                             <h4 class="modal-title" id="easyFitModalLabel">Easy Fit</h4>
                         </div>
                         <div class="modal-body">
-                            <form class="form-horizontal" role="form" id="easyFitForm">
+                            <form action="mailto:lorenz.prasch@gmail.com" method="post" class="form-horizontal" role="form" id="easyFitForm" enctype="text/plain">
                                 <div id="formcontainer">
+                                
+                                <input hidden type="text" name=" " value="=>    Bitte schicken Sie folgende Mail nun an uns, wir werden Sie dann bald kontaktieren">
+
+                                <div id="nameField">
+                                    <h4>Name</h4>
+                                  <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
+                                  <div>
+                                    <input required name="name" type="text" min="1" max="18" class="form-control" id="age" placeholder="Marco Burger">
+                                    <!-- HTML to write -->
+                                    
+                                  </div>
+                                </div>
+
+
                                 <div id="ageField">
                                     <h4>Alter</h4>
                                   <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
                                   <div>
-                                    <input type="number" min="1" max="18" class="form-control" id="age" placeholder="10">
+                                    <input required name="age" type="number" min="1" max="18" class="form-control" id="age" placeholder="10" value="10">
                                   </div>
                                 </div>
 
@@ -457,7 +477,7 @@
                               
                               <h4>Handicap</h4>
                               <div id="handycapSelect">
-                                <select class="form-control" id="handycap">
+                                <select required name="handicap" class="form-control" id="handycap">
                                   <option> < 7</option>
                                   <option selected="selected">8 - 15</option>
                                   <option>16 - 25</option>
@@ -469,23 +489,27 @@
                                     <h4>Körpergröße [cm]</h4>
                                   <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
                                   <div>
-                                    <input type="number" min="1" max="350" class="form-control" id="height" placeholder="140">
+                                    <input name="bodySize" type="number" min="1" max="350" class="form-control" id="height" placeholder="140" value="140">
                                   </div>
                                 </div>
 
                                 <div id="handToFloorField">
                                     <h4>Handgelenk - Bodenabstand [cm]</h4>
                                   <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
-                                  <div>
-                                    <input type="number" min="1" max="188" class="form-control" id="handToFloor" placeholder="70">
+                                  <div class="right-inner-addon">
+                                    <a href="#" data-toggle="tooltip" data-placement="left" title="Den Abstand von Beginn des Handgelenks bis zum Boden messen. Bei dieser Messung sollte man in Golfschuhen gekleidet aufrecht stehen und die Arme locker hängen lassen. Der Rechtshänder misst den Abstand an der linken Hand, als Linkshänder nimmt man die rechte Hand.">
+                                        <i class="fa fa-info-circle"></i></a>
+                                    <input name="handToFloor" type="number" min="1" max="188" class="form-control" id="handToFloor" placeholder="70" value="70">
                                   </div>
                                 </div>
 
                                 <div id="handSizeField">
                                     <h4>Handgröße [cm]</h4>
                                   <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
-                                  <div>
-                                    <input type="number" min="1" max="180" class="form-control" id="handSize" placeholder="14">
+                                  <div class="right-inner-addon">
+                                    <a href="#" data-toggle="tooltip" data-placement="left" title="Vom Handgelenk bis zur Fingerkuppe des Mittelfingers messen. Die Fingerspitzen sollten beim Messen ganz leicht die Handflächen der linken Hand berühren.">
+                                        <i class="fa fa-info-circle"></i></a>
+                                    <input name="handSize" type="number" min="1" max="180" class="form-control" id="handSize" placeholder="14" value="14">
                                   </div>
                                 </div>
 
@@ -493,13 +517,13 @@
                                     <h4>Fingergröße [cm]</h4>
                                   <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
                                   <div>
-                                    <input type="number" min="1" max="50" class="form-control" id="fingerSize" placeholder="6">
+                                    <input name="fingerSize" type="number" min="1" max="50" class="form-control" id="fingerSize" placeholder="6" value="6">
                                   </div>
                                 </div>
 
                                 <h4>Schlaglänge Eisen 7 Carry</h4>
                                 <div id="carryLengthSelect">
-                                  <select class="form-control" id="carryLength">
+                                  <select name="carryLength" class="form-control" id="carryLength">
                                     <option> < 50m</option>
                                     <option>50 - 70m</option>
                                     <option selected="selected">71 - 90m</option>
@@ -515,16 +539,16 @@
 
                                 <h4>Ziele</h4>
                                 <div id="goalsSelect">
-                                  <select class="form-control" id="goals">
+                                  <select name="goal" class="form-control" id="goals">
                                     <option> Profi </option>
                                     <option> Hdc 0 </option>
                                     <option> Spaß </option>
                                   </select>
                                 </div>
 
-                                <h4>Trainingsaufwand je Woche</h4>
+                                <h4>Trainings<wbr>aufwand je Woche</h4>
                                 <div id="trainingTimeSelect">
-                                  <select class="form-control" id="trainingTime">
+                                  <select name="trainingTime" class="form-control" id="trainingTime">
                                     <option> < 5h</option>
                                     <option>5 - 10h</option>
                                     <option selected="selected">10 - 15h</option>
@@ -535,7 +559,7 @@
 
                                 <h4>Lieblingsfarbe</h4>
                                 <div id="colorSelect">
-                                  <select class="form-control" id="color">
+                                  <select name="favouriteColor" class="form-control" id="color">
                                     <option> schwarz </option>
                                     <option> orange </option>
                                     <option> grün </option>
@@ -545,7 +569,7 @@
                                 </div>
 
                                 <div id="submitButtonCont">
-                                    <button class="btn-submit" type="submit">ABSCHICKEN!</button>
+                                    <button class="btn-submit" type="submit" value="send">ABSCHICKEN!</button>
                                 </div>
                               </div>
                             </form>
@@ -592,7 +616,7 @@
                             <img id="SchmuckLogo" src="img/Logo_Golfschule_Schmuck.svg">
                             <div>
                                 <p>Die Golfschule um Maria und Marco Schmuck steht für absolutes High-End Training wie es nicht an vielen Standorten in Deutschland zu finden ist. Von High-Speed Kameras über Radargeräte bis hin zur Anpassung des Materials,  hier wird jeder Aspekt eines innovativen Golftrainings berücksichtigt. Als bayerische Jugendtrainer des Jahres 2013 bringt Marco Schmuck alle Fähigkeiten mit, um einen perfekten Grundstein für die Karriere junger Talente zu legen.</p>
-                                <p>Zitat Marco Schmuck zu TalentStix: <em> „…“</em></p>
+                                <p>Zitat Marco Schmuck zu TalentStix: <em> "Seit vielen Jahren beschäftige ich mich mit dem dem Thema Leistungssport im Golf. Vor allem mit Jugendlichen und Kindern habe ich großen Spaß zu arbeiten und bin über die sportliche Entwicklung der letzten Jahre sehr begeistert. Das liegt vor allem an dem besseren Verständnis der Golflehrer für den Sport.^In den leistungsbestimmenden Faktoren Taktik, Technik und  Psyche hat sich eine Menge getan. Die Ausrüstung für Kinder und Jugendliche stand bisher aber nicht wirklich im Vordergrund. Mit Talentstix haben wir ein fantastisches Konzept geschaffen, damit die jungen Athleten sich maximal schnell entwickeln können. Ich bin froh Teil dieses Konzept sein zu dürfen."</em></p>
                                 <h4>Kontakt</h4>
                                 <p>Website <a href="http://www.marco-schmuck.de">www.marco-schmuck.de</a> <br>
                                    Mail <a href="mailto:golf@marco-schmuck.de">golf@marco-schmuck.de</a></p>
