@@ -616,7 +616,8 @@ body {
 
 figure > figcaption {
     width: 75%;
-    display: inline-block;
+    display: inline-block;    
+    font-family: Montserrat,"Lato",Helvetica,Arial,sans-serif;
 }
 
 figure > figcaption > em {
