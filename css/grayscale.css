@@ -616,7 +616,8 @@ body {
 
 figure > figcaption {
     width: 75%;
-    display: inline-block;
+    display: inline-block;    
+    font-family: Montserrat,"Lato",Helvetica,Arial,sans-serif;
 }
 
 figure > figcaption > em {
@@ -631,13 +632,14 @@ figure {
     border-bottom: 1px solid #353535;
 }
 
+figure > h3 {
+    height: 135px;
+    padding-top: 50px;
+    color: #7ecc28;
+}
+
 
 /*Modalstuff*/
-
-/*.modal-dialog {
-    width: 1000px;
-}*/
-
 
 .close {
     color: #7ecc28;
