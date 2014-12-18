@@ -238,7 +238,7 @@ a:focus {
 }
 
 .brand-heading img {
-    width: 50%;
+    min-width: 50%;
 }
 
 .intro .intro-body .intro-text {
