@@ -499,7 +499,7 @@
                                     <h4>Handgelenk - Bodenabstand [cm]</h4>
                                   <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
                                   <div class="right-inner-addon">
-                                    <a href="#" data-toggle="tooltip" data-placement="left" title="Den Abstand von Beginn des Handgelenks bis zum Boden messen. Bei dieser Messung sollte man in Golfschuhen gekleidet aufrecht stehen und die Arme locker hängen lassen. Der Rechtshänder misst den Abstand an der linken Hand, als Linkshänder nimmt man die rechte Hand.">
+                                    <a href="#" id="handToFloorPopover" rel="popover" data-original-title="Handgelenkabstand zum Boden"> 
                                         <i class="fa fa-info-circle"></i></a>
                                     <input name="handToFloor" type="number" min="1" max="188" class="form-control" id="handToFloor" placeholder="70" value="70">
                                   </div>
@@ -509,7 +509,7 @@
                                     <h4>Handgröße [cm]</h4>
                                   <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
                                   <div class="right-inner-addon">
-                                    <a href="#" data-toggle="tooltip" data-placement="left" title="Vom Handgelenk bis zur Fingerkuppe des Mittelfingers messen. Die Fingerspitzen sollten beim Messen ganz leicht die Handflächen der linken Hand berühren.">
+                                    <a href="#" id="handSizePopover" rel="popover" data-original-title="Handgröße">
                                         <i class="fa fa-info-circle"></i></a>
                                     <input name="handSize" type="number" min="1" max="180" class="form-control" id="handSize" placeholder="14" value="14">
                                   </div>
@@ -518,8 +518,10 @@
                                 <div id="fingerSizeField">
                                     <h4>Fingergröße [cm]</h4>
                                   <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
-                                  <div>
-                                    <input name="fingerSize" type="number" min="1" max="50" class="form-control" id="fingerSize" placeholder="6" value="6">
+                                  <div class="right-inner-addon">
+                                    <a href="#" id="fingerLengthPopover" rel="popover" data-original-title="Fingergröße">
+                                        <i class="fa fa-info-circle"></i></a>
+                                  <input name="fingerSize" type="number" min="1" max="50" class="form-control" id="fingerSize" placeholder="6" value="6">
                                   </div>
                                 </div>
 

@@ -188,6 +188,33 @@ function init() {
 
     //Tooltip
     $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();   
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // Popovers
+        var handheight = '<img style="width:100px;margin: 0 auto;" src="img/handheight.png"/>';
+        $("#handToFloorPopover").popover({placement: 'left', content:handheight, html:true}); 
+
+        var handsize = '<img style="width:100px;margin: 0 auto;" src="img/handsize.png"/>';
+        $("#handSizePopover").popover({placement: 'left', content:handsize, html:true}); 
+
+        var fingerlength = '<img style="width:100px;margin: 0 auto;" src="img/fingerlength.png"/>';
+        $("#fingerLengthPopover").popover({placement: 'left', content:fingerlength, html:true});
+
+        $('body').on('click', function (e) {
+            //did not click a popover toggle, or icon in popover toggle, or popover
+            $('[rel="popover"]').each(function () {
+                //the 'is' for buttons that trigger popups
+                //the 'has' for icons within a button that triggers a popup
+                if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                    $(this).popover('hide');
+                }
+            });
+            /*
+            if ($('.popover').is(":visible");) { 
+                $('.popover').popover('hide');
+            }*/
+        });   
     });
+
+    
 }

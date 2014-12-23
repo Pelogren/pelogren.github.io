@@ -766,31 +766,30 @@ img.smallmid {
     color: #7ecc28;
 }
 
-.tooltip{
+.popover{
     position:absolute;
     z-index:1020;
     display:block;
     visibility:visible;
     font-size:10pt;
     opacity:0;
+    background: #353535;
     filter:alpha(opacity=0)
 }
-.tooltip-inner {    
-    padding: 10px;
-    text-align: left;
-    background: #231f20;
-    border: solid 1px #7ecc28;
-    opacity: 1;
+
+.popover-title {
+    background: #353535;
+    color: #7ecc28;
+    border-bottom: 1px solid #505050;
 }
 
-.tooltip.left .tooltip-arrow {
-    top:50%;
-    right:0;
-    margin-top:-5px;
-    border-top:5px solid transparent;
-    border-bottom:5px solid transparent;
-    border-left:5px solid #7ecc28;
-}   
+.popover-content {
+    text-align: center;
+}
+
+.popover.left>.arrow:after {
+    border-left-color: #353535;
+}
 
 .tooltip.in {
   opacity: 1;
