@@ -22,6 +22,10 @@ footer {
     background-color: #7ecc28;
 }
 
+footer a:hover{
+    color: #231f20;
+}
+
 html {
     width: 100%;
     height: 100%;
@@ -797,6 +801,8 @@ img.smallmid {
 }
 
 #SchmuckLogo {
+    min-width: 100%;
+    max-width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
 }
