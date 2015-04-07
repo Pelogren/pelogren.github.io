@@ -1,847 +1,503 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>TalentStix</title>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- Facebook -->
-    <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>        
-
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-            </div>
-            <div class="container">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-main-collapse">
-                    <ul class="nav navbar-nav">
-                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                        <li class="hidden">
-                            <a href="#page-top"></a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#" data-toggle="modal" data-target="#conceptModal">Talentstix</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#" data-toggle="modal" data-target="#easyFitModal">Easy Fit</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#" data-toggle="modal" data-target="#productModal">Produkte</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#" data-toggle="modal" data-target="#teamModal">Team</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#media-section">Media</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#swingtypes-section">Schwungtypen</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#contact-section">Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
-
-        <!-- Intro Header -->
-        <header class="intro">
-            <div class="intro-body">
-                <div class="">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h1 class="brand-heading">
-                                <img src="img/Talentstix_logo_GWB_1.svg">
-                            </h1>
-                            <p class="intro-text">“WINNING TAKES TALENT, TO REPEAT TAKES CHARACTER.“</p>
-                            <a href="#content" class="btn btn-circle page-scroll">
-                                <i class="fa fa-angle-double-down animated"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Content Section -->
-        <section id="content" class="content-section text-center">
-        <div class="container">
-        <div class="row">
-
-            <div class="col-sm-5 col-md-offset-1">
-                <button class="category-wrapper" data-toggle="modal" data-target="#conceptModal">
-                    <div class="category" id="concept">
-                        <h4 class="cl-effect-7">
-                            <a href="#talentstix">Talentstix Konzept</a>
-                        </h4>
-                    </div>
-                </button>    
-            </div>
-
-            <div class="col-sm-5">
-                <button class="category-wrapper" data-toggle="modal" data-target="#easyFitModal">
-                    <div class="category" id="easyFit">
-                        <h4 class="cl-effect-7">
-                            <a href="#talentstix">Easy Fit</a>
-                        </h4>
-                    </div>
-                </button>
-            </div>
-        </div>
-
-        <div class="row">
-
-            <div class="col-sm-5 col-md-offset-1">
-                <button class="category-wrapper" data-toggle="modal" data-target="#productModal">
-                    <div class="category" id="products">
-                        <h4 class="cl-effect-7">
-                            <a href="#talentstix">Produkte</a>
-                        </h4>
-                    </div>
-                </button>
-            </div>
-
-            <div class="col-sm-5">
-                <button class="category-wrapper" data-toggle="modal" data-target="#teamModal">
-                    <div class="category" id="team">
-                        <h4 class="cl-effect-7">
-                            <a href="#talentstix">Team</a>
-                        </h4>
-                    </div>
-                </button>
-            </div>
-        </div>
-        </div>
-        </section>
-
-<!-- Media Section -->
-<section id="media-section" class="content-section text-center">
-    <div class="news-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Media</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-5">
-                    <h3>Testimonials</h3>
-                    <div class="testimonial">
-                        <h4>Präziser und Weiter!</h4>
-                        <p class="testimonial-text">Mit den von HIO angepassten Schlägern spiele ich präziser und schlage den Ball dennoch weiter als vorher. Seit dem Fitting bei HIO habe ich deutlich mehr Vertrauen in mein eigenes Spiel gewonnen und spiele sehr viel konstantere Runden. Die Daten, für die Konstruktion des optimalen Schlägers, werden durch das umfassende Fitting absolut professionell ermittelt - Ich kann HIO jedem empfehlen, der nicht möchte, dass schlechte Rundenergebnisse auf falsches Material im Bag zurückzuführen sind!</p>
-                        <p class="testimonial-name">Lara Grosse</p>
-                    </div>
-
-                    <div class="testimonial">
-                        <h4>Wieder Vertrauen ins Material</h4>
-                        <p class="testimonial-text">Mir ist es vor allem wichtig, Vertrauen in mein Material zu haben. Durch die umfangreiche Analyse beim HIO Fitting bin ich mir sicher, das für mich richtige Material zu spielen. Die akribische und detailreiche Arbeit von Marco ist einmalig und kann ich nur weiterempfehlen.</p>
-                        <p class="testimonial-name">Ann-Kathrin Lindner, Ladies European Tour</p>
-                    </div>
-
-                    <div class="testimonial">
-                        <h4>Ass über 170m!</h4>
-                        <p class="testimonial-text">Dank des optimal gefitteten Schlägers war der Einsatz des Aresoputters nicht mehr notwendig! Ein Ass am 8.7.14 im GC Velden-Köstenberg Loch 3 Par 3 170m! Fazit: Auch für Oldies rentiert es sich das Golfmaterial zu optimieren, am besten natürlich bei HIO!</p>
-                        <p class="testimonial-name">Michael Burger</p>
-                    </div>
-
-                    <div class="testimonial">
-                        <h4>Ich bin begeistert</h4>
-                        <p class="testimonial-text">Ich habe mir vor ca. 1 Jahr den kompletten Eisensatz, zwei Rescues, ein FW-Holz und den Driver von HIO fitten lassen. Ich bin begeistert. Mein alter kompletter King-Cobra-Satz war schon gefittet, jedoch von unserem lokalen Pro-Shop. <br>
-                        Heute erkenne ich, was man mit wirklich gutem Fitting noch herausholen kann. Der Längengewinn liegt bei mindestens 10m. Wichtig erscheint mir auch, dass wirklich hochwertige und an die eigene Schwunggeschwindigkeit angepasste Schäfte verwendet werden. Da mangelt es anscheinend häufig bei den Standardanbietern und anderen Fittern... <br>
-                        Marco, danke!!!</p>
-                        <p class="testimonial-name">Klaus Knauer</p>
-                    </div>
-
-                    <div class="testimonial">
-                        <h4>I’m hooked on the idea of club fitting</h4>
-                        <p class="testimonial-text">I’ve been playing the new clubs for 2 months now and I feel so much more confident with them. In the rounds I played with the new irons, I lowered my score by almost 5 to 7 hits. In my last round I had the option to hit almost every iron and I increased my distance with every single one by 10 meters or more. My game was optimized in style and you can say my bag is officially pimped by HIO-Fitting. Now I feel well prepared for the upcoming season. And one thing’s for sure …. I’m hooked on the idea of club fitting and will soon make an appointment for my Woods and my Putter.</p>
-                        <p class="testimonial-name">Goodsundays.com</p>
-                    </div>
-                    
-                </div>
-                <div class="col-md-5 col-md-offset-2">
-                    <h3>What's new</h3>
-                    <div class="newsentry">
-                        <h4>Talentstix auf facebook</h4>                        
-                        <iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FTalentStix%2F338187643034246&amp;height=600&amp;colorscheme=dark&amp;show_faces=false&amp;header=false&amp;stream=true&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100% !important; height:600px; opacity:0.8;" allowTransparency="true"></iframe>
-                    </div>
-
-                    <h3>Talentstix in der Presse</h3>
-                    <a class="press-link-wrapper" href="http://www.hio-fitting.de/images/Presse/Artikel%20August%202014.pdf">
-                        <div class="press-link">
-                            <img src="img/article1.png">
-                            <h4>App-solut passend</h4>
-                            <p class="press-link-text">Mit wissenschaftlicher Akribie und jeder Menge Pioniergeist haben diese drei Jungs ein Stück Fitting-Software entwickelt, wie es die Golfszene bisher noch nicht gesehen hat.</p>
-                            <p class="press-link-name">GOLFPUNK</p>
-                        </div>
-                    </a>
-
-                    <a class="press-link-wrapper" href="http://www.golf.de/publish/equipment/nachrichten/60102155/schlaeger-nach-mass">
-                        <div class="press-link">
-                            <img src="http://www.golf.de/publish/imagedata/WoodsT14_drive_728.jpg">
-                            <h4>Schläger nach Maß</h4>
-                            <p class="press-link-text">"Der Schläger, den Tiger Woods spielt, ist nicht der, den man im Laden kaufen kann", sagt Marco Burger von HIO Fitting. Golf.de war zu Besuch bei dem jungen Start-up-Unternehmen, das ein technisch extrem versiertes Anpassen von Schlägern anbietet, und hat sich fitten lassen.</p>
-                            <p class="press-link-name">Golf.de</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-            <!-- Swing Types Section -->
-            <section id="swingtypes-section" class="content-section text-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <h2>Schwung<wbr>typen</h2>
-                        </div>
-                    </div>
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="swingtype">
-                            <div class="videoWrapper">                          
-                                <iframe src="https://www.youtube.com/embed/I_FJN153e2Q" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <h4>Der Heber</h4>
-                            <p>Bei diesem Schwungtyp fliegen gut getroffenen Bälle häufig zu hoch und haben wenig Power. Fehlschläge sind eher getoppt und oft nicht in der Mitte der Schlagfläche getroffen. Wenig bis kein Divot bzw. Bodenkontakt vor dem Ball wären typische Folgen. Ein weiteres Kennzeichen wären angezogene Arme im/nach dem Treffmoment. <br>
-                            Diese Bewegungen entstehen  nicht zu selten bei Kindern, die mit einem falschen Liewinkel oder einer falschen Schlägerlänge spielen.</p>
-                        </div>
-
-                        <div class="swingtype">
-                            <div class="videoWrapper"> 
-                                <iframe src="https://www.youtube.com/embed/g0kJa9MgzG0" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                                <h4>Der Steher</h4>
-                                <p>Bei diesem Schwungtyp fliegen die gut getroffenen Bälle gerade aber nicht sonderlich weit. Der Steher schwingt vorwiegend aus den Armen und hat demnach einen geringen Gewichtstransfer. Typische Kennzeichen wären ein kleiner Schwungradius während der Ausholbewegung, sowie eine zu geringe Schulterrotation. Ein zu frühes Auflösen der Körperwinkel zum Treffmoment ist ebenfalls ein typisches Bewegungsmuster für den Steher komplett aufgelöst haben. <br>
-                                Zu lange, zu harte oder auch zu steife Schäfte können diesen Typ negativ beeinflussen. Haltungsschäden sowie Ausgleichsbewegungen sind demnach keine seltene Folge. Immerhin führen 10g Mehrgewicht im Schaft bei einer dynamischen Bewegung zu bis zu 2,5kg mehr an Gewicht was beschleunigt und ausbalanciert werden muss.</p>
-                        </div>
-                    </div>  
-                <div class="col-md-5 col-md-offset-2">
-                    <div class="swingtype">
-                            <div class="videoWrapper"> 
-                                <iframe src="https://www.youtube.com/embed/qIegT7zU5jA" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <h4>Der Drücker</h4>
-                            <p>Die gut getroffenen Bälle fliegen eher flach. Mit einem Eisen 7 ein Grün anzuspielen ist für diese Kinder schwierig, da die Bälle mit einem zu flachen Winkel in das Grün einschlagen. Häufig rollen die Bälle hinter das Grün. Die schlecht getroffenen Bälle sind eher innen an der Schlagfläche getroffen und es wird meist zu viel Gras mitgenommen. Gerade mit den Hölzern werden die Bälle deshalb oft unterschlagen und fliegen mehr hoch als weit. <br>
-                            Der Drücker hat meist ein Schlägerset, welches bezüglich der Loftzahlen nicht ideal aufeinander angepasst ist. Je nach Flughöhe benötigt jedes Kind andere Loftstufen. Auch auf sinnvolle Abstände von einem Eisen zum Nächsten sollte bei Kindern ganz besonders geachtet werden. Ein gut aufeinander abgestimmtes Set unterstützt eine konstante Schwungbewegung.</p>
-                    </div>
-
-                    <div class="swingtype">
-                        <div class="videoWrapper"> 
-                            <iframe width="100%" src="https://www.youtube.com/embed/aeP9JMo-iUM" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                            <h4>Der Koppler</h4>
-                            <p>Der Koppler hat verstanden, wie er seine Energie effizient auf den Golfball mit viel Energie übertragen kann. Er benutzt die richtige Bewegungskette von unten nach oben: Zuerst werden die Beine eingesetzt, dann der Rumpf, dann die Arme  und anschließend geht die Energie von Schaft – in den Kopf – an den Ball. Das Prinzip des optimalen Beschleunigungsweges sowie der Koordination der Teilimpulse beeinflusst entscheidend die Schlagweite und die Stabilität des Spielers. <br>
-                            Eine regelmäßige Überprüfung des Materials  ist speziell für sehr früh entwickelte Spieler essentiell. Das frühe Verstehen einer „neutralen“ Bewegung sowie das Erlernen verschiedener Flugkurven helfen in verschiedensten Situation erfolgreich reagieren zu können. Wer möchte schon sein Talent wegen ein paar unpassender Schläger aufs Spiel setzen?</p>
-                    </div>
-                </div>
-        
-                </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact-section" class="content-section text-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <h2>Kontakt Talent<wbr>stix</h2>
-                            <p>Kontaktieren Sie uns bei Fragen und Anregungen. <br> Wir freuen uns auf Ihr Feedback!</p>
-                            <p><a href="mailto:info@hio-fitting.de ">info<wbr>@hio-fitting.de </a>
-                            </p>
-                            <ul class="list-inline banner-social-buttons">
-                            <li>
-                                <a href="https://www.facebook.com/pages/TalentStix/338187643034246" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                            </li>
-                            </ul>
-                        </div>
-                </div>
-            </section>
-
-
-            <!-- Map Section -->
-            <section id="map-section">
-                    <div id="map"></div>
-                
-            </section>
-
-            <!-- Footer -->
-            <footer>
-                <div class="container text-center">
-                    <p>Copyright &copy; Talentstix 2014</p>
-                    <a href="#" title="Impressum" data-toggle="modal" data-target="#impressumModal">Impressum</a>
-                </div>
-            </footer>
-
-            <!-- Modalwindows -->
-
-            <!-- Impressum Modal -->
-            <div class="modal fade" id="impressumModal" tabindex="-1" role="dialog" aria-labelledby="conceptModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title" id="conceptModalLabel">Impressum</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p><span class="more">Angaben gemäß § 5 TMG</span><br />Technisch und inhaltlich verantwortlich:</p>
-                            <p><span class="more">Benjamin Pfister</span><br />Schleißheimerstr. 183a<br />80797 München<br /><br />Keine Abmahnung ohne vorherigen Kontakt!</p>
-                            <p>Sollte der Inhalt oder die Aufmachung dieser Seiten fremde Rechte Dritter oder gesetzliche Bestimmungen verletzen, so bitten wir um eine entsprechende Nachricht ohne Kostennote.</p>
-                            <p>Die Beseitigung einer möglicherweise von diesen Seiten ausgehenden Schutzrecht-Verletzung durch Schutzrecht-InhaberInnen selbst darf nicht ohne unsere Zustimmung stattfinden. Wir garantieren, dass die zu Recht beanstandeten Passagen unverzüglich entfernt werden, ohne dass von Ihrer Seite die Einschaltung eines Rechtsbeistandes erforderlich ist. Dennoch von Ihnen ohne vorherige Kontaktaufnahme ausgelöste Kosten werden wir vollumfänglich zurückweisen und gegebenenfalls Gegenklage wegen Verletzung vorgenannter Bestimmungen einreichen.</p>
-                            <p>Vielen Dank für Ihr Verständnis.</p>
-                            <p><br /><br /><span class="more">Haftungsausschluss</span></p>
-                            <p>1. Inhalt des Onlineangebotes<br />Der Autor übernimmt keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der bereitgestellten Informationen. Haftungsansprüche gegen den Autor, welche sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern seitens des Autors kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt.<br />Alle Angebote sind freibleibend und unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.</p>
-                            <p><br /><br /><span class="more">2. Verweise und Links</span><br />Bei direkten oder indirekten Verweisen auf fremde Webseiten ("Hyperlinks"), die außerhalb des Verantwortungsbereiches des Autors liegen, würde eine Haftungsverpflichtung ausschließlich in dem Fall in Kraft treten, in dem der Autor von den Inhalten Kenntnis hat und es ihm technisch möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern. Der Autor erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte oder die Urheberschaft der verlinkten/verknüpften Seiten hat der Autor keinerlei Einfluss. Deshalb distanziert er sich hiermit ausdrücklich von allen Inhalten aller verlinkten /verknüpften Seiten, die nach der Linksetzung verändert wurden. Diese Feststellung gilt für alle innerhalb des eigenen Internetangebotes gesetzten Links und Verweise sowie für Fremdeinträge in vom Autor eingerichteten Gästebüchern, Diskussionsforen, Linkverzeichnissen, Mailinglisten und in allen anderen Formen von Datenbanken, auf deren Inhalt externe Schreibzugriffe möglich sind. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.</p>
-                            <p><br /><br /><span class="more">3. Urheber- und Kennzeichenrecht</span><br />Der Autor ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Bilder, Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihm selbst erstellte Bilder, Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und Texte zurückzugreifen. Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass Markenzeichen nicht durch Rechte Dritter geschützt sind!<br />Das Copyright für veröffentlichte, vom Autor selbst erstellte Objekte bleibt allein beim Autor der Seiten. Eine Vervielfältigung oder Verwendung solcher Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen oder gedruckten Publikationen ist ohne ausdrückliche Zustimmung des Autors nicht gestattet.</p>
-                            <p><br /><br /><span class="more">4. Datenschutz</span><br />Sofern innerhalb des Internetangebotes die Möglichkeit zur Eingabe persönlicher oder geschäftlicher Daten (Emailadressen, Namen, Anschriften) besteht, so erfolgt die Preisgabe dieser Daten seitens des Nutzers auf ausdrücklich freiwilliger Basis. Die Inanspruchnahme und Bezahlung aller angebotenen Dienste ist – soweit technisch möglich und zumutbar – auch ohne Angabe solcher Daten bzw. unter Angabe anonymisierter Daten oder eines Pseudonyms gestattet. Die Nutzung der im Rahmen des Impressums oder vergleichbarer Angaben veröffentlichten Kontaktdaten wie Postanschriften, Telefon- und Faxnummern sowie Emailadressen durch Dritte zur Übersendung von nicht ausdrücklich angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender von sogenannten Spam-Mails bei Verstössen gegen dieses Verbot sind ausdrücklich vorbehalten.</p>
-                            <p><span class="more">5. Rechtswirksamkeit dieses Haftungsausschlusses</span><br />Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen sollten, bleiben die übrigen Teile des Dokumentes in ihrem Inhalt und ihrer Gültigkeit davon unberührt.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Konzept Modal -->
-            <div class="modal fade" id="conceptModal" tabindex="-1" role="dialog" aria-labelledby="conceptModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title" id="conceptModalLabel">Talentstix Konzept</h4>
-                        </div>
-                        <div class="modal-body">
-                            <h2>Status quo</h2>
-                            <div>
-                                <p class="subtitle">Die Golfschule Schmuck und HIO-Fitting setzt auf individuelle Anpassung und Kostensenkung bei Kinderschlägern.</p>
-
-                                <p>Fitting für Kinder – ein Thema, welches in seiner Bedeutung stark unterschätzt wird. Geht es um die Ausrüstung der kleinsten Golfer sind die Eltern in der Regel mit mehreren Problemen konfrontiert: Kinder wachsen schnell – damit verändern sich permanent die Anforderungen an Schlägerlänge, Gewicht, Griffgröße, Loft und Lie. Hinzu kommt, dass mit zunehmendem Spielvermögen auch eine Ausweitung des Sets auf mehr Eisen und Hölzer Sinn macht. Mit der ständigen Veränderung der Sets sind in der Regel beträchtliche Anschaffungskosten verbunden.</p>
-                            </div>
-
-                            <h2>Warum TalentStix?</h2>
-                            <ul>
-                                <li> <p><em>Gebaut von deutschen Ingenieuren:</em> Die Schläger überzeugen durch ihre Präzision, die Weite der Schläge, die Fehlerverzeihbarkeit sowie das individuelle Design.</p></li>
-
-                                <li><p><em>Kontinuierliche Abstimmung:</em> Schlägerlänge, Loft und Lie werden individuell angepasst. Gerade bei Kindern ist dies ein entscheidender Punkt, da sich der Schwung sonst an falsches Material anpasst.</p></li>
-
-                                <li><p><em>Kostensenkung bei 100% Passgenauigkeit:</em> Die jährlichen Kosten für Ausrüstungsanschaffungen sinken, da bereits gekaufte Schläger durch spezielle Adapter verlängert werden können.</p></li>
-
-                                <li><p><em>„Mein eigener Schläger“:</em> Das Vertrauen in die eigene Ausrüstung steigt, weil die Kinder- und Jugendlichen wissen, dass die Schläger perfekt passen.</p></li>
-                            </ul>
-
-                            <h2>Zielgruppe</h2>
-                            <p>Ab einem Alter von 8 Jahren ist eine Anpassung der Schläger sinnvoll. Ob Mädchen oder Junge, Rechtshänder oder Linkshänder spielt dabei keine Rolle. In der Regel wachsen Jugendliche mit einem Alter von circa 15 Jahren aus den Kinderschlägern raus und sie können bei uns auf Damen- bzw. Herrenschläger umstellen</p>
-
-                            <h2>Vorteile Qualität vs. Finanziell</h2>
-                            <img src="img/talentstix_concept_1.png">
-                            <img src="img/talentstix_concept_2.png">
-
-                            <h4>Talentstix - beispielhafter Verlauf</h4>
-                            <img src="img/talentstix_concept_3.png">
-
-                            <h4>Finanzielle Auswirkungen von TalentStix</h4>
-                            <img src="img/talentstix_concept_4.png">
-
-                            <h2>Fittingablauf</h2>
-                            <p>Wohl findet man in Deutschland keine technologisch hochwertiger ausgestattete Fittingstation als in Eichenau bei München. Folgende Messungen sind Teil des Fittingprozesses:</p>
-
-                            <div class="fittingstep fittingstep-first">
-                                <div class="fittingstep-number">
-                                    1
-                                </div>
-                                <p>Vermessung des eigenen Equipments mittels digitaler Maschinen</p>
-                                <img class="smallmid" src="img/1mitiPad.png">
-                            </div>
-
-                            <div class="fittingstep fittingstep-second">
-                                <div class="fittingstep-number">
-                                    2
-                                </div>
-                                <p>Eingangsmessung auf der Kraftmessplatte um körperlich Potentiale und Defizite herauszustellen</p>
-                                <img class="smallmid" src="img/2mitiPad.png">
-                            </div>
-
-                            <div class="fittingstep fittingstep-third">
-                                <div class="fittingstep-number">
-                                    3
-                                </div>
-                                <p>Aufnahme und Vergleich von relevanten Ballflugparameter wie Schlagweite, Flughöhe, Spin, Abflugwinkel, Ballgeschwindigkeit mittels neuester Radar- und Kameratechnologie</p>
-                                <img class="smallmid" src="img/3mitiPad.png">
-                            </div>
-
-                            <div class="fittingstep fittingstep-fourth">
-                                <div class="fittingstep-number">
-                                    4
-                                </div>
-                                <p>Bestimmung des Testsiegers anhand gemessener Daten sowie eigens entwickeltem TalentStix Algorithmus</p>
-                                <img class="smallmid" src="img/4mitiPad.png"> 
-                            </div>
-
-                            <div class="fittingstep fittingstep-fifth">
-                                <div class="fittingstep-number">
-                                    5
-                                </div>
-                                <p>Diskussion der Bewegung aus biomechanischen Gesichtspunkten und Ableitung eines Trainingsplans</p>
-                                <img class="smallmid" src="img/5mitiPad.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Easy Fit Modal -->
-            <div class="modal fade" id="easyFitModal" tabindex="-1" role="dialog" aria-labelledby="easyFitModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title" id="easyFitModalLabel">Easy Fit</h4>
-                        </div>
-                        <div class="modal-body">
-                            <form action="mailto:info@hio-fitting.de " method="post" class="form-horizontal" role="form" id="easyFitForm" enctype="text/plain">
-                                <div id="formcontainer">
-                                
-                                <input hidden type="text" name=" " value="=>    Bitte schicken Sie folgende Mail nun an uns, wir werden Sie dann bald kontaktieren">
-
-                                <div id="nameField">
-                                    <h4>Name</h4>
-                                  <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
-                                  <div>
-                                    <input required name="name" type="text" min="1" max="18" class="form-control" id="age" placeholder="">
-                                    <!-- HTML to write -->
-                                    
-                                  </div>
-                                </div>
-
-
-                                <div id="ageField">
-                                    <h4>Alter</h4>
-                                  <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
-                                  <div>
-                                    <input required name="age" type="number" min="1" max="18" class="form-control" id="age" placeholder="10" value="10">
-                                  </div>
-                                </div>
-
-
-                                <h4>Geschlecht</h4>
-                                <!-- <label class="control-label col-sm-2" for="sexRadio">Geschlecht:</label> -->
-                                <div id="sexRadio">
-                                    <div class="radio ">
-                                        <label>
-                                            <input type="radio" name="sexRadios" id="optionsSexFemale" value="female">
-                                            weiblich
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="sexRadios" id="optionsSexMale" value="male" checked>
-                                            männlich
-                                        </label>
-                                    </div>
-                                </div>
-                        
-
-                                <h4>Händigkeit</h4>
-                              <div id="handRadio">
-                                  <div class="radio ">
-                                        <label>
-                                            <input type="radio" name="handRadios" id="optionshandRight" value="right" checked>
-                                            rechts
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="handRadios" id="optionsHandLeft" value="left">
-                                            links
-                                        </label>
-                                    </div>
-                              </div>
-                              
-                              <h4>Handicap</h4>
-                              <div id="handycapSelect">
-                                <select required name="handicap" class="form-control" id="handycap">
-                                  <option> < 7</option>
-                                  <option selected="selected">8 - 15</option>
-                                  <option>16 - 25</option>
-                                  <option> > 25</option>
-                                </select>
-                              </div>
-
-                              <div id="heightField">
-                                    <h4>Körpergröße [cm]</h4>
-                                  <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
-                                  <div>
-                                    <input name="bodySize" type="number" min="1" max="350" class="form-control" id="height" placeholder="140" value="140">
-                                  </div>
-                                </div>
-
-                                <div id="handToFloorField">
-                                    <h4>Handgelenk - Bodenabstand [cm]</h4>
-                                  <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
-                                  <div class="right-inner-addon">
-                                    <a href="#" id="handToFloorPopover" rel="popover" data-original-title="Handgelenkabstand zum Boden"> 
-                                        <i class="fa fa-info-circle"></i></a>
-                                    <input name="handToFloor" type="number" min="1" max="188" class="form-control" id="handToFloor" placeholder="70" value="70">
-                                  </div>
-                                </div>
-
-                                <div id="handSizeField">
-                                    <h4>Handgröße [cm]</h4>
-                                  <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
-                                  <div class="right-inner-addon">
-                                    <a href="#" id="handSizePopover" rel="popover" data-original-title="Handgröße">
-                                        <i class="fa fa-info-circle"></i></a>
-                                    <input name="handSize" type="number" min="1" max="180" class="form-control" id="handSize" placeholder="14" value="14">
-                                  </div>
-                                </div>
-
-                                <div id="fingerSizeField">
-                                    <h4>Fingergröße [cm]</h4>
-                                  <!-- <label class="control-label col-sm-2" for="age">Alter:</label> -->
-                                  <div class="right-inner-addon">
-                                    <a href="#" id="fingerLengthPopover" rel="popover" data-original-title="Fingergröße">
-                                        <i class="fa fa-info-circle"></i></a>
-                                  <input name="fingerSize" type="number" min="1" max="50" class="form-control" id="fingerSize" placeholder="6" value="6">
-                                  </div>
-                                </div>
-
-                                <h4>Schlaglänge Eisen 7 Carry</h4>
-                                <div id="carryLengthSelect">
-                                  <select name="carryLength" class="form-control" id="carryLength">
-                                    <option> < 50m</option>
-                                    <option>50 - 70m</option>
-                                    <option selected="selected">71 - 90m</option>
-                                    <option>91 - 100m</option>
-                                    <option>101 - 110m</option>
-                                    <option>111 - 120m</option>
-                                    <option>121 - 130m</option>
-                                    <option>131 - 140m</option>
-                                    <option>141 - 150m</option>
-                                    <option> > 150m</option>
-                                  </select>
-                                </div>
-
-                                <h4>Ziele</h4>
-                                <div id="goalsSelect">
-                                  <select name="goal" class="form-control" id="goals">
-                                    <option> Profi </option>
-                                    <option> Hdc 0 </option>
-                                    <option> Spaß </option>
-                                  </select>
-                                </div>
-
-                                <h4>Trainings<wbr>aufwand je Woche</h4>
-                                <div id="trainingTimeSelect">
-                                  <select name="trainingTime" class="form-control" id="trainingTime">
-                                    <option> < 5h</option>
-                                    <option>5 - 10h</option>
-                                    <option selected="selected">10 - 15h</option>
-                                    <option>15 - 20h</option>
-                                    <option> > 20h</option>
-                                  </select>
-                                </div>
-
-                                <h4>Lieblingsfarbe</h4>
-                                <div id="colorSelect">
-                                  <select name="favouriteColor" class="form-control" id="color">
-                                    <option> schwarz </option>
-                                    <option> orange </option>
-                                    <option> grün </option>
-                                    <option> blau </option>
-                                    <option> gelb </option>
-                                  </select>
-                                </div>
-
-                                <div id="submitButtonCont">
-                                    <button class="btn-submit" type="submit" value="send">ABSCHICKEN!</button>
-                                </div>
-                              </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Modal -->
-            <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title" id="productModalLabel">Produkte</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Die Talentstix Produkte unterteilen sich in drei Kategorien. Die im Fitting ermittelten Daten werden mit den sportlichen Ambitionen und Designwünschen abgestimmt und so eine sinnvolle Empfehlung für jeden Junior gefunden: Vom Anfänger bis zum Scratch Golfer, von preiswert bis high end.</p>
-                            <h2>Tour Series</h2>
-                            <figure>
-                              <img class"product-image" src="img/products/Tour Driver.png" alt="Tour Driver">
-                              <!-- <figcaption><em>Tour Driver </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                              <h3>Tour Driver</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Tour Fairway.png" alt="Tour Fairway">
-                              <!-- <figcaption><em>Tour Fairway </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Tour Fairway</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Tour Hybrid.png" alt="Tour Hybrid">
-                              <!-- <figcaption><em>Tour Hybrid </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Tour Hybrid</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Tour Eisen.png" alt="Tour Eisen">
-                              <!-- <figcaption><em>Tour Eisen </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Tour Eisen</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Tour Wedge.png" alt="Tour Wedge">
-                              <!-- <figcaption><em>Tour Wedge </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Tour Wedge</h3>
-                            </figure>
-
-
-
-
-                            <h2>Skillz Series</h2>
-                            <figure>
-                              <img class"product-image" src="img/products/Skillz Driver.png" alt="Skillz Driver">
-                              <!-- <figcaption><em>Skillz Driver </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Skillz Driver</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Skillz Fairway.png" alt="Skillz Fairway">
-                              <!-- <figcaption><em>Skillz Fairway </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Skillz Fairway</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Skillz Hybrid.png" alt="Skillz Hybrid">
-                              <!-- <figcaption><em>Skillz Hybrid </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                              <h3>Skillz Hybrid</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Skillz Eisen 1.png" alt="Skillz Eisen 1">
-                              <!-- <figcaption><em>Skillz Eisen 1 </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Skillz Eisen 1</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Skillz Eisen 2.png" alt="Skillz Eisen 2">
-                              <!-- <figcaption><em>Skillz Eisen 2 </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Skillz Eisen 2</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Skillz Wedge.png" alt="Skillz Wedge">
-                              <!-- <figcaption><em>Skillz Wedge </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Skillz Wedge</h3>
-                            </figure>
-
-
-
-
-
-                            <h2>Players Series</h2>
-                            <figure>
-                              <img class"product-image" src="img/products/Players Driver.png" alt="Players Driver">
-                              <!-- <figcaption><em>Players Driver </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Players Driver</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Players Fairway.png" alt="Players Fairway">
-                              <!-- <figcaption><em>Players Fairway </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Players Fairway</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Players Hybrid.png" alt="Players Hybrid">
-                              <!-- <figcaption><em>Players Hybrid </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Players Hybrid</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Players Eisen.png" alt="Players Eisen">
-                              <!-- <figcaption><em>Players Eisen </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Players Eisen</h3>
-                            </figure>
-
-                            <figure>
-                              <img class"product-image" src="img/products/Players Wedge.png" alt="Players Wedge">
-                              <!-- <figcaption><em>Players Wedge </em> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> -->
-                            <h3>Players Wedge</h3>
-                            </figure>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Modal -->
-            <div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title" id="teamModalLabel">Team</h4>
-                        </div>
-                        <div class="modal-body">
-                            <h2>Golfschule Schmuck</h2>
-                            <img id="SchmuckLogo" src="img/Logo_Golfschule_Schmuck.svg">
-                            <div>
-                                <p>Die Golfschule um Maria und Marco Schmuck steht für absolutes High-End Training wie es nicht an vielen Standorten in Deutschland zu finden ist. Von High-Speed Kameras über Radargeräte bis hin zur Anpassung des Materials,  hier wird jeder Aspekt eines innovativen Golftrainings berücksichtigt. Als bayerische Jugendtrainer des Jahres 2013 bringt Marco Schmuck alle Fähigkeiten mit, um einen perfekten Grundstein für die Karriere junger Talente zu legen.</p>
-                                <p>Marco Schmuck über TalentStix: <em> "Seit vielen Jahren beschäftige ich mich mit dem dem Thema Leistungssport im Golf. Vor allem mit Jugendlichen und Kindern habe ich großen Spaß zu arbeiten und bin über die sportliche Entwicklung der letzten Jahre sehr begeistert. Das liegt vor allem an dem besseren Verständnis der Golflehrer für den Sport.^In den leistungsbestimmenden Faktoren Taktik, Technik und  Psyche hat sich eine Menge getan. Die Ausrüstung für Kinder und Jugendliche stand bisher aber nicht wirklich im Vordergrund. Mit Talentstix haben wir ein fantastisches Konzept geschaffen, damit die jungen Athleten sich maximal schnell entwickeln können. Ich bin froh Teil dieses Konzept sein zu dürfen."</em></p>
-                                <h4>Kontakt</h4>
-                                <p>Website <a href="http://www.marco-schmuck.de">www.marco-schmuck.de</a> <br>
-                                   Mail <a href="mailto:golf@marco-schmuck.de">golf@marco-schmuck.de</a></p>
-                            </div>
-
-                            <h2>Hio-Fitting</h2>
-                            <img id="hioLogo" class="smallmid" src="img/hio_logo.gif">
-                            <div>
-                                <p>HoleInOne – Fitting hat sich in den letzten Jahren voll und ganz auf das Material rund um einen Golfschläger spezialisiert. Das interdisziplinäre Team bestehend aus Ingenieuren, Chemiker, Sportwissenschaftler und BWlern hat es sich zur Aufgabe gemacht für Anfänger, Profis, Erwachsene und auch Kinder jeweils das perfekte Schlägerset zu finden. Neben starken golferischen Fähigkeiten macht das Team um HIO aber vor allem aus dem Thema Fitting einen höchst wissenschaftlichen und damit transparenten Prozess. Wer also glaubt er sei bezüglich Equipment an der Weisheit letzten Schlusses angekommen verlässt die Fittinghallen Münchens meist mit einer ganz neuen Sichtweise.</p>
-                                <p>Marco Burger über TalentStix: <em>„ Für mich gibt es aktuell nichts spannenderes als die Art und Weise wie Kinder- und Jugendliche an ein Fitting rangehen zu beobachten. Die Offenheit, Ehrlichkeit und Zielstrebigkeit vereinfachen den Prozess die richtigen Schläger zu finden um ein Vielfaches. Durch TalentStix kommen Kinder erstmals in den Genuss ihr maximales Potential auszuschöpfen. Die Möglichkeit Schläger ständig neu anzupassen, ohne dabei in ein komplett neues Set zu investieren lohnt sich nicht nur für Kinder sondern auch für ihre Eltern.“ </em></p>
-                                <h4>Kontakt</h4>
-                                <p>Website <a href="http://www.hio-fitting.de">www.hio-fitting.de</a> <br>
-                                   Mail <a href="mailto:info@hio-fitting.de">info@hio-fitting.de</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- jQuery Version 1.11.0 -->
-            <script src="js/jquery-1.11.0.js"></script>
-
-            <!-- Bootstrap Core JavaScript -->
-            <script src="js/bootstrap.min.js"></script>
-
-            <!-- Plugin JavaScript -->
-            <script src="js/jquery.easing.min.js"></script>
-
-            <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-            <!-- Custom Theme JavaScript -->
-            <script src="js/grayscale.js"></script>
-
-        </body>
-
-        </html>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="assets/img/favicon.png">
+
+	<!-- full screen toggle -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<script type='text/javascript' charset='utf-8'>
+	    // Hides mobile browser's address bar when page is done loading.
+	      window.addEventListener('load', function(e) {
+	        setTimeout(function() { window.scrollTo(0, 1); }, 1);
+	      }, false);
+	</script>
+
+	<title>Budget Butler</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+
+  	<!-- Bootstrap core JavaScript
+  	================================================== -->
+  	<!-- Placed at the end of the document so the pages load faster NOT^^-->
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  	<script src="assets/js/bootstrap.min.js"></script> 	
+  	<script src="assets/js/bootstrap-slider.js"></script> 	
+
+	<!-- Custom styles for this template -->
+	<link href="assets/css/main.css" rel="stylesheet">
+
+	<!-- Fonts from Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+
+	<!-- FontAwesome -->
+	<link href="http://www.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- google visualization:pie-chart-->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="assets/js/googleVisualisation.js"></script>
+
+	<!-- our scripts -->
+	<script type="text/javascript" src="assets/js/categories.js"></script>	
+	<script type="text/javascript" src="assets/js/advice.js"></script>
+	<script type="text/javascript" src="assets/js/modals.js"></script>		
+
+	<!-- jQuery -->	
+  	<script src="assets/js/jquery.mobile.min.js"></script>
+  	<script type="text/javascript" src="assets/js/myjQuery.js"></script>
+
+</head>
+
+<body>
+	<div class="container page activePage" id="pageOverview">
+
+		<div data-role="main" class="ui-content">
+			<div class="boxed flying">
+				<div id="budget-tabs">
+					<ul>
+						<li onClick=toDaily()><a href="#" title="daily" id="daily">DAY</a></li>
+						<li onclick=toMonthly()><a href="#" title="monthly" id="monthly" class="activeOverview">MONTH</a></li>
+						<li onclick=toPeriod()><a href="#" title="periodly" id="periodly">PERIOD</a></li>
+					</ul>
+				</div>
+				<div id="dailyOverview" style="display:none">
+					<div id="visualization"></div>
+				</div>	
+
+				<div id="monthlyOverview" >
+					<div id="piechart"></div>
+				</div>	
+
+				<div id="periodOverview" style="display:none">
+					<div id="chart_div"></div>
+				</div>	
+			</div>
+
+			<button type="button" class="btn btn-primary btn-lg btn-block flying" data-toggle="modal" data-target="#addExpenseModal">ADD NEW EXPENSE</button>
+		</div>
+	</div> <!-- end of page Overview -->
+
+	<div class="container page" id="pageCategories"><!-- page Categories -->
+
+		<!-- Categories -->
+		
+			<div class="panel-group" id="accordion">
+				<div class="boxed flying panel panel-default">
+					<div class="panel-heading panel-education">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+							<h2 class="panel-title">
+								<i class="fa  fa-graduation-cap"></i>  Education 
+								<ul class="panel-category-list">
+								<li class="pull-right"><i class="fa  fa-angle-down fa-2x"></i></li>
+								</ul>
+							</h2>
+						</a>
+					</div>
+					
+					<div id="collapseOne" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-0">
+							<script>
+									$(document).ready(function(){
+   								  $("#panel-body-0").append(createExpenseEntry(0)); 
+  											 });
+ 								</script> 
+						</div>
+					</div>
+				</div>
+				<div class="boxed flying panel panel-default">
+					<div class="panel-heading panel-food">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+						<h2 class="panel-title">
+								<i class="fa  fa-spoon"></i>  Food 
+							
+							<ul class="panel-category-list">
+								
+								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+								
+							</ul>
+						</h2>
+						</a>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-1">
+							<script>
+									$(document).ready(function(){
+  								  		$("#panel-body-1").append(createExpenseEntry(1)); 
+ 											 });
+									</script> 
+						</div>
+					</div>
+				</div>
+				<div class="boxed flying panel panel-default">
+					<div class="panel-heading panel-entertainment">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">	
+						<h2 class="panel-title">
+							
+								<i class="fa  fa-glass"></i> Entertainment 
+							
+							<ul class="panel-category-list">
+								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+							</ul>
+						</h2>
+						</a>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-2">
+																<script>
+									$(document).ready(function(){
+  								  		$("#panel-body-2").append(createExpenseEntry(2)); 
+ 											 });
+									</script> 
+						</div>
+					</div>
+				</div>
+				<div class="boxed flying panel panel-default">
+					<div class="panel-heading panel-transportation">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+						<h2 class="panel-title">
+							
+								<i class="fa  fa-car"></i>  Transportation 
+							
+							<ul class="panel-category-list">
+								<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+							</ul>
+						</h2>
+						</a>
+					</div>
+					<div id="collapseFour" class="panel-collapse collapse">
+						<div class="panel-body" id="panel-body-3">
+																<script>
+									$(document).ready(function(){
+  								  		$("#panel-body-3").append(createExpenseEntry(3)); 
+ 											 });
+									</script> 
+						</div>
+					</div>
+				</div>
+
+			</div>
+		
+
+		<button type="button" class="btn btn-primary btn-lg btn-block flying" data-toggle="modal" data-target="#addCategoryModal">ADD NEW CATEGORY</button>
+		
+
+		<!-- Categories -->	
+
+	</div> <!-- end of page Categories -->
+
+
+	<div class="container page" id="pageBudgets"><!-- page Budgets -->
+		<div class="boxed flying">
+			<h1>SET YOUR MONTHLY BUDGET</h1>
+		</div>
+		
+		<div class="panel-group" id="budgetcordion">
+
+		<div class="boxed flying panel panel-default">
+			<div class="panel-heading panel-education">
+				<a data-toggle="collapse" data-parent="#budgetcordion" href="#collapseEight">
+					<h2 class="panel-title">
+						<i class="fa  fa-graduation-cap"></i>  Education 
+						<ul class="panel-category-list">
+							<li class="pull-right"><i class="fa  fa-angle-down fa-2x"></i></li>
+						</ul>
+					</h2>
+				</a>
+			</div>
+			
+			<div id="collapseEight" class="panel-collapse collapse">
+				<div class="panel-body" id="panel-body-4">
+					<p>YOUR STATUS AT THE MOMENT</p>
+					<div id="donutchart1">
+						
+					</div>
+
+					<p>SET YOUR BUDGET</p>
+					<div class="input-group">
+					  	<input type="number" id="inputBudget1" class="form-control listPrice" placeholder="120">
+					  	<span class="input-group-addon">€</span>
+					</div>
+					<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented">SET</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="boxed flying panel panel-default">
+			<div class="panel-heading panel-food">
+			<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+				<h2 class="panel-title">
+						<i class="fa  fa-spoon"></i>  Food 
+					
+					<ul class="panel-category-list">
+						
+						<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+						
+					</ul>
+				</h2>
+				</a>
+			</div>
+			<div id="collapseFive" class="panel-collapse collapse">
+				<div class="panel-body" id="panel-body-5">
+					<p>YOUR STATUS AT THE MOMENT</p>
+					<div id="donutchart2">
+						
+					</div>
+
+					<p>SET YOUR BUDGET</p>
+					<div class="input-group">
+					  	<input type="number" id="inputBudget1" class="form-control listPrice" placeholder="75">
+					  	<span class="input-group-addon">€</span>
+					</div>
+					<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented">SET</button>					
+				</div>
+			</div>
+		</div>
+
+		<div class="boxed flying panel panel-default">
+			<div class="panel-heading panel-entertainment">
+			<a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">	
+				<h2 class="panel-title">
+					
+						<i class="fa  fa-glass"></i> Entertainment 
+					
+					<ul class="panel-category-list">
+						<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+					</ul>
+				</h2>
+				</a>
+			</div>
+			<div id="collapseSix" class="panel-collapse collapse">
+				<div class="panel-body" id="panel-body-6">
+					<p>YOUR STATUS AT THE MOMENT</p>
+					<div id="donutchart3">
+						
+					</div>
+
+					<p>SET YOUR BUDGET</p>
+					<div class="input-group">
+					  	<input type="number" id="inputBudget1" class="form-control listPrice" placeholder="60">
+					  	<span class="input-group-addon">€</span>
+					</div>
+					<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented">SET</button>						
+				</div>
+			</div>
+		</div>
+
+		<div class="boxed flying panel panel-default">
+			<div class="panel-heading panel-transportation">
+			<a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+				<h2 class="panel-title">
+					
+						<i class="fa  fa-car"></i>  Transportation 
+					
+					<ul class="panel-category-list">
+						<li class="pull-right"><i class="fa fa-angle-down fa-2x"></i></li>
+					</ul>
+				</h2>
+				</a>
+			</div>
+			<div id="collapseSeven" class="panel-collapse collapse">
+				<div class="panel-body" id="panel-body-7">
+					<p>YOUR STATUS AT THE MOMENT</p>
+					<div id="donutchart4">
+						
+					</div>
+
+					<p>SET YOUR BUDGET</p>
+					<div class="input-group">
+					  	<input type="number" id="inputBudget1" class="form-control listPrice" placeholder="120">
+					  	<span class="input-group-addon">€</span>
+					</div>
+					<button type="button" class="btn btn-primary btn-lg btn-block flying notImplemented">SET</button>					
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>	
+
+
+
+	<div class="container page" id="pageAdvice"><!-- page Advice -->
+			 	
+		<div class="boxed butlersays">
+			<div class="logobig">
+	 			<img class="pull-right" src="assets/img/logo_black.png" alt="Logo" id="butlerpic">
+	 			<h1>HI, I AM JAMES,</h1>
+	 			<p>your personal butler regarding finance. With my limitless wisdom I am here to help you manage your expenses and stay within your monthly budgets.</p>
+	 			<p>Just ask me for advice any time you want!</p>
+	 		</div>
+	 	</div>
+
+	 	<div class="boxed flying butlersays" id="adviceBox">
+			<h1> MY ADVICE FOR YOU</h1>
+			<p id="advice">Dogs have no money. Isn’t that amazing? They’re broke their entire lives. But they get through. You know why dogs have no money? .. No Pockets.</p> 
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg btn-block flying" onclick="changeAdvice()">GET OTHER ADVICE</button>
+	</div> <!-- end of page Advice -->
+
+	<!-- add expense Modal -->
+	<div class="modal fade" id="addExpenseModal" tabindex="-1" role="dialog" aria-labelledby="addExpenseLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+  		  	<div class="modal-content">
+  		  	  	<div class="modal-header">
+  		  	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  		  	    	<h4 class="modal-title" id="myModalLabel">ADD A NEW EXPENSE</h4>
+  		  	  	</div>
+
+  		  		<div class="modal-body">
+					<div id="entry-tabs">
+						<ul>
+							<li class="notImplemented"><i class="fa fa-microphone"></i><a href="#" title="dictate" id="dictate">SAY</a></li>
+							<li><i class="fa fa-pencil"></i><a href="#" title="write" id="write" class="activeOverview">WRITE</a></li>
+							<li class="notImplemented"><i class="fa fa-camera"></i><a href="#" title="photograph" id="photograph">PHOTO</a></li>
+						</ul>
+					</div>
+					<form class="form-horizontal" role="form" name="addExpenseForm">
+						<div class="form-group">
+							<label for="inputName" class="col-sm-2 control-label">Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inputName" placeholder="Cat Food">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputPrice" class="col-sm-2 control-label">Price</label>
+							<div class="col-sm-10">
+								<input type="number" class="form-control" id="inputPrice" placeholder="12">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputCategory" class="col-sm-2 control-label">Category</label>
+							<div class="col-sm-10">
+								<select class="form-control" id="inputCategory" placeholder="FOOD">
+									<option value="0">Education</option>
+								  	<option value="1">Food</option>
+								  	<option value="2">Entertainment</option>
+								  	<option value="3">Transportation</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox"> Repeat Expense
+									</label>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+
+					
+
+					<button onclick='recolor()'class="btn btn-default">CLOSE <span class="glyphicon glyphicon-remove"></span></button>
+					<button onclick='addExpense()' class="btn btn-default">ADD <span id="changeable" class="glyphicon glyphicon-ok"></span></button>
+
+      			</div>
+	    	</div>
+	  	</div>
+	</div>
+
+	<!-- add category Modal -->
+	<div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="addCategoryLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+  		  	<div class="modal-content">
+  		  	  	<div class="modal-header">
+  		  	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  		  	    	<h4 class="modal-title" id="myModalLabel">ADD A NEW CATEGORY</h4>
+  		  	  	</div>
+
+  		  		<div class="modal-body">
+  		  		<div id="entry-tabs">
+						<ul>
+							<li class="notImplemented"><i class="fa fa-microphone"></i><a href="#" title="dictate" id="dictate">SAY</a></li>
+							<li><i class="fa fa-pencil"></i><a href="#" title="write" id="write" class="activeOverview">WRITE</a></li>
+							<li class="notImplemented"><i class="fa fa-camera"></i><a href="#" title="photograph" id="photograph">PHOTO</a></li>
+						</ul>
+					</div>
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label for="inputCategoryname" class="col-sm-2 control-label">Name</label>
+							<div class="col-sm-10">
+								<input type="email" class="form-control" id="inputName" placeholder="Health">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputLimit" class="col-sm-2 control-label">Limit</label>
+							<div class="col-sm-10">
+								<input type="number" class="form-control" id="inputLimit" placeholder="120">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputColor" class="col-sm-2 control-label">Color</label>
+							<div class="col-sm-10">
+								<div class="btn-group">
+  									 <input id="colorpicker" type="color" name="favcolor">
+								</div>
+							</div>
+						</div>
+						
+						
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal">CLOSE <span class=" glyphicon glyphicon-remove"></span></button>
+					<button  class="notImplemented btn btn-default">ADD <span class="glyphicon glyphicon-ok"></span></button>
+      			</div>
+	    	</div>
+	  	</div>
+	</div>
+
+	<!-- function not implemented Modal -->
+	<div class="modal fade" id="notImplementedModal" tabindex="-1" role="dialog" aria-labelledby="notImplementedLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+  		  	<div class="modal-content">
+  		  	  	<div class="modal-header">
+  		  	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  		  	    	<h4 class="modal-title" id="myModalLabel">SORRY</h4>
+  		  	  	</div>
+  		  	<div class="modal-body">
+        		<p>The function you are trying to acces does not yet exist.</p>
+        		<p>A team of highly trained monkeys has been dispatched to deal with this situation</p>
+	      	</div>
+	      		<div class="modal-footer">
+	        		<button type="button" class="btn btn-default" data-dismiss="modal">CLOSE<span class="glyphicon glyphicon-remove"></span></button>
+	      		</div>
+	    	</div>
+	  	</div>
+	</div>
+
+	<!-- HEADER -->
+	<div data-role="header" class="navbar navbar-default navbar-fixed-top" data-role="header">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><img id="logo" src="assets/img/logo_white.png"> <p id="brand-name">BUDGET BUTLER</p></a>
+			</div>
+		</div>
+	</div><!-- /header -->
+
+	
+	<!-- FOOTER -->
+	<div data-role="footer" id="footer" class="navbar-default">
+		<ul class="nav">
+			<li><a href="#pageOverview" class="navlink activeSite" ><i class="fa fa-bar-chart-o fa-2x"></i> <br> Overview </a></li>
+			<li><a href="#pageCategories" class="navlink"><i class="fa fa-tags fa-2x"></i> <br> Categories </a></li>
+			<li><a href="#pageBudgets" class="navlink" ><i class="fa fa-money fa-2x"></i> <br> Budgets </a></li>
+			<li><a href="#pageAdvice" class="navlink"><i class="fa fa-lightbulb-o fa-2x"></i> <br> Advice </a></li>
+		</ul>
+	</div><!-- /footer -->
+
+  </body>
+  </html>
